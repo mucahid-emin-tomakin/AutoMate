@@ -75,7 +75,7 @@ ALL EMPLOYEES                      82h 54m 36s        82.91         4975       2
 ========================================================================================================================
 ```
 
-=
+---
 
 ## ⚡ QUICK START
 ```bash
@@ -93,7 +93,7 @@ cd Archive/2026.02.20_23.30.45/
 cat result_2026.02.20_23.30.45.txt
 ```
 
-=
+---
 
 ## 📁 STRUKTUR
 
@@ -123,7 +123,7 @@ WorkingTimeTracker/
         └── 📊 WorkingTimeTracker.xlsx
 ```
 
-=
+---
 
 ## 🚀 TOOL
 
@@ -140,7 +140,7 @@ WorkingTimeTracker/
 - 🔧 **subprocess** - Für Auto-Installation fehlender Pakete
 - 📋 **logging** - Für detaillierte Fehleranalyse und Nachvollziehbarkeit
 
-=
+---
 
 ## ⚙️ KONFIGURATION
 
