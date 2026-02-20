@@ -12,16 +12,16 @@
 
 ## 📖 Inhaltsverzeichnis
 
-- [✨ Features](#✨-features)
-- [🖼️ Screenshots](#️-screenshots)
-- [⚡ Quick Start](#⚡-quick-start)
-- [📁 Struktur](#📁-struktur)
-- [🚀 Tool](#🚀-tool)
-- [⚙️ Konfiguration](#⚙️-konfiguration)
-- [⚠️ Wichtige Hinweise](#⚠️-wichtige-hinweise)
-- [📝 Lizenz](#📝-lizenz)
-- [👤 Autor](#👤-autor)
-- [📊 Repository Statistik](#📊-repository-statistik)
+- [✨ FEATURES](#-features)
+- [🖼️ SCREENSHOTS](#️-screenshots)
+- [⚡ QUICK START](#-quick-start)
+- [📁 STRUKTUR](#-struktur)
+- [🚀 TOOL](#-tool)
+- [⚙️ KONFIGURATION](#️-konfiguration)
+- [⚠️ WICHTIGE HINWEISE](#️-wichtige-hinweise)
+- [📝 LIZENZ](#-lizenz)
+- [👤 AUTOR](#-autor)
+- [📊 REPOSITORY STATISTIK](#-repository-statistik)
 
 ---
 
