@@ -235,4 +235,4 @@ git commit -m "[Doc] README - Dokumentation erweitert"
 
 ---
 
-### 🔧 Made with ❤️ für Automatisierung
+### 🔧 Made with ❤️ on Automation
