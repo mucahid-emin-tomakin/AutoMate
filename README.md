@@ -172,7 +172,7 @@ git commit -m "[Doc] README - Dokumentation erweitert"
 | 📘 | Ergebnis-Datei |
 | 🗂️ | Archiv-Ordner |
 
-=
+---
 
 ## ⚠️ WICHTIGE HINWEISE
 
