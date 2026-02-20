@@ -130,7 +130,6 @@ WorkingTimeTracker/
 ### 🐍 Python
 
 #### 📦 **WorkingTimeTracker** ⏱️
-**Verwendet wurde:**
 - 🐍 **Python 3.11** - Hauptprogrammiersprache
 - 📊 **pandas** - Für das Einlesen und Verarbeiten von Excel/CSV-Dateien
 - 📗 **openpyxl** - Für Excel-Datei Unterstützung (.xlsx)
