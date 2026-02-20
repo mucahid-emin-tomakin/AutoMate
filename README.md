@@ -108,8 +108,6 @@ AutoMate/
 ```text
 Python/
 └── 📁 WorkingTimeTracker/
-    ├── 📄 WorkingTimeTracker.py
-    └── 📄 README.md
 ```
 
 ### 🐍 WorkingTimeTracker
