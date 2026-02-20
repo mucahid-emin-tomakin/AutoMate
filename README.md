@@ -176,17 +176,17 @@ git commit -m "[Doc] README - Dokumentation erweitert"
 ## ⚠️ WICHTIGE HINWEISE
 
 ### 🔒 Sicherheit
+- ⚠️ Keine sensiblen Daten (Passwörter, API-Keys) committen
+- ⚠️ Große Dateien (>100MB) nicht ins Repository
+- ⚠️ Immer input("Press Enter...") am Ende für GUI-Nutzer
+
+### 💡 Empfehlungen
 - ✅ Testen - Skripte vor dem Commit testen
 - ✅ Backup - Wichtige Daten vorher sichern
 - ✅ Dokumentation - Jedes Projekt mit README.md dokumentieren
 - ✅ Versionierung - Klare Commit-Nachrichten verwenden
 - ✅ Pfade - Relative Pfade verwenden, keine absoluten
 - ✅ Fehlerbehandlung - Immer try/except verwenden
-
-### 💡 Empfehlungen
-- ⚠️ Keine sensiblen Daten (Passwörter, API-Keys) committen
-- ⚠️ Große Dateien (>100MB) nicht ins Repository
-- ⚠️ Immer input("Press Enter...") am Ende für GUI-Nutzer
 - ✅ Auto-Installation für Abhängigkeiten einbauen
 - ✅ Logging für Fehleranalyse implementieren
 
