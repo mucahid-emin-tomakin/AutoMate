@@ -104,13 +104,14 @@ Archive/
 | 14:20     | 18:05 | 10:00     | 18:05 | 14:20     | 18:05 |
 
 ### ⏱️ Unterstützte Zeitformate
-| Format    | Beispiel  | Erkannt als  |
-| hh:mm:ss  | 13:20:00  | 13:20 |
-| hh:mm     | 13:20     | 13:20 |
-| hhmmss    | 132000    | 13:20 |
-| hhmm      | 1320      | 13:20 |
-| h / hh    | 9 oder 17 | 09:00 oder 17:00  |
-| Excel-Zahl| 11.0, 1705.0 | 11:00, 17:05   |
+| Format | Beispiel | Erkannt als |
+|--------|----------|-------------|
+| hh:mm:ss | 13:20:00 | 13:20 |
+| hh:mm | 13:20 | 13:20 |
+| hhmmss | 132000 | 13:20 |
+| hhmm | 1320 | 13:20 |
+| h / hh | 9 oder 17 | 09:00 oder 17:00 |
+| Excel-Zahl | 11.0, 1705.0 | 11:00, 17:05 |
 
 ---
 
