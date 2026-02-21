@@ -43,8 +43,8 @@
 
 | Datei | Beschreibung |
 |-------|-------------|
-| `result_YYYY.MM.DD_HH.MM.SS.txt` | Zusammenfassung + Tagesdetails |
-| `log_YYYY.MM.DD_HH.MM.SS.txt` | Vollständiges Ausführungslog |
+| `Result.txt` | Zusammenfassung + Tagesdetails |
+| `Log.txt` | Vollständiges Ausführungslog |
 | `Archive/` | Ordner mit allen generierten Dateien |
 
 ---
@@ -78,8 +78,8 @@ WorkingTimeTracker/
 ├── 📄 README.md
 └── 📁 Archive/
 └── 📁 YYYY.MM.DD_HH.MM.SS/
-├── 📄 result_.txt
-├── 📄 log_.txt
+├── 📄 Result.txt
+├── 📄 Log.txt
 └── 📄 WorkingTimeTracker*.xlsx (Original)
 ```
 
@@ -97,22 +97,20 @@ Archive/
 ## 📋 EINGABEFORMAT
 
 ### 📊 Excel/CSV Struktur
-```Text
-Employee1,,Employee2,,Employee3,,
-Start,Ende,Start,Ende,Start,Ende
-09:00,17:00,08:30,16:30,13:20,17:05
-14:20,18:05,10:00,18:05,14:20,18:05
-```
+| Employee1         | Employee2         | Employee3         |
+|-------------------|-------------------|-------------------|
+| Start     | Ende  | Start     | Ende  | Start     | Ende  |
+| 09:00     | 17:00 | 08:30     | 16:30 | 13:20     | 17:05 |
+| 14:20     | 18:05 | 10:00     | 18:05 | 14:20     | 18:05 |
 
 ### ⏱️ Unterstützte Zeitformate
-
-Format	Beispiel	Erkannt als
-hh:mm:ss	13:20:00	13:20
-hh:mm	13:20	13:20
-hhmmss	132000	13:20
-hhmm	1320	13:20
-h / hh	9 oder 17	09:00 oder 17:00
-Excel-Zahl	11.0, 1705.0	11:00, 17:05
+| Format    | Beispiel  | Erkannt als  |
+| hh:mm:ss  | 13:20:00  | 13:20 |
+| hh:mm     | 13:20     | 13:20 |
+| hhmmss    | 132000    | 13:20 |
+| hhmm      | 1320      | 13:20 |
+| h / hh    | 9 oder 17 | 09:00 oder 17:00  |
+| Excel-Zahl| 11.0, 1705.0 | 11:00, 17:05   |
 
 ---
 
@@ -204,7 +202,7 @@ RESULT_FILE_PREFIX = "Result"                   # Ergebnis-Präfix
 - ⚠️ Bei Absturz: Log-Datei prüfen!
 
 ### 💡 Tipps
-- ✅ Bei Problemen: log_*.txt im Archive-Ordner prüfen
+- ✅ Bei Problemen: log*.txt im Archive-Ordner prüfen
 - ✅ Bei Nachtschichten: Automatische Erkennung
 - ✅ Bei Formatfehlern: DEBUG-Ausgaben im Log
 
