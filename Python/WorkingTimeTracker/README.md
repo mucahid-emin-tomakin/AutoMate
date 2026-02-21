@@ -12,8 +12,8 @@
 ## 📖 Inhaltsverzeichnis
 
 - [✨ FEATURES](#-features)
-- [📁 STRUKTUR](#-struktur)
 - [⚡ QUICK START](#-quick-start)
+- [📁 STRUKTUR](#-struktur)
 - [📋 EINGABEFORMAT](#-eingabeformat)
 - [📊 BEISPIEL-AUSGABE](#-beispiel-ausgabe)
 - [⚙️ KONFIGURATION](#️-konfiguration)
@@ -49,6 +49,26 @@
 
 ---
 
+## ⚡ QUICK START
+
+```bash
+# 1. Repository klonen (falls nicht vorhanden)
+git clone https://github.com/mucahid-emin-tomakin/AutoMate.git
+cd AutoMate/Python/WorkingTimeTracker
+
+# 2. Excel/CSV-Datei mit "WorkingTimeTracker" im Namen bereitlegen
+#    Beispiel: WorkingTimeTracker.xlsx oder WorkingTimeTracker.csv
+
+# 3. Tool ausführen (installiert fehlende Pakete automatisch)
+python WorkingTimeTracker.py
+
+# 4. Ergebnis im Archive-Ordner prüfen
+cd Archive/2026.02.20_23.30.45/
+cat Result.txt
+```
+
+---
+
 ## 📁 STRUKTUR
 
 ### 📂 Hauptverzeichnis
@@ -74,26 +94,6 @@ Archive/
 
 ---
 
-## ⚡ QUICK START
-
-```bash
-# 1. Repository klonen (falls nicht vorhanden)
-git clone https://github.com/mucahid-emin-tomakin/AutoMate.git
-cd AutoMate/Python/WorkingTimeTracker
-
-# 2. Excel/CSV-Datei mit "WorkingTimeTracker" im Namen bereitlegen
-#    Beispiel: WorkingTimeTracker.xlsx oder WorkingTimeTracker.csv
-
-# 3. Tool ausführen (installiert fehlende Pakete automatisch)
-python WorkingTimeTracker.py
-
-# 4. Ergebnis im Archive-Ordner prüfen
-cd Archive/2026.02.20_23.30.45/
-cat Result.txt
-```
-
----
-
 ## 📋 EINGABEFORMAT
 
 ### 📊 Excel/CSV Struktur
@@ -104,9 +104,7 @@ Start,Ende,Start,Ende,Start,Ende
 14:20,18:05,10:00,18:05,14:20,18:05
 ```
 
----
-
-## ⏱️ Unterstützte Zeitformate
+### ⏱️ Unterstützte Zeitformate
 
 Format	Beispiel	Erkannt als
 hh:mm:ss	13:20:00	13:20
@@ -160,6 +158,8 @@ ALL EMPLOYEES                     145h 38m 24s       145.64         8738       5
 ===========================================================================================================================
 ```
 
+---
+
 ## ⚙️ KONFIGURATION
 
 Alle Einstellungen sind am Anfang der Datei:
@@ -175,6 +175,8 @@ LOG_FILE_PREFIX = "Log"                         # Log-Präfix
 RESULT_FILE_PREFIX = "Result"                   # Ergebnis-Präfix
 ```
 
+---
+
 ## 🐍 VERWENDETE BIBLIOTHEKEN
 - 🐍 **Python 3.11** - Hauptprogrammiersprache
 - 📊 **pandas** - Einlesen und Verarbeiten von Excel/CSV
@@ -185,8 +187,10 @@ RESULT_FILE_PREFIX = "Result"                   # Ergebnis-Präfix
 - 🔧 **subprocess** - Auto-Installation fehlender Pakete
 - 🔧 **glob** - Dateisuche mit Platzhaltern
 - 📋 **logging** - Für detaillierte Fehleranalyse und Nachvollziehbarkeit
-	
-##⚠️ WICHTIGE HINWEISE
+
+---
+
+## ⚠️ WICHTIGE HINWEISE
 
 ### 📌 Vor der Verwendung
 - ✅ Excel/CSV-Datei muss mit "Zaman" beginnen (Groß-/Kleinschreibung beachten!)
@@ -204,8 +208,14 @@ RESULT_FILE_PREFIX = "Result"                   # Ergebnis-Präfix
 - ✅ Bei Nachtschichten: Automatische Erkennung
 - ✅ Bei Formatfehlern: DEBUG-Ausgaben im Log
 
+---
+
 ## 📝 LIZENZ
   Dieses Projekt ist unter der **MIT License** lizenziert - frei für persönliche und kommerzielle Nutzung.
+
+---
+
+## 👤 AUTOR
 
 **Mücahid Emin Tomakin (TomaKing)**
 
@@ -216,4 +226,6 @@ RESULT_FILE_PREFIX = "Result"                   # Ergebnis-Präfix
 **Teil der AutoMate Familie:**
 🤖 AutoMate | 🔧 Automation Scripts | 🐍 Python | ⏱️ WorkingTimeTracker
 
-🔧 Made with ❤️ on Python
+---
+
+### 🔧 Made with ❤️ on Python
