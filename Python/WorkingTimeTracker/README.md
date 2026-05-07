@@ -77,7 +77,7 @@ Das Tool ist Teil der **AutoMate**-Familie und wird dort zusammen mit weiteren A
 | CSV / Excel (.xlsx) | Eingabeformate |
 | TXT / Log | Ausgabe & Nachvollziehbarkeit |
 
-### 🐍 VERWENDETE BIBLIOTHEKEN
+### 🐍 Verwendete Bibliotheken
 | Bibliothek | Zweck |
 |------------|-------|
 | 🐍 **Python 3.11** | Hauptprogrammiersprache |
