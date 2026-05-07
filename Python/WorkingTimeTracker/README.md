@@ -48,7 +48,6 @@ Das Tool ist Teil der **AutoMate**-Familie und wird dort zusammen mit weiteren A
 ## ✨ FEATURES
 
 ### ⏱️ Zeiterfassung & Berechnung
-
 | Feature | Beschreibung | Status |
 |---------|-------------|--------|
 | 📂 Datei-Unterstützung | Excel (.xlsx) & CSV Dateien | ✅ |
@@ -61,7 +60,6 @@ Das Tool ist Teil der **AutoMate**-Familie und wird dort zusammen mit weiteren A
 | 🔧 Auto-Installation | Fehlende Pakete werden installiert | ✅ |
 
 ### 📁 Was es generiert
-
 | Datei | Beschreibung |
 |-------|-------------|
 | `Result.txt` | Zusammenfassung + Tagesdetails |
@@ -72,16 +70,25 @@ Das Tool ist Teil der **AutoMate**-Familie und wird dort zusammen mit weiteren A
 
 ## 🚀 TOOL
 
+| Sprache / Format | Zweck |
+|------------------|-------|
+| Python 3.11+ | Kernlogik & Ausführung |
+| pandas, openpyxl, xlrd | Datenverarbeitung |
+| CSV / Excel (.xlsx) | Eingabeformate |
+| TXT / Log | Ausgabe & Nachvollziehbarkeit |
+
 ### 🐍 VERWENDETE BIBLIOTHEKEN
-- 🐍 **Python 3.11** - Hauptprogrammiersprache
-- 📊 **pandas** - Einlesen und Verarbeiten von Excel/CSV
-- 📗 **openpyxl** - Excel-Datei Unterstützung (.xlsx)
-- 📘 **xlrd** - Ältere Excel-Dateien (.xls)
-- 🗄️ **shutil** - Archivieren der Originaldateien
-- 📝 **datetime** - Zeitberechnungen und Zeitstempel
-- 🔧 **subprocess** - Auto-Installation fehlender Pakete
-- 🔧 **glob** - Dateisuche mit Platzhaltern
-- 📋 **logging** - Für detaillierte Fehleranalyse und Nachvollziehbarkeit
+| Bibliothek | Zweck |
+|------------|-------|
+| 🐍 **Python 3.11** | Hauptprogrammiersprache |
+| 📊 **pandas** | Einlesen und Verarbeiten von Excel/CSV |
+| 📗 **openpyxl** | Excel-Datei Unterstützung (.xlsx) |
+| 📘 **xlrd** | Ältere Excel-Dateien (.xls) |
+| 🗄️ **shutil** | Archivieren der Originaldateien |
+| 📝 **datetime** | Zeitberechnungen und Zeitstempel |
+| 🔧 **subprocess** | Auto-Installation fehlender Pakete |
+| 🔧 **glob** | Dateisuche mit Platzhaltern |
+| 📋 **logging** | Für detaillierte Fehleranalyse und Nachvollziehbarkeit |
 
 ---
 
@@ -106,23 +113,67 @@ RESULT_FILE_PREFIX = "Result"                   # Ergebnis-Präfix
 
 ### 📂 Hauptverzeichnis
 ```Text
-WorkingTimeTracker/
-├── 📄 WorkingTimeTracker.py
-├── 📄 README.md
-└── 📁 Archive/
-└── 📁 YYYY.MM.DD_HH.MM.SS/
-├── 📄 Result.txt
-├── 📄 Log.txt
-└── 📄 WorkingTimeTracker*.xlsx (Original)
+⏱️ WorkingTimeTracker/
+├── 🐍 WorkingTimeTracker.py
+├── 🐍 WorkingTimeTracker - NoComment.py
+├── 🐍 WorkingTimeTracker - Turkish.py
+├── 🐍 WorkingTimeTracker - MesaiCizelgesi.py
+├── 🐍 WorkingTimeTracker - MesaiCizelgesiNoLog.py
+└── 📄 README.md
+
 ```
 
-### 🗂️ Archiv-Ordner (Beispiel)
-```Text
-Archive/
-└── 📁 2026.02.20_23.30.45/
-├── 📄 Result.txt
-├── 📄 Log.txt
-└── 📄 WorkingTimeTracker.xlsx
+### 🐍 WorkingTimeTracker - Beispiel Run
+```text
+⏱️ WorkingTimeTracker/
+├── 🐍 WorkingTimeTracker.py
+├── 📊 WorkingTimeTracker.xlsx
+└── 📄 README.md
+└── 📁 Archive/
+    └── 📁 YYYY.MM.DD_HH.MM.SS/
+        ├── 📘 Result.txt
+        ├── 📘 Log.txt
+        └── 📊 WorkingTimeTracker.xlsx
+```
+
+### 📁 Struktur-Legende
+```text
+⏱️ WorkingTimeTracker/
+├── 🐍 .py                    # Python-Skripte (Hauptprogramm & Varianten)
+├── 📄 README.md              # Projektbeschreibung (diese Datei)
+├── 📘 .txt                   # Log-Dateien
+├── 📊 .xlsx                  # Excel-Eingabedatei
+└── 🗂️ Archive/               # Ergebnisse & Kopien (automatisch erstellt)
+```
+
+---
+
+## ⚡ QUICK START
+
+### 📦 Git & GitHub
+```bash
+# 1. Repository klonen
+git clone https://github.com/mucahid-emin-tomakin/AutoMate.git
+cd AutoMate
+
+# 2. In den ein Projektfodler wechseln
+cd AutoMate/Python/WorkingTimeTracker
+
+# 3. Tool ausführen (installiert fehlende Pakete automatisch)
+python WorkingTimeTracker.py
+
+# 4. Ergebnis im automatisch erstellten Archive-Ordner prüfen
+cd Archive/YYYY.MM.DD_HH.MM.SS/
+cat Result.txt
+```
+
+### 🐍 Python virtueller Umgebung
+```bash
+# Mit virtueller Umgebung
+python -m venv venv
+source venv/bin/activate  # Linux/Mac
+venv\Scripts\activate     # Windows
+pip install -r requirements.txt
 ```
 
 ---
@@ -199,26 +250,6 @@ ALL EMPLOYEES                     145h 38m 24s       145.64         8738       5
 | hhmm | 1320 | 13:20 |
 | h / hh | 9 oder 17 | 09:00 oder 17:00 |
 | Excel-Zahl | 11.0, 1705.0 | 11:00, 17:05 |
-
----
-
-## ⚡ QUICK START
-
-```bash
-# 1. Repository klonen (falls nicht vorhanden)
-git clone https://github.com/mucahid-emin-tomakin/AutoMate.git
-cd AutoMate/Python/WorkingTimeTracker
-
-# 2. Excel/CSV-Datei mit "WorkingTimeTracker" im Namen bereitlegen
-#    Beispiel: WorkingTimeTracker.xlsx oder WorkingTimeTracker.csv
-
-# 3. Tool ausführen (installiert fehlende Pakete automatisch)
-python WorkingTimeTracker.py
-
-# 4. Ergebnis im Archive-Ordner prüfen
-cd Archive/2026.02.20_23.30.45/
-cat Result.txt
-```
 
 ---
 
