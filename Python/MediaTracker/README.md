@@ -161,10 +161,12 @@ cd AutoMate
 # 2. In den ein Projektfodler wechseln
 cd AutoMate/Python/MediaTracker
 
-# 3. Tool ausführen (installiert fehlende Pakete automatisch)
+# 3. Konfiguration anpassen (root_folder, BACKUP_TIMESTAMP_FORMAT)
+
+# 4. Tool ausführen (installiert fehlende Pakete automatisch)
 python MediaTracker.py
 
-# 4. Ergebnis prüfen
+# 5. Ergebnis prüfen
 #    → NAME.txt öffnet sich im konfigurierten Ordner
 #    → error_log.txt nur bei Problemen
 ```
