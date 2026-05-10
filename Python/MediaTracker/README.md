@@ -177,6 +177,7 @@ python MediaTracker.py
 python -m venv venv
 source venv/bin/activate  # Linux/Mac
 venv\Scripts\activate     # Windows
+python MediaTracker.py
 ```
 
 ---
