@@ -86,8 +86,8 @@ Alle Einstellungen sind am Anfang der Datei:
 # ============================== CONFIGURATION ==============================
 
 FOLDER_PATH = r"C:\Users\USER\Documents\Projekte"     # Zielverzeichnis
-FOLDER_NAMES = "Ordner1;Ordner2;Ordner3"               # Semikolongetrennte Namensliste
-FILE_ENCODING = "utf-8"                                 # Zeichenkodierung
+FOLDER_NAMES = "Ordner1;Ordner2;Ordner3"              # Semikolongetrennte Namensliste
+FILE_ENCODING = "utf-8"                               # Zeichenkodierung
 ```
 
 ---
