@@ -42,6 +42,10 @@ Das Repository wächst kontinuierlich – neue Automatisierungen werden laufend 
 | Projekt | Inhalte & Schwerpunkte | Status |
 |---------------------|--------------|--------|
 | ⏱️ **WorkingTimeTracker** | Arbeitszeiterfassung aus Excel/CSV mit automatischer Archivierung | ✅ |
+| 🎬 **MediaTracker** | Video-Bibliotheksanalyse mit ffprobe & Multithreading | ✅ |
+| 🔄 **CopySync** | 1:1-Festplattensynchronisation mit SHA-256-Hash | ✅ |
+| 🔨 **FolderForge** | Ordner-Stapelerstellung aus Namensliste | ✅ |
+| 🔄 **NameShift** | Ordner & Dateien umbenennen + Dateiliste exportieren | ✅ |
 
 *Jedes fertige Projekt besitzt ein eigenes `README.md` mit Quick-Start und Konfiguration.*
 
@@ -67,6 +71,10 @@ Das Repository wächst kontinuierlich – neue Automatisierungen werden laufend 
 🤖 AutoMate/
 ├── 🐍 Python/
 │   └── ⏱️ WorkingTimeTracker/
+│   ├── 🎬 MediaTracker/
+│   ├── 🔄 CopySync/
+│   ├── 🔨 FolderForge/
+│   └── 🔄 NameShift/
 └── 📄 README.md
 ```
 
@@ -144,8 +152,9 @@ cat Result.txt
 - ⏱️ Zeiterfassung & Reporting
 - 📊 Excel/CSV Datenverarbeitung
 - 📁 Datei- & Ordner-Automatisierung
-- 🔄 Wiederkehrende Tasks automatisieren
-- ⚙️ System-Wartung & Backup
+- 🔄 Festplatten-Synchronisation & Backup
+- 🎬 Medien-Bibliotheksanalyse
+- ⚙️ System-Wartung & Automatisierung
 
 ---
 
