@@ -293,7 +293,7 @@ cd AutomationAnywhere/TTSFactory
 ## 🖼️ SCREENSHOTS
 
 ### 🎬 DemoWorkflow.mp4
-![DemoWorkflow](https://github.com/mucahid-emin-tomakin/AutoMate/blob/main/AutomationAnywhere/TTSFactory/DemoWorkflow.mp4)
+<video src="https://github.com/mucahid-emin-tomakin/AutoMate/raw/main/AutomationAnywhere/TTSFactory/DemoWorkflow.mp4" controls width="100%"></video>
 > **Hinweis:** Das Video zeigt die Ausführung des Main‑Bots und das Ergebnis (MP3 + Main.csv).
 
 ---
