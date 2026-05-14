@@ -1,0 +1,2941 @@
+{
+  "triggers": [],
+  "nodes": [
+    {
+      "uid": "311c2a33-314a-4cba-b06e-f1510987e098",
+      "commandName": "toString",
+      "packageName": "Datetime",
+      "disabled": false,
+      "attributes": [
+        {
+          "name": "source",
+          "value": {
+            "type": "DATETIME",
+            "expression": "$System:Date$"
+          }
+        },
+        {
+          "name": "selectPattern",
+          "value": {
+            "type": "STRING",
+            "string": "CUSTOM"
+          }
+        },
+        {
+          "name": "patternInput",
+          "value": {
+            "type": "STRING",
+            "expression": "$stringDateTimeFormat$"
+          }
+        }
+      ],
+      "returnTo": {
+        "type": "VARIABLE",
+        "variableName": "stringLogTextGenerator"
+      }
+    },
+    {
+      "uid": "e6faeb03-c1cc-4de7-8619-ea8dcd400b88",
+      "commandName": "try",
+      "packageName": "ErrorHandler",
+      "children": [
+        {
+          "uid": "82a33162-a3a8-4685-b1f3-bacb5fbf9395",
+          "commandName": "step",
+          "packageName": "Step",
+          "children": [
+            {
+              "uid": "80b6dcf3-992e-43cd-ac3d-21ac1efd4745",
+              "commandName": "replace",
+              "packageName": "String",
+              "disabled": false,
+              "attributes": [
+                {
+                  "name": "sourceString",
+                  "value": {
+                    "type": "STRING",
+                    "expression": "$stringPromptGeneratorChatGPT$"
+                  }
+                },
+                {
+                  "name": "find",
+                  "value": {
+                    "type": "STRING",
+                    "expression": "$String:Enter$"
+                  }
+                },
+                {
+                  "name": "isCaseSensitive",
+                  "value": {
+                    "type": "STRING",
+                    "string": "false"
+                  }
+                },
+                {
+                  "name": "isRegularExpression",
+                  "value": {
+                    "type": "STRING",
+                    "string": "false"
+                  }
+                },
+                {
+                  "name": "startIndex",
+                  "value": {
+                    "type": "NUMBER",
+                    "number": "1"
+                  }
+                },
+                {
+                  "name": "count",
+                  "value": {
+                    "type": "NUMBER",
+                    "number": "-1"
+                  }
+                },
+                {
+                  "name": "replaceWith",
+                  "value": {
+                    "type": "STRING",
+                    "string": ""
+                  }
+                }
+              ],
+              "returnTo": {
+                "type": "VARIABLE",
+                "variableName": "stringPromptGeneratorChatGPT"
+              }
+            },
+            {
+              "uid": "bcfc1bc4-ad2b-4f95-b774-f094718feca8",
+              "commandName": "replace",
+              "packageName": "String",
+              "disabled": false,
+              "attributes": [
+                {
+                  "name": "sourceString",
+                  "value": {
+                    "type": "STRING",
+                    "expression": "$stringPromptGeneratorChatGPT$"
+                  }
+                },
+                {
+                  "name": "find",
+                  "value": {
+                    "type": "STRING",
+                    "expression": "$String:Newline$"
+                  }
+                },
+                {
+                  "name": "isCaseSensitive",
+                  "value": {
+                    "type": "STRING",
+                    "string": "false"
+                  }
+                },
+                {
+                  "name": "isRegularExpression",
+                  "value": {
+                    "type": "STRING",
+                    "string": "false"
+                  }
+                },
+                {
+                  "name": "startIndex",
+                  "value": {
+                    "type": "NUMBER",
+                    "number": "1"
+                  }
+                },
+                {
+                  "name": "count",
+                  "value": {
+                    "type": "NUMBER",
+                    "number": "-1"
+                  }
+                },
+                {
+                  "name": "replaceWith",
+                  "value": {
+                    "type": "STRING",
+                    "string": ""
+                  }
+                }
+              ],
+              "returnTo": {
+                "type": "VARIABLE",
+                "variableName": "stringPromptGeneratorChatGPT"
+              }
+            },
+            {
+              "uid": "d9deee66-8f4a-4237-8cf9-0618c0ec6f63",
+              "commandName": "replace",
+              "packageName": "String",
+              "disabled": false,
+              "attributes": [
+                {
+                  "name": "sourceString",
+                  "value": {
+                    "type": "STRING",
+                    "expression": "$stringTextGeneratorPrompt$"
+                  }
+                },
+                {
+                  "name": "find",
+                  "value": {
+                    "type": "STRING",
+                    "string": ">>>stringPromptGeneratorChatGPT<<<"
+                  }
+                },
+                {
+                  "name": "isCaseSensitive",
+                  "value": {
+                    "type": "STRING",
+                    "string": "true"
+                  }
+                },
+                {
+                  "name": "isRegularExpression",
+                  "value": {
+                    "type": "STRING",
+                    "string": "false"
+                  }
+                },
+                {
+                  "name": "startIndex",
+                  "value": {
+                    "type": "NUMBER",
+                    "number": "1"
+                  }
+                },
+                {
+                  "name": "count",
+                  "value": {
+                    "type": "NUMBER",
+                    "number": "-1"
+                  }
+                },
+                {
+                  "name": "replaceWith",
+                  "value": {
+                    "type": "STRING",
+                    "expression": "$stringPromptGeneratorChatGPT$"
+                  }
+                }
+              ],
+              "returnTo": {
+                "type": "VARIABLE",
+                "variableName": "stringTextGeneratorPrompt"
+              }
+            }
+          ],
+          "disabled": false,
+          "attributes": [
+            {
+              "name": "title",
+              "value": {
+                "type": "STRING",
+                "string": "PreConfiguration"
+              }
+            }
+          ]
+        },
+        {
+          "uid": "e11a4a8e-4ffa-4c0f-a4f2-b61b87eb5907",
+          "commandName": "step",
+          "packageName": "Step",
+          "children": [
+            {
+              "uid": "c5abf8e0-91e5-470c-a381-f01acef313c7",
+              "commandName": "loop.commands.start",
+              "packageName": "Loop",
+              "children": [
+                {
+                  "uid": "05634043-4120-4f2d-83ef-fa9a83cc85e4",
+                  "commandName": "if",
+                  "packageName": "If",
+                  "children": [
+                    {
+                      "uid": "663d3ce7-bc2c-4e46-9a42-94a51013089b",
+                      "commandName": "close",
+                      "packageName": "Browser",
+                      "disabled": false,
+                      "attributes": [
+                        {
+                          "name": "whatToClose",
+                          "value": {
+                            "type": "STRING",
+                            "string": "Tab"
+                          }
+                        },
+                        {
+                          "name": "tabValue",
+                          "value": {
+                            "type": "WINDOW",
+                            "expression": "$windowChatGPT$"
+                          }
+                        },
+                        {
+                          "name": "timeoutValue",
+                          "value": {
+                            "type": "NUMBER",
+                            "expression": "$numberWaitForCondition$"
+                          }
+                        },
+                        {
+                          "name": "version",
+                          "value": {
+                            "type": "NUMBER",
+                            "number": "3810"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "uid": "84e3196b-32a9-4ac1-979a-9c3588aeab6e",
+                      "commandName": "waitForCondition",
+                      "packageName": "Wait",
+                      "disabled": false,
+                      "attributes": [
+                        {
+                          "attributes": [
+                            {
+                              "name": "window",
+                              "value": {
+                                "type": "WINDOW",
+                                "expression": "$windowChatGPT$"
+                              }
+                            },
+                            {
+                              "name": "waitTimeout",
+                              "value": {
+                                "type": "NUMBER",
+                                "expression": "$numberWaitForCondition$"
+                              }
+                            }
+                          ],
+                          "name": "conditionPredicate",
+                          "value": {
+                            "type": "CONDITIONAL",
+                            "conditionalName": "windowNotExists",
+                            "packageName": "Window"
+                          }
+                        }
+                      ]
+                    }
+                  ],
+                  "branches": [],
+                  "disabled": false,
+                  "attributes": [
+                    {
+                      "attributes": [
+                        {
+                          "name": "window",
+                          "value": {
+                            "type": "WINDOW",
+                            "expression": "$windowChatGPT$"
+                          }
+                        },
+                        {
+                          "name": "waitTimeout",
+                          "value": {
+                            "type": "NUMBER",
+                            "expression": "$numberWaitForCondition$"
+                          }
+                        }
+                      ],
+                      "name": "condition",
+                      "value": {
+                        "type": "CONDITIONAL",
+                        "conditionalName": "windowExists",
+                        "packageName": "Window"
+                      }
+                    }
+                  ]
+                }
+              ],
+              "disabled": false,
+              "attributes": [
+                {
+                  "name": "loopType",
+                  "value": {
+                    "type": "STRING",
+                    "string": "WHILE"
+                  }
+                },
+                {
+                  "attributes": [
+                    {
+                      "name": "window",
+                      "value": {
+                        "type": "WINDOW",
+                        "expression": "$windowChatGPT$"
+                      }
+                    },
+                    {
+                      "name": "waitTimeout",
+                      "value": {
+                        "type": "NUMBER",
+                        "expression": "$numberWaitForCondition$"
+                      }
+                    }
+                  ],
+                  "name": "condition",
+                  "value": {
+                    "type": "CONDITIONAL",
+                    "conditionalName": "windowExists",
+                    "packageName": "Window"
+                  }
+                },
+                {
+                  "name": "checkConditionAtEnd",
+                  "value": {
+                    "type": "BOOLEAN",
+                    "boolean": false
+                  }
+                }
+              ]
+            },
+            {
+              "uid": "6d80bb6a-c94f-4719-9344-96ba0e209748",
+              "commandName": "clearClipboard",
+              "packageName": "Clipboard",
+              "disabled": false
+            },
+            {
+              "uid": "f567d6a6-cea7-4df2-b6e5-c846e93e77be",
+              "commandName": "if",
+              "packageName": "If",
+              "children": [
+                {
+                  "uid": "f1bdb3ed-9abd-4997-a728-b26337da19bf",
+                  "commandName": "openbrowser",
+                  "packageName": "Browser",
+                  "disabled": false,
+                  "attributes": [
+                    {
+                      "name": "openOption",
+                      "value": {
+                        "type": "STRING",
+                        "string": "NEW_WIN"
+                      }
+                    },
+                    {
+                      "name": "browser",
+                      "value": {
+                        "type": "STRING",
+                        "string": "CHROME"
+                      }
+                    },
+                    {
+                      "name": "url",
+                      "value": {
+                        "type": "STRING",
+                        "string": "https://chatgpt.com/?temporary-chat=true"
+                      }
+                    },
+                    {
+                      "name": "timeoutValue",
+                      "value": {
+                        "type": "NUMBER",
+                        "expression": "$numberWaitForCondition$+8"
+                      }
+                    },
+                    {
+                      "name": "version",
+                      "value": {
+                        "type": "NUMBER",
+                        "number": "3810"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "uid": "b492099c-3a52-41b9-8716-8f6a36b7aa69",
+                  "commandName": "waitForWindow",
+                  "packageName": "Wait",
+                  "disabled": false,
+                  "attributes": [
+                    {
+                      "name": "waitType",
+                      "value": {
+                        "type": "STRING",
+                        "string": "OPEN"
+                      }
+                    },
+                    {
+                      "name": "window",
+                      "value": {
+                        "type": "WINDOW",
+                        "expression": "$windowChatGPT$"
+                      }
+                    },
+                    {
+                      "name": "waitTimeout",
+                      "value": {
+                        "type": "NUMBER",
+                        "expression": "$numberWaitForCondition$"
+                      }
+                    },
+                    {
+                      "name": "isThrowException",
+                      "value": {
+                        "type": "BOOLEAN",
+                        "boolean": false
+                      }
+                    }
+                  ]
+                },
+                {
+                  "uid": "297685dc-96cb-477f-864d-c2d0ca1fa479",
+                  "commandName": "activateWindow",
+                  "packageName": "Window",
+                  "disabled": false,
+                  "attributes": [
+                    {
+                      "name": "window",
+                      "value": {
+                        "type": "WINDOW",
+                        "expression": "$windowChatGPT$"
+                      }
+                    }
+                  ]
+                }
+              ],
+              "branches": [],
+              "disabled": false,
+              "attributes": [
+                {
+                  "attributes": [
+                    {
+                      "name": "window",
+                      "value": {
+                        "type": "WINDOW",
+                        "expression": "$windowChatGPT$"
+                      }
+                    },
+                    {
+                      "name": "waitTimeout",
+                      "value": {
+                        "type": "NUMBER",
+                        "expression": "$numberWaitForCondition$"
+                      }
+                    }
+                  ],
+                  "name": "condition",
+                  "value": {
+                    "type": "CONDITIONAL",
+                    "conditionalName": "windowNotExists",
+                    "packageName": "Window"
+                  }
+                }
+              ]
+            },
+            {
+              "uid": "1adefe83-6c6f-4a36-beb8-8081ebd8aaaf",
+              "commandName": "capture",
+              "packageName": "Recorder",
+              "disabled": false,
+              "attributes": [
+                {
+                  "name": "uiObject",
+                  "value": {
+                    "type": "UIOBJECT",
+                    "uiObject": {
+                      "blob": "eyJvYmpOb2RlIjp7InVuaXF1ZUlEIjoiMDZlZmJmZWEtZmY3MC00YzJkLTk5NjQtMWYwNGYzNGFkOWI5IiwiaWQiOiIiLCJuYW1lIjoiIiwidmFsdWUiOiIiLCJjbGFzcyI6IiIsInBhcmVudCI6IiIsIndpbmRvd1RpdGxlIjoiIiwicGF0aCI6eyJvYmpQYXRoIjpbeyJpbmRleCI6Nn0seyJpbmRleCI6MX0seyJpbmRleCI6MX0seyJpbmRleCI6MX0seyJpbmRleCI6LTF9LHsiaW5kZXgiOjF9LHsiaW5kZXgiOi0xfSx7ImluZGV4IjoxfSx7ImluZGV4IjoxfSx7ImluZGV4IjotMX0seyJpbmRleCI6MX0seyJpbmRleCI6MX0seyJpbmRleCI6MX0seyJpbmRleCI6MX0seyJpbmRleCI6MX0seyJpbmRleCI6Mn0seyJpbmRleCI6MX0seyJpbmRleCI6LTF9LHsiaW5kZXgiOjF9LHsiaW5kZXgiOjJ9XX0sInJvbGUiOjI1LCJpbmRleCI6MCwibGVmdCI6NzA4LCJ0b3AiOjUzMiwid2lkdGgiOjc5MywiaGVpZ2h0Ijo3MCwiY2xpY2tYIjo1LCJjbGlja1kiOjE4LCJkZXNjcmlwdGlvbiI6IiIsInN0YXRlcyI6IiIsImRlZmF1bHRBY3Rpb24iOiIiLCJ0ZWNobm9sb2d5Ijp7InRlY2hUeXBlIjo2LCJwbGF0Zm9ybVR5cGUiOjEyLCJhcHBsaWNhdGlvblR5cGUiOjMsInByb2Nlc3NJRCI6IlRBLUNCUy1DSFJPTUUtQUdFTlQiLCJ3aW5IYW5kbGUiOiIiLCJvY3JFbmdpbmUiOm51bGwsImlzQWR2YW5jZWRDYXB0dXJlIjpmYWxzZSwiaXNTaWx2ZXJsaWdodFRlY2hub2xvZ3kiOmZhbHNlfSwiYWN0aW9ucyI6bnVsbCwicHJvcGVydGllcyI6W3sibmFtZSI6IkRPTVhQYXRoIiwidmFsdWUiOiIvL2RpdltAaWQ9J3RocmVhZC1ib3R0b20nXS9kaXZbMV0vZGl2WzFdL2RpdlsxXS9kaXZbMV0vZGl2WzJdL2Zvcm1bMV0vZGl2WzJdL2RpdlsxXS9kaXZbMl0ifSx7Im5hbWUiOiJDU1MgU2VsZWN0b3IiLCJ2YWx1ZSI6ImRpdiN0aHJlYWQtYm90dG9tPmRpdj5kaXY+ZGl2PmRpdj5kaXY6bnRoLW9mLXR5cGUoMik+Zm9ybT5kaXY6bnRoLW9mLXR5cGUoMik+ZGl2PmRpdjpudGgtb2YtdHlwZSgyKSJ9LHsibmFtZSI6IkhUTUwgSUQiLCJ2YWx1ZSI6IiJ9LHsibmFtZSI6IkhUTUwgTmFtZSIsInZhbHVlIjoiIn0seyJuYW1lIjoiSFRNTCBBbHQiLCJ2YWx1ZSI6IiJ9LHsibmFtZSI6IkhUTUwgVGFnIiwidmFsdWUiOiJESVYifSx7Im5hbWUiOiJIVE1MIENsYXNzIiwidmFsdWUiOiItbXktMi41IGZsZXggbWluLWgtMTQgaXRlbXMtY2VudGVyIG92ZXJmbG93LXgtaGlkZGVuIHB4LTEuNSBbZ3JpZC1hcmVhOnByaW1hcnldIGdyb3VwLWRhdGEtZXhwYW5kZWQvY29tcG9zZXI6bWItMCBncm91cC1kYXRhLWV4cGFuZGVkL2NvbXBvc2VyOnB4LTIuNSJ9LHsibmFtZSI6IkhUTUwgSW5uZXJUZXh0IiwidmFsdWUiOiJ3aW5kb3cuX19vYWlfbG9nSFRNTD93aW5kb3cuX19vYWlfbG9nSFRNTCgpOndpbmRvdy5fX29haV9TU1JfSFRNTD13aW5kb3cuX19vYWlfU1NSX0hUTUx8fERhdGUubm93KCk7cmVxdWVzdEFuaW1hdGlvbkZyYW1lKChmdW5jdGlvbigpe3dpbmRvdy5fX29haV9sb2dUVEk/d2luZG93Ll9fb2FpX2xvZ1RUSSgpOndpbmRvdy5fX29haV9TU1JfVFRJPXdpbmRvdy5fX29haV9TU1JfVFRJfHxEYXRlLm5vdygpfSkpIn0seyJuYW1lIjoiSFRNTCBTb3VyY2VJbmRleCIsInZhbHVlIjoiMCJ9LHsibmFtZSI6IkhUTUwgSHJlZiIsInZhbHVlIjoiIn0seyJuYW1lIjoiSFRNTCBUeXBlIiwidmFsdWUiOiIifSx7Im5hbWUiOiJIVE1MIFZhbHVlIiwidmFsdWUiOiIifSx7Im5hbWUiOiJIVE1MIENsYXNzSWQiLCJ2YWx1ZSI6IiJ9LHsibmFtZSI6IkhUTUwgVGl0bGUiLCJ2YWx1ZSI6IiJ9LHsibmFtZSI6IkhUTUwgSGVpZ2h0IiwidmFsdWUiOiI3MCJ9LHsibmFtZSI6IkhUTUwgV2lkdGgiLCJ2YWx1ZSI6Ijc5MyJ9LHsibmFtZSI6IkhUTUwgVGFnSW5kZXgiLCJ2YWx1ZSI6IjEzOSJ9LHsibmFtZSI6IkhUTUwgVG9wIiwidmFsdWUiOiIyOTkifSx7Im5hbWUiOiJIVE1MIExlZnQiLCJ2YWx1ZSI6IjU2MCJ9LHsibmFtZSI6IkhUTUwgSGFzRnJhbWUiLCJ2YWx1ZSI6ImZhbHNlIn0seyJuYW1lIjoiSFRNTCBGcmFtZVNyYyIsInZhbHVlIjoiaHR0cHM6Ly9jaGF0Z3B0LmNvbS8/dGVtcG9yYXJ5LWNoYXQ9dHJ1ZSJ9LHsibmFtZSI6IkhUTUwgRnJhbWVOYW1lIiwidmFsdWUiOiIifSx7Im5hbWUiOiJIVE1MIEZyYW1lUGF0aCIsInZhbHVlIjoiIn0seyJuYW1lIjoiaW5uZXJIVE1MIiwidmFsdWUiOiI8ZGl2IGNsYXNzPVwid2NEVGRhX3Byb3NlbWlycm9yLXBhcmVudCB0ZXh0LXRva2VuLXRleHQtcHJpbWFyeSBtYXgtaC1bbWF4KDMwc3ZoLDVyZW0pXSBtYXgtaC01MiBtaW4taC1bdmFyKC0tZGVlcC1yZXNlYXJjaC1jb21wb3Nlci1leHRyYS1oZWlnaHQsdW5zZXQpXSBmbGV4LTEgb3ZlcmZsb3ctYXV0byBbc2Nyb2xsYmFyLXdpZHRoOnRoaW5dIGRlZmF1bHQtYnJvd3NlciB2ZXJ0aWNhbC1zY3JvbGwtZmFkZS1tYXNrXCI+PHRleHRhcmVhIGNsYXNzPVwid2NEVGRhX2ZhbGxiYWNrVGV4dGFyZWFcIiBuYW1lPVwicHJvbXB0LXRleHRhcmVhXCIgYXV0b2ZvY3VzPVwiXCIgcGxhY2Vob2xkZXI9XCJTdGVsbGUgaXJnZW5kZWluZSBGcmFnZVwiIGFyaWEtbGFiZWw9XCJNaXQgQ2hhdEdQVCBjaGF0dGVuXCIgZGF0YS12aXJ0dWFsa2V5Ym9hcmQ9XCJ0cnVlXCIgc3R5bGU9XCJkaXNwbGF5OiBub25lO1wiPjwvdGV4dGFyZWE+PHNjcmlwdCBub25jZT1cIlwiPndpbmRvdy5fX29haV9sb2dIVE1MP3dpbmRvdy5fX29haV9sb2dIVE1MKCk6d2luZG93Ll9fb2FpX1NTUl9IVE1MPXdpbmRvdy5fX29haV9TU1JfSFRNTHx8RGF0ZS5ub3coKTtyZXF1ZXN0QW5pbWF0aW9uRnJhbWUoKGZ1bmN0aW9uKCl7d2luZG93Ll9fb2FpX2xvZ1RUST93aW5kb3cuX19vYWlfbG9nVFRJKCk6d2luZG93Ll9fb2FpX1NTUl9UVEk9d2luZG93Ll9fb2FpX1NTUl9UVEl8fERhdGUubm93KCl9KSk8L3NjcmlwdD48ZGl2IGNvbnRlbnRlZGl0YWJsZT1cInRydWVcIiB0cmFuc2xhdGU9XCJub1wiIGNsYXNzPVwiUHJvc2VNaXJyb3IgUHJvc2VNaXJyb3ItZm9jdXNlZFwiIGlkPVwicHJvbXB0LXRleHRhcmVhXCIgZGF0YS12aXJ0dWFsa2V5Ym9hcmQ9XCJ0cnVlXCIgcm9sZT1cInRleHRib3hcIiBhcmlhLW11bHRpbGluZT1cInRydWVcIiBhcmlhLWxhYmVsPVwiTWl0IENoYXRHUFQgY2hhdHRlblwiPjxwIGRhdGEtcGxhY2Vob2xkZXI9XCJTdGVsbGUgaXJnZW5kZWluZSBGcmFnZVwiIGNsYXNzPVwicGxhY2Vob2xkZXJcIj48YnIgY2xhc3M9XCJQcm9zZU1pcnJvci10In0seyJuYW1lIjoib3V0ZXJIVE1MIiwidmFsdWUiOiI8ZGl2IGNsYXNzPVwiLW15LTIuNSBmbGV4IG1pbi1oLTE0IGl0ZW1zLWNlbnRlciBvdmVyZmxvdy14LWhpZGRlbiBweC0xLjUgW2dyaWQtYXJlYTpwcmltYXJ5XSBncm91cC1kYXRhLWV4cGFuZGVkL2NvbXBvc2VyOm1iLTAgZ3JvdXAtZGF0YS1leHBhbmRlZC9jb21wb3NlcjpweC0yLjVcIj48ZGl2IGNsYXNzPVwid2NEVGRhX3Byb3NlbWlycm9yLXBhcmVudCB0ZXh0LXRva2VuLXRleHQtcHJpbWFyeSBtYXgtaC1bbWF4KDMwc3ZoLDVyZW0pXSBtYXgtaC01MiBtaW4taC1bdmFyKC0tZGVlcC1yZXNlYXJjaC1jb21wb3Nlci1leHRyYS1oZWlnaHQsdW5zZXQpXSBmbGV4LTEgb3ZlcmZsb3ctYXV0byBbc2Nyb2xsYmFyLXdpZHRoOnRoaW5dIGRlZmF1bHQtYnJvd3NlciB2ZXJ0aWNhbC1zY3JvbGwtZmFkZS1tYXNrXCI+PHRleHRhcmVhIGNsYXNzPVwid2NEVGRhX2ZhbGxiYWNrVGV4dGFyZWFcIiBuYW1lPVwicHJvbXB0LXRleHRhcmVhXCIgYXV0b2ZvY3VzPVwiXCIgcGxhY2Vob2xkZXI9XCJTdGVsbGUgaXJnZW5kZWluZSBGcmFnZVwiIGFyaWEtbGFiZWw9XCJNaXQgQ2hhdEdQVCBjaGF0dGVuXCIgZGF0YS12aXJ0dWFsa2V5Ym9hcmQ9XCJ0cnVlXCIgc3R5bGU9XCJkaXNwbGF5OiBub25lO1wiPjwvdGV4dGFyZWE+PHNjcmlwdCBub25jZT1cIlwiPndpbmRvdy5fX29haV9sb2dIVE1MP3dpbmRvdy5fX29haV9sb2dIVE1MKCk6d2luZG93Ll9fb2FpX1NTUl9IVE1MPXdpbmRvdy5fX29haV9TU1JfSFRNTHx8RGF0ZS5ub3coKTtyZXF1ZXN0QW5pbWF0aW9uRnJhbWUoKGZ1bmN0aW9uKCl7d2luZG93Ll9fb2FpX2xvZ1RUST93aW5kb3cuX19vYWlfbG9nVFRJKCk6d2luZG93Ll9fb2FpX1NTUl9UVEk9d2luZG93Ll9fb2FpX1NTUl9UVEl8fERhdGUubm93KCl9KSk8L3NjcmlwdD48ZGl2IGNvbnRlbnRlZGl0YWJsZT1cInRydWVcIiB0cmFuc2xhdGU9XCJub1wiIGNsYXNzPVwiUHJvc2VNaXJyb3IgUHJvc2VNaXJyb3ItZm9jdXNlZFwiIGlkPVwicHJvbXB0LXRleHRhcmVhXCIgZGF0YS12aXJ0dWFsa2V5Ym9hcmQ9XCJ0cnUifSx7Im5hbWUiOiJJc1Zpc2libGUiLCJ2YWx1ZSI6InRydWUifV0sImF0dHJpYnV0ZXMiOlt7Im5hbWUiOiJVbmlxdWVJRCIsInZhbHVlIjoiMDZlZmJmZWEtZmY3MC00YzJkLTk5NjQtMWYwNGYzNGFkOWI5In0seyJuYW1lIjoiSUQiLCJ2YWx1ZSI6IiJ9LHsibmFtZSI6Ik5hbWUiLCJ2YWx1ZSI6IiJ9LHsibmFtZSI6IlZhbHVlIiwidmFsdWUiOiIifSx7Im5hbWUiOiJDbGFzcyIsInZhbHVlIjoiIn0seyJuYW1lIjoiUGFyZW50IiwidmFsdWUiOiIifSx7Im5hbWUiOiJXaW5kb3dUaXRsZSIsInZhbHVlIjoiIn0seyJuYW1lIjoiUm9sZSIsInZhbHVlIjoiUGFuZSJ9LHsibmFtZSI6IlBhdGgiLCJ2YWx1ZSI6IjZ8MXwxfDF8LTF8MXwtMXwxfDF8LTF8MXwxfDF8MXwxfDJ8MXwtMXwxfDIifSx7Im5hbWUiOiJJbmRleCIsInZhbHVlIjoiMCJ9LHsibmFtZSI6IkxlZnQiLCJ2YWx1ZSI6IjcwOCJ9LHsibmFtZSI6IlRvcCIsInZhbHVlIjoiNTMyIn0seyJuYW1lIjoiV2lkdGgiLCJ2YWx1ZSI6Ijc5MyJ9LHsibmFtZSI6IkhlaWdodCIsInZhbHVlIjoiNzAifSx7Im5hbWUiOiJDbGlja1giLCJ2YWx1ZSI6IjUifSx7Im5hbWUiOiJDbGlja1kiLCJ2YWx1ZSI6IjE4In0seyJuYW1lIjoiRGVzY3JpcHRpb24iLCJ2YWx1ZSI6IiJ9LHsibmFtZSI6IlN0YXRlcyIsInZhbHVlIjoiIn0seyJuYW1lIjoiRGVmYXVsdEFjdGlvbiIsInZhbHVlIjoiIn1dLCJpc0xpbmtlZCI6ZmFsc2V9LCJvYmpQYXJlbnQiOm51bGwsIm9iakl0ZW0iOm51bGwsImNoaWxkcmVuIjpbXSwiaXRlbXMiOltdLCJzZWFyY2hDcml0ZXJpYSI6WzcsNjEsODBdLCJlcnJvciI6bnVsbCwiYnJvd3NlckZyYW1ld29yayI6InVuZGVmaW5lZCIsImNhcHR1cmVWZXJzaW9uIjo0MTAwLCJpc0NlZldpbkZvcm1zQXBwbGljYXRpb24iOmZhbHNlLCJhZHZhbmNlUHJvcGVydGllcyI6eyJhbmNlc3RvckVsZW1lbnQiOiI8ZGl2PjxkaXY+PGRpdj48ZGl2PjxkaXY+PGRpdj48ZGl2PjwvZGl2PjxkaXY+PGZvcm0+PGRpdj48aW5wdXQ+PC9kaXY+PGRpdj48ZGl2PjxkaXY+PHNwYW4+PGJ1dHRvbj48c3ZnPjx1c2U+PC91c2U+PC9zdmc+PC9idXR0b24+PC9zcGFuPjwvZGl2PjxkaXY+PGRpdj48dGV4dGFyZWE+PC90ZXh0YXJlYT48c2NyaXB0Pjwvc2NyaXB0PjxkaXY+PHA+PGJyPjwvcD48L2Rpdj48L2Rpdj48L2Rpdj48ZGl2PjxkaXY+PGRpdj48L2Rpdj48YnV0dG9uPjxzdmc+PHVzZT48L3VzZT48L3N2Zz48L2J1dHRvbj48ZGl2PjxkaXY+PGRpdj48ZGl2PjwvZGl2PjxidXR0b24+PHN2Zz48dXNlPjwvdXNlPjwvc3ZnPjwvYnV0dG9uPjwvZGl2PjwvZGl2PjwvZGl2PjwvZGl2PjwvZGl2PjwvZGl2PjwvZGl2PjwvZm9ybT48L2Rpdj48aW5wdXQ+PGlucHV0PjwvZGl2PjwvZGl2PjwvZGl2PjwvZGl2PjwvZGl2PjxkaXY+PGRpdj48ZGl2PjxkaXY+PC9kaXY+PGRpdj48ZGl2PjxkaXY+PGJ1dHRvbj48c3Bhbj48c3ZnPjx1c2U+PC91c2U+PC9zdmc+PC9zcGFuPjxzcGFuPjxzcGFuPjwvc3Bhbj48L3NwYW4+PC9idXR0b24+PC9kaXY+PGRpdj48YnV0dG9uPjxzcGFuPjxzdmc+PHVzZT48L3VzZT48L3N2Zz48L3NwYW4+PHNwYW4+PHNwYW4+PC9zcGFuPjwvc3Bhbj48L2J1dHRvbj48L2Rpdj48ZGl2PjxidXR0b24+PHNwYW4+PHN2Zz48dXNlPjwvdXNlPjwvc3ZnPjwvc3Bhbj48c3Bhbj48c3Bhbj48L3NwYW4+PC9zcGFuPjwvYnV0dG9uPjwvZGl2PjwvZGl2PjwvZGl2PjwvZGl2PjwvZGl2PjwvZGl2PjxkaXY+PGRpdj48ZGl2PjxkaXY+PC9kaXY+PC9kaXY+PC9kaXY+PC9kaXY+PGRpdj48ZGl2PjxkaXY+PGRpdj48ZGl2PjxkaXY+PC9kaXY+PC9kaXY+PC9kaXY+PC9kaXY+PC9kaXY+PC9kaXY+PC9kaXY+IiwiY3NzUGF0aCI6IltdIiwiYWR2YW5jZVhwYXRoIjoiW1wiKC8vZGl2W2NvbnRhaW5zKEBjbGFzcywnYmctdG9rZW4tYmctcHJpbWFyeSBkYXJrOmJnLXRva2VuLWJnLWVsZXZhdGVkLXByaW1hcnknKV0vL2RpdilbMl1cIixcIigvL2RpdltAZGF0YS1jb21wb3Nlci1zdXJmYWNlPSd0cnVlJ10vL2RpdilbMl1cIixcIi8vZGl2W0BjbGFzcz0nW2dyaWQtYXJlYTpsZWFkaW5nXSddL2ZvbGxvd2luZy1zaWJsaW5nOjpkaXZbMV1cIixcIi8vZGl2W2NvbnRhaW5zKEBjbGFzcywnLW15LTIuNSBmbGV4JyldXCJdIiwicHJlY2VkaW5nVGV4dCI6IndpbmRvdy5fX29haV9sb2dIVE1MP3dpbmRvdy5fX29haV9sb2dIVE1MKCk6d2luZG93Ll9fb2FpX1NTUl9IVE1MPXdpbmRvdy5fX29haV9TU1JfSFRNTHx8RGF0ZS5ub3coKTtyZXF1ZXN0QW5pbWF0aW9uRnJhbWUoKGZ1bmN0aW9uKCl7d2luZG93Ll9fb2FpX2xvZ1RUST93aW5kb3cuX19vYWlfbG9nVFRJKCk6d2luZG93Ll9fb2FpX1NTUl9UVEk9d2luZG93Ll9fb2FpX1NTUl9UVEl8fERhdGUubm93KCl9KSkiLCJhbmNob3JUZXh0IjoiIn19",
+                      "controlType": "CLIENT",
+                      "technologyType": "HTML",
+                      "browserType": "CHROME",
+                      "criteria": {
+                        "HTML Tag": {
+                          "enabled": true,
+                          "value": {
+                            "type": "STRING",
+                            "string": "DIV"
+                          }
+                        },
+                        "UniqueID": {
+                          "enabled": false,
+                          "value": {
+                            "type": "STRING",
+                            "string": "06efbfea-ff70-4c2d-9964-1f04f34ad9b9"
+                          }
+                        },
+                        "WindowTitle": {
+                          "enabled": false,
+                          "value": {
+                            "type": "STRING",
+                            "string": ""
+                          }
+                        },
+                        "innerHTML": {
+                          "enabled": false,
+                          "value": {
+                            "type": "STRING",
+                            "string": "<div class=\"wcDTda_prosemirror-parent text-token-text-primary max-h-[max(30svh,5rem)] max-h-52 min-h-[var(--deep-research-composer-extra-height,unset)] flex-1 overflow-auto [scrollbar-width:thin] default-browser vertical-scroll-fade-mask\"><textarea class=\"wcDTda_fallbackTextarea\" name=\"prompt-textarea\" autofocus=\"\" placeholder=\"Stelle irgendeine Frage\" aria-label=\"Mit ChatGPT chatten\" data-virtualkeyboard=\"true\" style=\"display: none;\"></textarea><script nonce=\"\">window.__oai_logHTML?window.__oai_logHTML():window.__oai_SSR_HTML=window.__oai_SSR_HTML||Date.now();requestAnimationFrame((function(){window.__oai_logTTI?window.__oai_logTTI():window.__oai_SSR_TTI=window.__oai_SSR_TTI||Date.now()}))</script><div contenteditable=\"true\" translate=\"no\" class=\"ProseMirror ProseMirror-focused\" id=\"prompt-textarea\" data-virtualkeyboard=\"true\" role=\"textbox\" aria-multiline=\"true\" aria-label=\"Mit ChatGPT chatten\"><p data-placeholder=\"Stelle irgendeine Frage\" class=\"placeholder\"><br class=\"ProseMirror-t"
+                          }
+                        },
+                        "Left": {
+                          "enabled": false,
+                          "value": {
+                            "type": "STRING",
+                            "string": "708"
+                          }
+                        },
+                        "Description": {
+                          "enabled": false,
+                          "value": {
+                            "type": "STRING",
+                            "string": ""
+                          }
+                        },
+                        "DOMXPath": {
+                          "enabled": true,
+                          "value": {
+                            "type": "STRING",
+                            "string": "//div[@id='thread-bottom']/div[1]/div[1]/div[1]/div[1]/div[2]/form[1]/div[2]/div[1]/div[2]"
+                          }
+                        },
+                        "HTML Top": {
+                          "enabled": false,
+                          "value": {
+                            "type": "STRING",
+                            "string": "299"
+                          }
+                        },
+                        "HTML Left": {
+                          "enabled": false,
+                          "value": {
+                            "type": "STRING",
+                            "string": "560"
+                          }
+                        },
+                        "Parent": {
+                          "enabled": false,
+                          "value": {
+                            "type": "STRING",
+                            "string": ""
+                          }
+                        },
+                        "ClickY": {
+                          "enabled": false,
+                          "value": {
+                            "type": "STRING",
+                            "string": "18"
+                          }
+                        },
+                        "HTML ID": {
+                          "enabled": false,
+                          "value": {
+                            "type": "STRING",
+                            "string": ""
+                          }
+                        },
+                        "ClickX": {
+                          "enabled": false,
+                          "value": {
+                            "type": "STRING",
+                            "string": "5"
+                          }
+                        },
+                        "Index": {
+                          "enabled": false,
+                          "value": {
+                            "type": "STRING",
+                            "string": "0"
+                          }
+                        },
+                        "outerHTML": {
+                          "enabled": false,
+                          "value": {
+                            "type": "STRING",
+                            "string": "<div class=\"-my-2.5 flex min-h-14 items-center overflow-x-hidden px-1.5 [grid-area:primary] group-data-expanded/composer:mb-0 group-data-expanded/composer:px-2.5\"><div class=\"wcDTda_prosemirror-parent text-token-text-primary max-h-[max(30svh,5rem)] max-h-52 min-h-[var(--deep-research-composer-extra-height,unset)] flex-1 overflow-auto [scrollbar-width:thin] default-browser vertical-scroll-fade-mask\"><textarea class=\"wcDTda_fallbackTextarea\" name=\"prompt-textarea\" autofocus=\"\" placeholder=\"Stelle irgendeine Frage\" aria-label=\"Mit ChatGPT chatten\" data-virtualkeyboard=\"true\" style=\"display: none;\"></textarea><script nonce=\"\">window.__oai_logHTML?window.__oai_logHTML():window.__oai_SSR_HTML=window.__oai_SSR_HTML||Date.now();requestAnimationFrame((function(){window.__oai_logTTI?window.__oai_logTTI():window.__oai_SSR_TTI=window.__oai_SSR_TTI||Date.now()}))</script><div contenteditable=\"true\" translate=\"no\" class=\"ProseMirror ProseMirror-focused\" id=\"prompt-textarea\" data-virtualkeyboard=\"tru"
+                          }
+                        },
+                        "HTML Class": {
+                          "enabled": false,
+                          "value": {
+                            "type": "STRING",
+                            "string": "-my-2.5 flex min-h-14 items-center overflow-x-hidden px-1.5 [grid-area:primary] group-data-expanded/composer:mb-0 group-data-expanded/composer:px-2.5"
+                          }
+                        },
+                        "HTML FrameName": {
+                          "enabled": false,
+                          "value": {
+                            "type": "STRING",
+                            "string": ""
+                          }
+                        },
+                        "HTML HasFrame": {
+                          "enabled": false,
+                          "value": {
+                            "type": "STRING",
+                            "string": "false"
+                          }
+                        },
+                        "Name": {
+                          "enabled": false,
+                          "value": {
+                            "type": "STRING",
+                            "string": ""
+                          }
+                        },
+                        "States": {
+                          "enabled": false,
+                          "value": {
+                            "type": "STRING",
+                            "string": ""
+                          }
+                        },
+                        "HTML Type": {
+                          "enabled": false,
+                          "value": {
+                            "type": "STRING",
+                            "string": ""
+                          }
+                        },
+                        "HTML FramePath": {
+                          "enabled": false,
+                          "value": {
+                            "type": "STRING",
+                            "string": ""
+                          }
+                        },
+                        "HTML InnerText": {
+                          "enabled": false,
+                          "value": {
+                            "type": "STRING",
+                            "string": "window.__oai_logHTML?window.__oai_logHTML():window.__oai_SSR_HTML=window.__oai_SSR_HTML||Date.now();requestAnimationFrame((function(){window.__oai_logTTI?window.__oai_logTTI():window.__oai_SSR_TTI=window.__oai_SSR_TTI||Date.now()}))"
+                          }
+                        },
+                        "HTML Alt": {
+                          "enabled": false,
+                          "value": {
+                            "type": "STRING",
+                            "string": ""
+                          }
+                        },
+                        "HTML Href": {
+                          "enabled": false,
+                          "value": {
+                            "type": "STRING",
+                            "string": ""
+                          }
+                        },
+                        "HTML SourceIndex": {
+                          "enabled": false,
+                          "value": {
+                            "type": "STRING",
+                            "string": "0"
+                          }
+                        },
+                        "ItemName": {
+                          "enabled": false,
+                          "value": {
+                            "type": "STRING",
+                            "string": ""
+                          }
+                        },
+                        "Height": {
+                          "enabled": false,
+                          "value": {
+                            "type": "STRING",
+                            "string": "70"
+                          }
+                        },
+                        "ID": {
+                          "enabled": false,
+                          "value": {
+                            "type": "STRING",
+                            "string": ""
+                          }
+                        },
+                        "Width": {
+                          "enabled": false,
+                          "value": {
+                            "type": "STRING",
+                            "string": "793"
+                          }
+                        },
+                        "HTML Title": {
+                          "enabled": false,
+                          "value": {
+                            "type": "STRING",
+                            "string": ""
+                          }
+                        },
+                        "Path": {
+                          "enabled": false,
+                          "value": {
+                            "type": "STRING",
+                            "string": "6|1|1|1|-1|1|-1|1|1|-1|1|1|1|1|1|2|1|-1|1|2"
+                          }
+                        },
+                        "HTML Height": {
+                          "enabled": false,
+                          "value": {
+                            "type": "STRING",
+                            "string": "70"
+                          }
+                        },
+                        "HTML Value": {
+                          "enabled": false,
+                          "value": {
+                            "type": "STRING",
+                            "string": ""
+                          }
+                        },
+                        "HTML TagIndex": {
+                          "enabled": false,
+                          "value": {
+                            "type": "STRING",
+                            "string": "139"
+                          }
+                        },
+                        "Role": {
+                          "enabled": false,
+                          "value": {
+                            "type": "STRING",
+                            "string": "Pane"
+                          }
+                        },
+                        "Top": {
+                          "enabled": false,
+                          "value": {
+                            "type": "STRING",
+                            "string": "532"
+                          }
+                        },
+                        "DefaultAction": {
+                          "enabled": false,
+                          "value": {
+                            "type": "STRING",
+                            "string": ""
+                          }
+                        },
+                        "ItemValue": {
+                          "enabled": false,
+                          "value": {
+                            "type": "STRING",
+                            "string": ""
+                          }
+                        },
+                        "HTML ClassId": {
+                          "enabled": false,
+                          "value": {
+                            "type": "STRING",
+                            "string": ""
+                          }
+                        },
+                        "HTML Width": {
+                          "enabled": false,
+                          "value": {
+                            "type": "STRING",
+                            "string": "793"
+                          }
+                        },
+                        "Value": {
+                          "enabled": false,
+                          "value": {
+                            "type": "STRING",
+                            "string": ""
+                          }
+                        },
+                        "HTML Name": {
+                          "enabled": false,
+                          "value": {
+                            "type": "STRING",
+                            "string": ""
+                          }
+                        },
+                        "Class": {
+                          "enabled": false,
+                          "value": {
+                            "type": "STRING",
+                            "string": ""
+                          }
+                        },
+                        "HTML FrameSrc": {
+                          "enabled": false,
+                          "value": {
+                            "type": "STRING",
+                            "string": "https://chatgpt.com/?temporary-chat=true"
+                          }
+                        },
+                        "IsVisible": {
+                          "enabled": false,
+                          "value": {
+                            "type": "STRING",
+                            "string": "true"
+                          }
+                        },
+                        "CSS Selector": {
+                          "enabled": false,
+                          "value": {
+                            "type": "STRING",
+                            "string": "div#thread-bottom>div>div>div>div>div:nth-of-type(2)>form>div:nth-of-type(2)>div>div:nth-of-type(2)"
+                          }
+                        }
+                      },
+                      "isElevated": false,
+                      "capture": {
+                        "thumbnailMetadataPath": "c3fe31fb-e144-4732-a7d4-05d65e5d537e.png",
+                        "screenshotMetadataPath": "52f9d3df-91eb-406c-894c-4a2c9d5e730d.png",
+                        "screenshotRectangle": {
+                          "x": 708,
+                          "y": 532,
+                          "width": 793,
+                          "height": 70
+                        },
+                        "thumbnailRectangle": {
+                          "x": 0,
+                          "y": 0,
+                          "width": 654,
+                          "height": 58
+                        },
+                        "securelyRecorded": false
+                      }
+                    },
+                    "uiObjectWindow": {
+                      "type": "WINDOW",
+                      "expression": "$windowChatGPT$"
+                    }
+                  }
+                },
+                {
+                  "name": "clientAction",
+                  "value": {
+                    "type": "STRING",
+                    "string": "SETTEXT"
+                  }
+                },
+                {
+                  "name": "runInBackground",
+                  "value": {
+                    "type": "BOOLEAN",
+                    "boolean": true
+                  }
+                },
+                {
+                  "name": "typeOfInput",
+                  "value": {
+                    "type": "STRING",
+                    "string": "VALUE"
+                  }
+                },
+                {
+                  "name": "value",
+                  "value": {
+                    "type": "STRING",
+                    "expression": "$stringTextGeneratorPrompt$"
+                  }
+                },
+                {
+                  "name": "delay",
+                  "value": {
+                    "type": "NUMBER",
+                    "number": "1"
+                  }
+                },
+                {
+                  "name": "advancedWait",
+                  "value": {
+                    "type": "STRING",
+                    "string": "BASIC"
+                  }
+                },
+                {
+                  "name": "wait",
+                  "value": {
+                    "type": "NUMBER",
+                    "expression": "$numberWaitForCondition$+32"
+                  }
+                }
+              ]
+            },
+            {
+              "uid": "9dd78c9c-ae59-41c4-9407-aeb79addea3d",
+              "commandName": "loop.commands.start",
+              "packageName": "Loop",
+              "children": [
+                {
+                  "uid": "0290906b-a5d1-4929-b7e1-3f077ab4b20f",
+                  "commandName": "try",
+                  "packageName": "ErrorHandler",
+                  "children": [
+                    {
+                      "uid": "2a573a23-1ab5-4a7f-b952-d18370c84cd0",
+                      "commandName": "capture",
+                      "packageName": "Recorder",
+                      "disabled": false,
+                      "attributes": [
+                        {
+                          "name": "uiObject",
+                          "value": {
+                            "type": "UIOBJECT",
+                            "uiObject": {
+                              "blob": "eyJvYmpOb2RlIjp7InVuaXF1ZUlEIjoiMmYzZmZjOWEtYzU0NC00MGY5LThiYjEtNGMzMGQ4NDBjZmJlIiwiaWQiOiIiLCJuYW1lIjoiIiwidmFsdWUiOiIiLCJjbGFzcyI6IiIsInBhcmVudCI6IiIsIndpbmRvd1RpdGxlIjoiIiwicGF0aCI6eyJvYmpQYXRoIjpbeyJpbmRleCI6NX0seyJpbmRleCI6MX0seyJpbmRleCI6MX0seyJpbmRleCI6MX0seyJpbmRleCI6LTF9LHsiaW5kZXgiOjF9LHsiaW5kZXgiOi0xfSx7ImluZGV4IjoxfSx7ImluZGV4IjoxfSx7ImluZGV4IjoxfSx7ImluZGV4IjoxfSx7ImluZGV4IjoxfSx7ImluZGV4IjotMX0seyJpbmRleCI6MX0seyJpbmRleCI6LTF9LHsiaW5kZXgiOjF9LHsiaW5kZXgiOi0xfSx7ImluZGV4IjoxfSx7ImluZGV4IjoxfV19LCJyb2xlIjoxLCJpbmRleCI6MCwibGVmdCI6NjQzLCJ0b3AiOjgzNywid2lkdGgiOjQwLCJoZWlnaHQiOjQwLCJjbGlja1giOjE0LCJjbGlja1kiOjIwLCJkZXNjcmlwdGlvbiI6IiIsInN0YXRlcyI6IiIsImRlZmF1bHRBY3Rpb24iOiIiLCJ0ZWNobm9sb2d5Ijp7InRlY2hUeXBlIjo2LCJwbGF0Zm9ybVR5cGUiOjEyLCJhcHBsaWNhdGlvblR5cGUiOjMsInByb2Nlc3NJRCI6IlRBLUNCUy1DSFJPTUUtQUdFTlQiLCJ3aW5IYW5kbGUiOiIiLCJvY3JFbmdpbmUiOm51bGwsImlzQWR2YW5jZWRDYXB0dXJlIjpmYWxzZSwiaXNTaWx2ZXJsaWdodFRlY2hub2xvZ3kiOmZhbHNlfSwiYWN0aW9ucyI6bnVsbCwicHJvcGVydGllcyI6W3sibmFtZSI6IkRPTVhQYXRoIiwidmFsdWUiOiIvL2RpdltAaWQ9J3RocmVhZCddL2RpdlsxXS9kaXZbMV0vZGl2WzFdL2RpdlsxXS9kaXZbMl0vc2VjdGlvblsxXS9kaXZbMV0vZGl2WzFdL2RpdlsyXS9kaXZbMV0vYnV0dG9uWzFdIn0seyJuYW1lIjoiQ1NTIFNlbGVjdG9yIiwidmFsdWUiOiJkaXYjdGhyZWFkPmRpdj5kaXY+ZGl2PmRpdj5kaXY6bnRoLW9mLXR5cGUoMik+c2VjdGlvbj5kaXY+ZGl2PmRpdjpudGgtb2YtdHlwZSgyKT5kaXY+YnV0dG9uIn0seyJuYW1lIjoiSFRNTCBJRCIsInZhbHVlIjoiIn0seyJuYW1lIjoiSFRNTCBOYW1lIiwidmFsdWUiOiIifSx7Im5hbWUiOiJIVE1MIEFsdCIsInZhbHVlIjoiIn0seyJuYW1lIjoiSFRNTCBUYWciLCJ2YWx1ZSI6IkJVVFRPTiJ9LHsibmFtZSI6IkhUTUwgQ2xhc3MiLCJ2YWx1ZSI6InRleHQtdG9rZW4tdGV4dC1zZWNvbmRhcnkgaG92ZXI6YmctdG9rZW4tYmctc2Vjb25kYXJ5IHJvdW5kZWQtbGcifSx7Im5hbWUiOiJIVE1MIElubmVyVGV4dCIsInZhbHVlIjoiIn0seyJuYW1lIjoiSFRNTCBTb3VyY2VJbmRleCIsInZhbHVlIjoiMCJ9LHsibmFtZSI6IkhUTUwgSHJlZiIsInZhbHVlIjoiIn0seyJuYW1lIjoiSFRNTCBUeXBlIiwidmFsdWUiOiJzdWJtaXQifSx7Im5hbWUiOiJIVE1MIFZhbHVlIiwidmFsdWUiOiIifSx7Im5hbWUiOiJIVE1MIENsYXNzSWQiLCJ2YWx1ZSI6IiJ9LHsibmFtZSI6IkhUTUwgVGl0bGUiLCJ2YWx1ZSI6IiJ9LHsibmFtZSI6IkhUTUwgSGVpZ2h0IiwidmFsdWUiOiI0MCJ9LHsibmFtZSI6IkhUTUwgV2lkdGgiLCJ2YWx1ZSI6IjQwIn0seyJuYW1lIjoiSFRNTCBUYWdJbmRleCIsInZhbHVlIjoiOCJ9LHsibmFtZSI6IkhUTUwgVG9wIiwidmFsdWUiOiIxODcxIn0seyJuYW1lIjoiSFRNTCBMZWZ0IiwidmFsdWUiOiI1MDgifSx7Im5hbWUiOiJIVE1MIEhhc0ZyYW1lIiwidmFsdWUiOiJmYWxzZSJ9LHsibmFtZSI6IkhUTUwgRnJhbWVTcmMiLCJ2YWx1ZSI6Imh0dHBzOi8vY2hhdGdwdC5jb20vP3RlbXBvcmFyeS1jaGF0PXRydWUifSx7Im5hbWUiOiJIVE1MIEZyYW1lTmFtZSIsInZhbHVlIjoiIn0seyJuYW1lIjoiSFRNTCBGcmFtZVBhdGgiLCJ2YWx1ZSI6IiJ9LHsibmFtZSI6ImlubmVySFRNTCIsInZhbHVlIjoiPHNwYW4gY2xhc3M9XCJmbGV4IGl0ZW1zLWNlbnRlciBqdXN0aWZ5LWNlbnRlciB0b3VjaDp3LTEwIGgtOCB3LThcIj48c3ZnIHhtbG5zPVwiaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmdcIiB3aWR0aD1cIjIwXCIgaGVpZ2h0PVwiMjBcIiBhcmlhLWhpZGRlbj1cInRydWVcIiBjbGFzcz1cImljb25cIj48dXNlIGhyZWY9XCIvY2RuL2Fzc2V0cy9zcHJpdGVzLWNvcmUtODZjMGU2OTcuc3ZnI2NlMzU0NFwiIGZpbGw9XCJjdXJyZW50Q29sb3JcIj48L3VzZT48L3N2Zz48L3NwYW4+In0seyJuYW1lIjoib3V0ZXJIVE1MIiwidmFsdWUiOiI8YnV0dG9uIGNsYXNzPVwidGV4dC10b2tlbi10ZXh0LXNlY29uZGFyeSBob3ZlcjpiZy10b2tlbi1iZy1zZWNvbmRhcnkgcm91bmRlZC1sZ1wiIGFyaWEtbGFiZWw9XCJBbnR3b3J0IGtvcGllcmVuXCIgZGF0YS10ZXN0aWQ9XCJjb3B5LXR1cm4tYWN0aW9uLWJ1dHRvblwiIGRhdGEtc3RhdGU9XCJkZWxheWVkLW9wZW5cIiBhcmlhLWRlc2NyaWJlZGJ5PVwicmFkaXgtX3JfcF9cIj48c3BhbiBjbGFzcz1cImZsZXggaXRlbXMtY2VudGVyIGp1c3RpZnktY2VudGVyIHRvdWNoOnctMTAgaC04IHctOFwiPjxzdmcgeG1sbnM9XCJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2Z1wiIHdpZHRoPVwiMjBcIiBoZWlnaHQ9XCIyMFwiIGFyaWEtaGlkZGVuPVwidHJ1ZVwiIGNsYXNzPVwiaWNvblwiPjx1c2UgaHJlZj1cIi9jZG4vYXNzZXRzL3Nwcml0ZXMtY29yZS04NmMwZTY5Ny5zdmcjY2UzNTQ0XCIgZmlsbD1cImN1cnJlbnRDb2xvclwiPjwvdXNlPjwvc3ZnPjwvc3Bhbj48L2J1dHRvbj4ifSx7Im5hbWUiOiJJc1Zpc2libGUiLCJ2YWx1ZSI6InRydWUifV0sImF0dHJpYnV0ZXMiOlt7Im5hbWUiOiJVbmlxdWVJRCIsInZhbHVlIjoiMmYzZmZjOWEtYzU0NC00MGY5LThiYjEtNGMzMGQ4NDBjZmJlIn0seyJuYW1lIjoiSUQiLCJ2YWx1ZSI6IiJ9LHsibmFtZSI6Ik5hbWUiLCJ2YWx1ZSI6IiJ9LHsibmFtZSI6IlZhbHVlIiwidmFsdWUiOiIifSx7Im5hbWUiOiJDbGFzcyIsInZhbHVlIjoiIn0seyJuYW1lIjoiUGFyZW50IiwidmFsdWUiOiIifSx7Im5hbWUiOiJXaW5kb3dUaXRsZSIsInZhbHVlIjoiIn0seyJuYW1lIjoiUm9sZSIsInZhbHVlIjoiUHVzaEJ1dHRvbiJ9LHsibmFtZSI6IlBhdGgiLCJ2YWx1ZSI6IjV8MXwxfDF8LTF8MXwtMXwxfDF8MXwxfDF8LTF8MXwtMXwxfC0xfDF8MSJ9LHsibmFtZSI6IkluZGV4IiwidmFsdWUiOiIwIn0seyJuYW1lIjoiTGVmdCIsInZhbHVlIjoiNjQzIn0seyJuYW1lIjoiVG9wIiwidmFsdWUiOiI4MzcifSx7Im5hbWUiOiJXaWR0aCIsInZhbHVlIjoiNDAifSx7Im5hbWUiOiJIZWlnaHQiLCJ2YWx1ZSI6IjQwIn0seyJuYW1lIjoiQ2xpY2tYIiwidmFsdWUiOiIxNCJ9LHsibmFtZSI6IkNsaWNrWSIsInZhbHVlIjoiMjAifSx7Im5hbWUiOiJEZXNjcmlwdGlvbiIsInZhbHVlIjoiIn0seyJuYW1lIjoiU3RhdGVzIiwidmFsdWUiOiIifSx7Im5hbWUiOiJEZWZhdWx0QWN0aW9uIiwidmFsdWUiOiIifV0sImlzTGlua2VkIjpmYWxzZX0sIm9ialBhcmVudCI6bnVsbCwib2JqSXRlbSI6bnVsbCwiY2hpbGRyZW4iOltdLCJpdGVtcyI6W10sInNlYXJjaENyaXRlcmlhIjpbNyw2MSw2Nyw4MF0sImVycm9yIjpudWxsLCJicm93c2VyRnJhbWV3b3JrIjoidW5kZWZpbmVkIiwiY2FwdHVyZVZlcnNpb24iOjU3MDAsImlzQ2VmV2luRm9ybXNBcHBsaWNhdGlvbiI6ZmFsc2UsImFkdmFuY2VQcm9wZXJ0aWVzIjp7ImFuY2VzdG9yRWxlbWVudCI6IjxkaXY+PGRpdj48ZGl2PjxkaXY+PHA+PGJyPjwvcD48cD48YnI+PC9wPjxwPjxicj48YnI+PC9wPjxwPjxicj48L3A+PHA+PGJyPjxicj48L3A+PHA+PGJyPjxicj48YnI+PGJyPjwvcD48cD48YnI+PGJyPjxicj48L3A+PHA+PC9wPjxwPjxicj48L3A+PHA+PGJyPjxicj48YnI+PC9wPjxwPjxicj48L3A+PHA+PC9wPjxwPjxicj48YnI+PC9wPjxwPjwvcD48cD48YnI+PGJyPjxicj48L3A+PHA+PGJyPjxicj48L3A+PHA+PC9wPjxwPjxicj48L3A+PC9kaXY+PC9kaXY+PC9kaXY+PC9kaXY+IiwiY3NzUGF0aCI6IltdIiwiYWR2YW5jZVhwYXRoIjoiW1wiKCgvL3NwYW4gfCAvL3RleHQoKSlbbm9ybWFsaXplLXNwYWNlKCk9J+KAnERpc2NpcGxpbmUgaXMgY2hvb3NpbmcgYmV0d2VlbiB3aGF0IHlvdSB3YW50IG5vdyBhbmQgd2hhdCB5b3Ugd2FudCBtb3N0LuKAnSDigJQgQWJyYWhhbSBMaW5jb2xuJ10vZm9sbG93aW5nOjpidXR0b24pWzFdXCIsXCIoLy9kaXZbY29udGFpbnMoQGNsYXNzLCd0b3VjaDotbWUtMiB0b3VjaDotbXMtMy41JyldLy9idXR0b24pWzJdXCIsXCIoLy9kaXZbQHJvbGU9J2dyb3VwJ10vL2J1dHRvbilbMl1cIixcIigvL2J1dHRvbltjb250YWlucyhAY2xhc3MsJ3RleHQtdG9rZW4tdGV4dC1zZWNvbmRhcnkgaG92ZXI6YmctdG9rZW4tYmctc2Vjb25kYXJ5JyldKVsyXVwiLFwiKC8vYnV0dG9uW0BkYXRhLXRlc3RpZD0nY29weS10dXJuLWFjdGlvbi1idXR0b24nXSlbMl1cIixcIi8vYnV0dG9uW0BkYXRhLXN0YXRlPSdkZWxheWVkLW9wZW4nXVwiXSIsInByZWNlZGluZ1RleHQiOiIoMSkgVG9waWM6IiwiYW5jaG9yVGV4dCI6IuKAnERpc2NpcGxpbmUgaXMgY2hvb3NpbmcgYmV0d2VlbiB3aGF0IHlvdSB3YW50IG5vdyBhbmQgd2hhdCB5b3Ugd2FudCBtb3N0LuKAnSDigJQgQWJyYWhhbSBMaW5jb2xuIiwiYWRkaXRpb25hbFByb3BlcnRpZXMiOnsiYWFfZ2VuYWlfc3Vycm91bmRpbmdDb250ZXh0Ijoie1widmVyc2lvblwiOjEsXCJ0YXJnZXRcIjp7XCJ0YWdcIjpcImJ1dHRvblwiLFwidmlzaWJsZVwiOnRydWUsXCJhcmlhTGFiZWxcIjpcIkFudHdvcnQga29waWVyZW5cIixcImRhdGFBdHRyaWJ1dGVzXCI6e1wiZGF0YS10ZXN0aWRcIjpcImNvcHktdHVybi1hY3Rpb24tYnV0dG9uXCIsXCJkYXRhLXN0YXRlXCI6XCJkZWxheWVkLW9wZW5cIn0sXCJzdGFibGVDbGFzc2VzXCI6W1widGV4dC10b2tlbi10ZXh0LXNlY29uZGFyeVwiLFwicm91bmRlZC1sZ1wiXSxcImhlbHBUZXh0XCI6XCJBbnR3b3J0IGtvcGllcmVuXCJ9LFwicHJlY2VkaW5nU2libGluZ3NcIjpbe1wicG9zaXRpb25cIjoxLFwidGFnXCI6XCJkaXZcIixcInRleHRcIjpcIigxKSBUb3BpYzogV2luIFRoZSBNb3JuaW5nLCBXaW4gWW91ciBMaWZlICgyKSBEZXNjcmlwdGlvbjogWW91ciBmdXR1cmUgY2hhbmdlcyB0aGUgbW9tZW50IHlvdSBzdG9wIGNcIixcInZpc2libGVcIjp0cnVlLFwic3RhYmxlQ2xhc3Nlc1wiOltcImZsZXhcIixcIm1heC13LWZ1bGxcIixcImZsZXgtY29sXCJdLFwiZGlzdGFuY2VMZXZlbFwiOjJ9LHtcInBvc2l0aW9uXCI6MixcInRhZ1wiOlwiaDRcIixcInRleHRcIjpcIkNoYXRHUFQ6XCIsXCJ2aXNpYmxlXCI6dHJ1ZSxcInN0YWJsZUNsYXNzZXNcIjpbXCJzci1vbmx5XCIsXCJzZWxlY3Qtbm9uZVwiXSxcImRpc3RhbmNlTGV2ZWxcIjo0fV0sXCJmb2xsb3dpbmdTaWJsaW5nc1wiOlt7XCJwb3NpdGlvblwiOjEsXCJ0YWdcIjpcImJ1dHRvblwiLFwidmlzaWJsZVwiOnRydWUsXCJhcmlhTGFiZWxcIjpcIldlaXRlcmdlYmVuXCIsXCJkYXRhQXR0cmlidXRlc1wiOntcImRhdGEtc3RhdGVcIjpcImNsb3NlZFwifSxcInN0YWJsZUNsYXNzZXNcIjpbXCJ0ZXh0LXRva2VuLXRleHQtc2Vjb25kYXJ5XCIsXCJyb3VuZGVkLWxnXCJdLFwiaXNEeW5hbWljXCI6ZmFsc2V9LHtcInBvc2l0aW9uXCI6MixcInRhZ1wiOlwiZGl2XCIsXCJ2aXNpYmxlXCI6dHJ1ZSxcInN0YWJsZUNsYXNzZXNcIjpbXCJjb250ZW50c1wiXSxcImRpc3RhbmNlTGV2ZWxcIjo1LFwiaXNEeW5hbWljXCI6ZmFsc2V9XSxcInNwYXRpYWxOZWlnaGJvcnNcIjp7XCJyaWdodFwiOlt7XCJ0YWdcIjpcImJ1dHRvblwiLFwidmlzaWJsZUxhYmVsXCI6XCJXZWl0ZXJnZWJlblwiLFwiZGlzdGFuY2VcIjowfV0sXCJhYm92ZVwiOltdLFwiYmVsb3dcIjpbe1widGFnXCI6XCJidXR0b25cIixcInR5cGVcIjpcImJ1dHRvblwiLFwidmlzaWJsZUxhYmVsXCI6XCJEYXRlaWVuIHVuZCBtZWhyIGhpbnp1ZsO8Z2VuXCIsXCJkaXN0YW5jZVwiOjU5fSx7XCJ0YWdcIjpcImlucHV0XCIsXCJ0eXBlXCI6XCJmaWxlXCIsXCJkaXN0YW5jZVwiOjEwNH0se1widGFnXCI6XCJpbnB1dFwiLFwidHlwZVwiOlwiZmlsZVwiLFwiZGlzdGFuY2VcIjoxMDR9XX0sXCJjb250YWluZXJDb250ZXh0XCI6W3tcInRhZ1wiOlwiZGl2XCIsXCJpZFwiOm51bGwsXCJuYW1lXCI6bnVsbCxcInJvbGVcIjpudWxsLFwiZGF0YUF0dHJpYnV0ZXNcIjpudWxsLFwidHlwZVwiOlwiYW5jZXN0b3ItZmFsbGJhY2tcIixcImNsYXNzZXNcIjpcIm14LWF1dG9cIixcImNoaWxkRWxlbWVudENvdW50XCI6NTl9XSxcInBvc2l0aW9uQ29udGV4dFwiOntcIm50aE9mVHlwZVwiOjEsXCJ0b3RhbE9mVHlwZVwiOjIsXCJudGhWaXNpYmxlT2ZUeXBlXCI6MSxcInRvdGFsVmlzaWJsZU9mVHlwZVwiOjIsXCJudGhDaGlsZFwiOjEsXCJ0b3RhbENoaWxkcmVuXCI6MixcImlzRmlyc3RPZlR5cGVcIjp0cnVlLFwiaXNMYXN0T2ZUeXBlXCI6ZmFsc2UsXCJzdGFibGVQYXJlbnRTZWxlY3RvclwiOlwiW3JvbGU9XFxcImdyb3VwXFxcIl1cIixcInN0YWJsZUFuY2VzdG9yXCI6XCJbZGF0YS10ZXN0aWQ9XFxcImNvbnZlcnNhdGlvbi10dXJuLTJcXFwiXVwiLFwicGF0aEZyb21TdGFibGVBbmNlc3RvclwiOlwiZGl2ID4gZGl2ID4gZGl2Om50aC1vZi10eXBlKDIpID4gZGl2ID4gYnV0dG9uOm50aC1vZi10eXBlKDEpXCJ9LFwiZnVsbEFuY2VzdG9yQ2hhaW5cIjpbe1wiZGVwdGhcIjoxLFwidGFnXCI6XCJkaXZcIixcInJvbGVcIjpcImdyb3VwXCIsXCJhcmlhTGFiZWxcIjpcIkFudHdvcnRha3Rpb25lblwiLFwic3RhYmxlQ2xhc3Nlc1wiOltcInRvdWNoOi1tcy0zLjVcIixcIi1tcy0yLjVcIixcImZsZXhcIl19LHtcImRlcHRoXCI6MixcInRhZ1wiOlwiZGl2XCIsXCJzdGFibGVDbGFzc2VzXCI6W1wiZmxleFwiLFwibWluLWgtWzQ2cHhdXCIsXCJqdXN0aWZ5LXN0YXJ0XCJdfSx7XCJkZXB0aFwiOjMsXCJ0YWdcIjpcImRpdlwiLFwic3RhYmxlQ2xhc3Nlc1wiOltcIlstLXRocmVhZC1jb250ZW50LW1heC13aWR0aDo0MHJlbV1cIixcIkB3LWxnL21haW46Wy0tdGhyZWFkLWNvbnRlbnQtbWF4LXdpZHRoOjQ4cmVtXVwiLFwibXgtYXV0b1wiXX0se1wiZGVwdGhcIjo0LFwidGFnXCI6XCJkaXZcIixcInN0YWJsZUNsYXNzZXNcIjpbXCJ0ZXh0LWJhc2VcIixcIm15LWF1dG9cIixcIm14LWF1dG9cIl19LHtcImRlcHRoXCI6NSxcInRhZ1wiOlwic2VjdGlvblwiLFwic3RhYmxlQ2xhc3Nlc1wiOltcInRleHQtdG9rZW4tdGV4dC1wcmltYXJ5XCIsXCJ3LWZ1bGxcIixcImZvY3VzOm91dGxpbmUtbm9uZVwiXX0se1wiZGVwdGhcIjo2LFwidGFnXCI6XCJkaXZcIixcInN0YWJsZUNsYXNzZXNcIjpbXCJyZWxhdGl2ZVwiLFwidy1mdWxsXCIsXCJvdmVyZmxvdy12aXNpYmxlXCJdfSx7XCJkZXB0aFwiOjcsXCJ0YWdcIjpcImRpdlwiLFwic3RhYmxlQ2xhc3Nlc1wiOltcInFNWXFVR19jb252U2VhcmNoUmVzdWx0SGlnaGxpZ2h0Um9vdFwiXX0se1wiZGVwdGhcIjo4LFwidGFnXCI6XCJkaXZcIixcInN0YWJsZUNsYXNzZXNcIjpbXCJmbGV4XCIsXCJmbGV4LWNvbFwiLFwidGV4dC1zbVwiXX0se1wiZGVwdGhcIjo5LFwidGFnXCI6XCJkaXZcIixcInN0YWJsZUNsYXNzZXNcIjpbXCJyZWxhdGl2ZVwiLFwiYmFzaXMtYXV0b1wiLFwiZmxleC1jb2xcIl19LHtcImRlcHRoXCI6MTAsXCJ0YWdcIjpcImRpdlwiLFwicm9sZVwiOlwicHJlc2VudGF0aW9uXCIsXCJzdGFibGVDbGFzc2VzXCI6W1wiY29tcG9zZXItcGFyZW50XCIsXCJmbGV4XCIsXCJmbGV4LWNvbFwiXX1dLFwibGFiZWxJbmZvXCI6bnVsbCxcInNlY3Rpb25Db250ZXh0XCI6W3tcInR5cGVcIjpcImFyaWEtZ3JvdXBcIixcInRpdGxlXCI6XCJBbnR3b3J0YWt0aW9uZW5cIixcImlkXCI6bnVsbCxcImFyaWFMYWJlbFwiOlwiQW50d29ydGFrdGlvbmVuXCIsXCJkZXB0aFwiOjB9LHtcInR5cGVcIjpcInNlY3Rpb25cIixcInRpdGxlXCI6XCJDaGF0R1BUOlwiLFwiaWRcIjpudWxsLFwiYXJpYUxhYmVsXCI6bnVsbCxcImRlcHRoXCI6NH0se1widHlwZVwiOlwibWFpblwiLFwidGl0bGVcIjpcIkR1OlwiLFwiaWRcIjpcIm1haW5cIixcImFyaWFMYWJlbFwiOm51bGwsXCJkZXB0aFwiOjExfV0sXCJpZnJhbWVJbmZvXCI6bnVsbCxcInJlY29tbWVuZGVkU2VsZWN0b3JzXCI6W3tcInByaW9yaXR5XCI6MSxcInR5cGVcIjpcImRhdGEtYXR0cmlidXRlXCIsXCJzZWxlY3RvclwiOlwiW2RhdGEtdGVzdGlkPVxcXCJjb3B5LXR1cm4tYWN0aW9uLWJ1dHRvblxcXCJdXCIsXCJ4cGF0aFwiOlwiLy8qW0BkYXRhLXRlc3RpZD1cXFwiY29weS10dXJuLWFjdGlvbi1idXR0b25cXFwiXVwiLFwic3RhYmlsaXR5XCI6XCJzdGFibGVcIixcInJlYXNvblwiOlwiU3RhYmxlIGRhdGEtdGVzdGlkIGF0dHJpYnV0ZVwifSx7XCJwcmlvcml0eVwiOjMsXCJ0eXBlXCI6XCJhcmlhLWxhYmVsXCIsXCJzZWxlY3RvclwiOlwiW2FyaWEtbGFiZWw9XFxcIkFudHdvcnQga29waWVyZW5cXFwiXVwiLFwieHBhdGhcIjpcIi8vKltAYXJpYS1sYWJlbD1cXFwiQW50d29ydCBrb3BpZXJlblxcXCJdXCIsXCJzdGFiaWxpdHlcIjpcInN0YWJsZVwiLFwicmVhc29uXCI6XCJBUklBIGxhYmVsIChhY2Nlc3NpYmlsaXR5KVwifSx7XCJwcmlvcml0eVwiOjQsXCJ0eXBlXCI6XCJzZWN0aW9uLXRpdGxlLWFuY2hvclwiLFwic2VsZWN0b3JcIjpudWxsLFwieHBhdGhcIjpcIi8vZGl2W2NvbnRhaW5zKEBsc2RhdGEsIFxcXCJBbnR3b3J0YWt0aW9uZW5cXFwiKSBvciBjb250YWlucyhAYXJpYS1sYWJlbCwgXFxcIkFudHdvcnRha3Rpb25lblxcXCIpXS8vZGVzY2VuZGFudDo6YnV0dG9uW0BhcmlhLWxhYmVsPVxcXCJBbnR3b3J0IGtvcGllcmVuXFxcIl1cIixcInN0YWJpbGl0eVwiOlwic2VtaS1zdGFibGVcIixcInJlYXNvblwiOlwiQW5jaG9yIG9uIHNlY3Rpb246IFxcXCJBbnR3b3J0YWt0aW9uZW5cXFwiXCJ9LHtcInByaW9yaXR5XCI6NCxcInR5cGVcIjpcInJvbGUtYXJpYS1hbmNob3JcIixcInNlbGVjdG9yXCI6bnVsbCxcInhwYXRoXCI6XCIvLypbQHJvbGU9XFxcImdyb3VwXFxcIl1bQGFyaWEtbGFiZWw9XFxcIkFudHdvcnRha3Rpb25lblxcXCJdLy9kZXNjZW5kYW50OjpidXR0b25bQGFyaWEtbGFiZWw9XFxcIkFudHdvcnQga29waWVyZW5cXFwiXVwiLFwic3RhYmlsaXR5XCI6XCJzZW1pLXN0YWJsZVwiLFwicmVhc29uXCI6XCJXaXRoaW4gZ3JvdXA6IFxcXCJBbnR3b3J0YWt0aW9uZW5cXFwiXCJ9LHtcInByaW9yaXR5XCI6NixcInR5cGVcIjpcImNsYXNzXCIsXCJzZWxlY3RvclwiOlwiLnRleHQtdG9rZW4tdGV4dC1zZWNvbmRhcnlcIixcInhwYXRoXCI6XCIvLypbY29udGFpbnMoQGNsYXNzLCBcXFwidGV4dC10b2tlbi10ZXh0LXNlY29uZGFyeVxcXCIpXVwiLFwic3RhYmlsaXR5XCI6XCJzZW1pLXN0YWJsZVwiLFwicmVhc29uXCI6XCJTdGFibGUgQ1NTIGNsYXNzOiB0ZXh0LXRva2VuLXRleHQtc2Vjb25kYXJ5XCJ9XX0ifX19",
+                              "controlType": "BUTTON",
+                              "technologyType": "HTML",
+                              "browserType": "CHROME",
+                              "criteria": {
+                                "HTML Tag": {
+                                  "enabled": true,
+                                  "value": {
+                                    "type": "STRING",
+                                    "string": "BUTTON"
+                                  }
+                                },
+                                "UniqueID": {
+                                  "enabled": false,
+                                  "value": {
+                                    "type": "STRING",
+                                    "string": "2f3ffc9a-c544-40f9-8bb1-4c30d840cfbe"
+                                  }
+                                },
+                                "WindowTitle": {
+                                  "enabled": false,
+                                  "value": {
+                                    "type": "STRING",
+                                    "string": ""
+                                  }
+                                },
+                                "innerHTML": {
+                                  "enabled": false,
+                                  "value": {
+                                    "type": "STRING",
+                                    "string": "<span class=\"flex items-center justify-center touch:w-10 h-8 w-8\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"20\" height=\"20\" aria-hidden=\"true\" class=\"icon\"><use href=\"/cdn/assets/sprites-core-86c0e697.svg#ce3544\" fill=\"currentColor\"></use></svg></span>"
+                                  }
+                                },
+                                "Left": {
+                                  "enabled": false,
+                                  "value": {
+                                    "type": "STRING",
+                                    "string": "643"
+                                  }
+                                },
+                                "Description": {
+                                  "enabled": false,
+                                  "value": {
+                                    "type": "STRING",
+                                    "string": ""
+                                  }
+                                },
+                                "DOMXPath": {
+                                  "enabled": true,
+                                  "value": {
+                                    "type": "STRING",
+                                    "string": "//div[@id='thread']/div[1]/div[1]/div[1]/div[1]/div[2]/section[1]/div[1]/div[1]/div[2]/div[1]/button[1]"
+                                  }
+                                },
+                                "HTML Top": {
+                                  "enabled": false,
+                                  "value": {
+                                    "type": "STRING",
+                                    "string": "1871"
+                                  }
+                                },
+                                "HTML Left": {
+                                  "enabled": false,
+                                  "value": {
+                                    "type": "STRING",
+                                    "string": "508"
+                                  }
+                                },
+                                "Parent": {
+                                  "enabled": false,
+                                  "value": {
+                                    "type": "STRING",
+                                    "string": ""
+                                  }
+                                },
+                                "ClickY": {
+                                  "enabled": false,
+                                  "value": {
+                                    "type": "STRING",
+                                    "string": "20"
+                                  }
+                                },
+                                "HTML ID": {
+                                  "enabled": false,
+                                  "value": {
+                                    "type": "STRING",
+                                    "string": ""
+                                  }
+                                },
+                                "ClickX": {
+                                  "enabled": false,
+                                  "value": {
+                                    "type": "STRING",
+                                    "string": "14"
+                                  }
+                                },
+                                "Index": {
+                                  "enabled": false,
+                                  "value": {
+                                    "type": "STRING",
+                                    "string": "0"
+                                  }
+                                },
+                                "outerHTML": {
+                                  "enabled": false,
+                                  "value": {
+                                    "type": "STRING",
+                                    "string": "<button class=\"text-token-text-secondary hover:bg-token-bg-secondary rounded-lg\" aria-label=\"Antwort kopieren\" data-testid=\"copy-turn-action-button\" data-state=\"delayed-open\" aria-describedby=\"radix-_r_p_\"><span class=\"flex items-center justify-center touch:w-10 h-8 w-8\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"20\" height=\"20\" aria-hidden=\"true\" class=\"icon\"><use href=\"/cdn/assets/sprites-core-86c0e697.svg#ce3544\" fill=\"currentColor\"></use></svg></span></button>"
+                                  }
+                                },
+                                "HTML Class": {
+                                  "enabled": false,
+                                  "value": {
+                                    "type": "STRING",
+                                    "string": "text-token-text-secondary hover:bg-token-bg-secondary rounded-lg"
+                                  }
+                                },
+                                "HTML FrameName": {
+                                  "enabled": false,
+                                  "value": {
+                                    "type": "STRING",
+                                    "string": ""
+                                  }
+                                },
+                                "HTML HasFrame": {
+                                  "enabled": false,
+                                  "value": {
+                                    "type": "STRING",
+                                    "string": "false"
+                                  }
+                                },
+                                "Name": {
+                                  "enabled": false,
+                                  "value": {
+                                    "type": "STRING",
+                                    "string": ""
+                                  }
+                                },
+                                "States": {
+                                  "enabled": false,
+                                  "value": {
+                                    "type": "STRING",
+                                    "string": ""
+                                  }
+                                },
+                                "HTML Type": {
+                                  "enabled": false,
+                                  "value": {
+                                    "type": "STRING",
+                                    "string": "submit"
+                                  }
+                                },
+                                "HTML FramePath": {
+                                  "enabled": false,
+                                  "value": {
+                                    "type": "STRING",
+                                    "string": ""
+                                  }
+                                },
+                                "HTML InnerText": {
+                                  "enabled": false,
+                                  "value": {
+                                    "type": "STRING",
+                                    "string": ""
+                                  }
+                                },
+                                "HTML Alt": {
+                                  "enabled": false,
+                                  "value": {
+                                    "type": "STRING",
+                                    "string": ""
+                                  }
+                                },
+                                "HTML Href": {
+                                  "enabled": false,
+                                  "value": {
+                                    "type": "STRING",
+                                    "string": ""
+                                  }
+                                },
+                                "HTML SourceIndex": {
+                                  "enabled": false,
+                                  "value": {
+                                    "type": "STRING",
+                                    "string": "0"
+                                  }
+                                },
+                                "ItemName": {
+                                  "enabled": false,
+                                  "value": {
+                                    "type": "STRING",
+                                    "string": ""
+                                  }
+                                },
+                                "Height": {
+                                  "enabled": false,
+                                  "value": {
+                                    "type": "STRING",
+                                    "string": "40"
+                                  }
+                                },
+                                "ID": {
+                                  "enabled": false,
+                                  "value": {
+                                    "type": "STRING",
+                                    "string": ""
+                                  }
+                                },
+                                "Width": {
+                                  "enabled": false,
+                                  "value": {
+                                    "type": "STRING",
+                                    "string": "40"
+                                  }
+                                },
+                                "HTML Title": {
+                                  "enabled": false,
+                                  "value": {
+                                    "type": "STRING",
+                                    "string": ""
+                                  }
+                                },
+                                "Path": {
+                                  "enabled": false,
+                                  "value": {
+                                    "type": "STRING",
+                                    "string": "5|1|1|1|-1|1|-1|1|1|1|1|1|-1|1|-1|1|-1|1|1"
+                                  }
+                                },
+                                "HTML Height": {
+                                  "enabled": false,
+                                  "value": {
+                                    "type": "STRING",
+                                    "string": "40"
+                                  }
+                                },
+                                "HTML Value": {
+                                  "enabled": false,
+                                  "value": {
+                                    "type": "STRING",
+                                    "string": ""
+                                  }
+                                },
+                                "HTML TagIndex": {
+                                  "enabled": false,
+                                  "value": {
+                                    "type": "STRING",
+                                    "string": "8"
+                                  }
+                                },
+                                "Role": {
+                                  "enabled": false,
+                                  "value": {
+                                    "type": "STRING",
+                                    "string": "PushButton"
+                                  }
+                                },
+                                "Top": {
+                                  "enabled": false,
+                                  "value": {
+                                    "type": "STRING",
+                                    "string": "837"
+                                  }
+                                },
+                                "DefaultAction": {
+                                  "enabled": false,
+                                  "value": {
+                                    "type": "STRING",
+                                    "string": ""
+                                  }
+                                },
+                                "ItemValue": {
+                                  "enabled": false,
+                                  "value": {
+                                    "type": "STRING",
+                                    "string": ""
+                                  }
+                                },
+                                "HTML ClassId": {
+                                  "enabled": false,
+                                  "value": {
+                                    "type": "STRING",
+                                    "string": ""
+                                  }
+                                },
+                                "HTML Width": {
+                                  "enabled": false,
+                                  "value": {
+                                    "type": "STRING",
+                                    "string": "40"
+                                  }
+                                },
+                                "Value": {
+                                  "enabled": false,
+                                  "value": {
+                                    "type": "STRING",
+                                    "string": ""
+                                  }
+                                },
+                                "HTML Name": {
+                                  "enabled": false,
+                                  "value": {
+                                    "type": "STRING",
+                                    "string": ""
+                                  }
+                                },
+                                "Class": {
+                                  "enabled": false,
+                                  "value": {
+                                    "type": "STRING",
+                                    "string": ""
+                                  }
+                                },
+                                "HTML FrameSrc": {
+                                  "enabled": false,
+                                  "value": {
+                                    "type": "STRING",
+                                    "string": "https://chatgpt.com/?temporary-chat=true"
+                                  }
+                                },
+                                "IsVisible": {
+                                  "enabled": false,
+                                  "value": {
+                                    "type": "STRING",
+                                    "string": "true"
+                                  }
+                                },
+                                "CSS Selector": {
+                                  "enabled": false,
+                                  "value": {
+                                    "type": "STRING",
+                                    "string": "div#thread>div>div>div>div>div:nth-of-type(2)>section>div>div>div:nth-of-type(2)>div>button"
+                                  }
+                                }
+                              },
+                              "isElevated": false,
+                              "capture": {
+                                "thumbnailMetadataPath": "543280bc-9c11-44de-9e1e-7cd30f3387c1.png",
+                                "screenshotMetadataPath": "a99ac3bd-f714-465d-825e-51eb51784f54.png",
+                                "screenshotRectangle": {
+                                  "x": 643,
+                                  "y": 837,
+                                  "width": 40,
+                                  "height": 40
+                                },
+                                "thumbnailRectangle": {
+                                  "x": 0,
+                                  "y": 0,
+                                  "width": 40,
+                                  "height": 40
+                                },
+                                "securelyRecorded": false
+                              }
+                            },
+                            "uiObjectWindow": {
+                              "type": "WINDOW",
+                              "expression": "$windowChatGPT$"
+                            }
+                          }
+                        },
+                        {
+                          "name": "buttonAction",
+                          "value": {
+                            "type": "STRING",
+                            "string": "LEFTCLICK"
+                          }
+                        },
+                        {
+                          "name": "advancedWait",
+                          "value": {
+                            "type": "STRING",
+                            "string": "BASIC"
+                          }
+                        },
+                        {
+                          "name": "wait",
+                          "value": {
+                            "type": "NUMBER",
+                            "expression": "$numberWaitForCondition$"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "uid": "238c3391-1621-4e86-9f07-89b8fb3ffdc5",
+                      "commandName": "assignFromClipboard",
+                      "packageName": "Clipboard",
+                      "disabled": false,
+                      "returnTo": {
+                        "type": "VARIABLE",
+                        "variableName": "stringTextGeneratorChatGPT"
+                      }
+                    },
+                    {
+                      "uid": "4c1faa16-2464-425c-84f0-4dfb6929ff01",
+                      "commandName": "loop.commands.break",
+                      "packageName": "Loop",
+                      "disabled": false,
+                      "attributes": [
+                        {
+                          "name": "anchor",
+                          "value": {
+                            "type": "STRING",
+                            "string": "Copy"
+                          }
+                        }
+                      ]
+                    }
+                  ],
+                  "branches": [
+                    {
+                      "uid": "6c68a50b-187a-41ac-9154-5e9ad3da7705",
+                      "commandName": "catch",
+                      "packageName": "ErrorHandler",
+                      "children": [
+                        {
+                          "uid": "ca271a61-d26e-4df7-a3f8-81fb77ac3811",
+                          "commandName": "loop.commands.continue",
+                          "packageName": "Loop",
+                          "disabled": false,
+                          "attributes": [
+                            {
+                              "name": "anchor",
+                              "value": {
+                                "type": "STRING",
+                                "string": "Copy"
+                              }
+                            }
+                          ]
+                        }
+                      ],
+                      "disabled": false,
+                      "attributes": [
+                        {
+                          "name": "exceptionType",
+                          "value": {
+                            "type": "EXCEPTION",
+                            "exceptionName": "BotException",
+                            "packageName": "ErrorHandler"
+                          }
+                        },
+                        {
+                          "name": "continueOnError",
+                          "value": {
+                            "type": "BOOLEAN",
+                            "boolean": false
+                          }
+                        }
+                      ]
+                    }
+                  ],
+                  "disabled": false
+                }
+              ],
+              "anchor": {
+                "type": "STRING",
+                "string": "Copy"
+              },
+              "disabled": false,
+              "attributes": [
+                {
+                  "name": "loopType",
+                  "value": {
+                    "type": "STRING",
+                    "string": "WHILE"
+                  }
+                },
+                {
+                  "attributes": [
+                    {
+                      "name": "variable",
+                      "value": {
+                        "type": "STRING",
+                        "expression": "$stringTextGeneratorChatGPT$"
+                      }
+                    },
+                    {
+                      "name": "operator",
+                      "value": {
+                        "type": "STRING",
+                        "string": "EQ"
+                      }
+                    },
+                    {
+                      "name": "value",
+                      "value": {
+                        "type": "STRING",
+                        "string": ""
+                      }
+                    },
+                    {
+                      "name": "matchCase",
+                      "value": {
+                        "type": "BOOLEAN",
+                        "boolean": true
+                      }
+                    },
+                    {
+                      "name": "isIgnoreCarriage",
+                      "value": {
+                        "type": "BOOLEAN",
+                        "boolean": false
+                      }
+                    }
+                  ],
+                  "name": "condition",
+                  "value": {
+                    "type": "CONDITIONAL",
+                    "conditionalName": "stringVariable",
+                    "packageName": "String"
+                  }
+                },
+                {
+                  "name": "checkConditionAtEnd",
+                  "value": {
+                    "type": "BOOLEAN",
+                    "boolean": true
+                  }
+                }
+              ]
+            },
+            {
+              "uid": "97c2088a-6839-47ae-8f60-c7b5836b4c14",
+              "commandName": "clearClipboard",
+              "packageName": "Clipboard",
+              "disabled": false
+            }
+          ],
+          "disabled": false,
+          "attributes": [
+            {
+              "name": "title",
+              "value": {
+                "type": "STRING",
+                "string": "Generate"
+              }
+            }
+          ]
+        },
+        {
+          "uid": "bc12a8d8-66da-416a-8dda-aea2538606c0",
+          "commandName": "step",
+          "packageName": "Step",
+          "children": [
+            {
+              "uid": "888210c2-0da0-43a8-85bb-8b3f3140e12a",
+              "commandName": "replace",
+              "packageName": "String",
+              "disabled": false,
+              "attributes": [
+                {
+                  "name": "sourceString",
+                  "value": {
+                    "type": "STRING",
+                    "expression": "$stringTextGeneratorPrompt$"
+                  }
+                },
+                {
+                  "name": "find",
+                  "value": {
+                    "type": "STRING",
+                    "string": "[SHIFT DOWN]"
+                  }
+                },
+                {
+                  "name": "isCaseSensitive",
+                  "value": {
+                    "type": "STRING",
+                    "string": "false"
+                  }
+                },
+                {
+                  "name": "isRegularExpression",
+                  "value": {
+                    "type": "STRING",
+                    "string": "false"
+                  }
+                },
+                {
+                  "name": "startIndex",
+                  "value": {
+                    "type": "NUMBER",
+                    "number": "1"
+                  }
+                },
+                {
+                  "name": "count",
+                  "value": {
+                    "type": "NUMBER",
+                    "number": "-1"
+                  }
+                },
+                {
+                  "name": "replaceWith",
+                  "value": {
+                    "type": "STRING",
+                    "string": ""
+                  }
+                }
+              ],
+              "returnTo": {
+                "type": "VARIABLE",
+                "variableName": "stringTextGeneratorPrompt"
+              }
+            },
+            {
+              "uid": "c907422a-7796-4255-b68c-71693e6e4cf5",
+              "commandName": "replace",
+              "packageName": "String",
+              "disabled": false,
+              "attributes": [
+                {
+                  "name": "sourceString",
+                  "value": {
+                    "type": "STRING",
+                    "expression": "$stringTextGeneratorPrompt$"
+                  }
+                },
+                {
+                  "name": "find",
+                  "value": {
+                    "type": "STRING",
+                    "string": "[SHIFT UP]"
+                  }
+                },
+                {
+                  "name": "isCaseSensitive",
+                  "value": {
+                    "type": "STRING",
+                    "string": "false"
+                  }
+                },
+                {
+                  "name": "isRegularExpression",
+                  "value": {
+                    "type": "STRING",
+                    "string": "false"
+                  }
+                },
+                {
+                  "name": "startIndex",
+                  "value": {
+                    "type": "NUMBER",
+                    "number": "1"
+                  }
+                },
+                {
+                  "name": "count",
+                  "value": {
+                    "type": "NUMBER",
+                    "number": "-1"
+                  }
+                },
+                {
+                  "name": "replaceWith",
+                  "value": {
+                    "type": "STRING",
+                    "string": ""
+                  }
+                }
+              ],
+              "returnTo": {
+                "type": "VARIABLE",
+                "variableName": "stringTextGeneratorPrompt"
+              }
+            },
+            {
+              "uid": "3d6ac277-29a3-4012-8b7b-409a8dae3fc7",
+              "commandName": "beforeAfter",
+              "packageName": "String",
+              "disabled": false,
+              "attributes": [
+                {
+                  "name": "sourceString",
+                  "value": {
+                    "type": "STRING",
+                    "expression": "$stringTextGeneratorChatGPT$"
+                  }
+                },
+                {
+                  "name": "getCharacters",
+                  "value": {
+                    "type": "STRING",
+                    "string": "BEFOREAFTER"
+                  }
+                },
+                {
+                  "name": "beforeStringInBeforeAfter",
+                  "value": {
+                    "type": "STRING",
+                    "string": "(1) Topic:"
+                  }
+                },
+                {
+                  "name": "beforeOccurrenceInBeforeAfter",
+                  "value": {
+                    "type": "NUMBER",
+                    "number": "1"
+                  }
+                },
+                {
+                  "name": "beforeAfterCondition",
+                  "value": {
+                    "type": "STRING",
+                    "string": "AND"
+                  }
+                },
+                {
+                  "name": "afterStringInBeforeAfter",
+                  "value": {
+                    "type": "STRING",
+                    "string": "(2) Description:"
+                  }
+                },
+                {
+                  "name": "afterOccurrenceInBeforeAfter",
+                  "value": {
+                    "type": "NUMBER",
+                    "number": "1"
+                  }
+                },
+                {
+                  "name": "ifNoMatchFound",
+                  "value": {
+                    "type": "STRING",
+                    "string": "EMPTY"
+                  }
+                },
+                {
+                  "name": "noOfCharsToGet",
+                  "value": {
+                    "type": "STRING",
+                    "string": "ALL"
+                  }
+                },
+                {
+                  "name": "isCaseSensitive",
+                  "value": {
+                    "type": "STRING",
+                    "string": "true"
+                  }
+                },
+                {
+                  "name": "trimSpaces",
+                  "value": {
+                    "type": "BOOLEAN",
+                    "boolean": false
+                  }
+                },
+                {
+                  "name": "removeEnter",
+                  "value": {
+                    "type": "BOOLEAN",
+                    "boolean": false
+                  }
+                }
+              ],
+              "returnTo": {
+                "type": "VARIABLE",
+                "variableName": "stringTopic"
+              }
+            },
+            {
+              "uid": "c4c1609d-aabc-4dbe-9295-8050c67b9867",
+              "commandName": "beforeAfter",
+              "packageName": "String",
+              "disabled": false,
+              "attributes": [
+                {
+                  "name": "sourceString",
+                  "value": {
+                    "type": "STRING",
+                    "expression": "$stringTextGeneratorChatGPT$"
+                  }
+                },
+                {
+                  "name": "getCharacters",
+                  "value": {
+                    "type": "STRING",
+                    "string": "BEFOREAFTER"
+                  }
+                },
+                {
+                  "name": "beforeStringInBeforeAfter",
+                  "value": {
+                    "type": "STRING",
+                    "string": "(2) Description:"
+                  }
+                },
+                {
+                  "name": "beforeOccurrenceInBeforeAfter",
+                  "value": {
+                    "type": "NUMBER",
+                    "number": "1"
+                  }
+                },
+                {
+                  "name": "beforeAfterCondition",
+                  "value": {
+                    "type": "STRING",
+                    "string": "AND"
+                  }
+                },
+                {
+                  "name": "afterStringInBeforeAfter",
+                  "value": {
+                    "type": "STRING",
+                    "string": "(3) Script:"
+                  }
+                },
+                {
+                  "name": "afterOccurrenceInBeforeAfter",
+                  "value": {
+                    "type": "NUMBER",
+                    "number": "1"
+                  }
+                },
+                {
+                  "name": "ifNoMatchFound",
+                  "value": {
+                    "type": "STRING",
+                    "string": "EMPTY"
+                  }
+                },
+                {
+                  "name": "noOfCharsToGet",
+                  "value": {
+                    "type": "STRING",
+                    "string": "ALL"
+                  }
+                },
+                {
+                  "name": "isCaseSensitive",
+                  "value": {
+                    "type": "STRING",
+                    "string": "true"
+                  }
+                },
+                {
+                  "name": "trimSpaces",
+                  "value": {
+                    "type": "BOOLEAN",
+                    "boolean": false
+                  }
+                },
+                {
+                  "name": "removeEnter",
+                  "value": {
+                    "type": "BOOLEAN",
+                    "boolean": false
+                  }
+                }
+              ],
+              "returnTo": {
+                "type": "VARIABLE",
+                "variableName": "stringDescription"
+              }
+            },
+            {
+              "uid": "1d5b4d5b-d3cb-4749-9c2e-251fbbd8b0b2",
+              "commandName": "beforeAfter",
+              "packageName": "String",
+              "disabled": false,
+              "attributes": [
+                {
+                  "name": "sourceString",
+                  "value": {
+                    "type": "STRING",
+                    "expression": "$stringTextGeneratorChatGPT$"
+                  }
+                },
+                {
+                  "name": "getCharacters",
+                  "value": {
+                    "type": "STRING",
+                    "string": "BEFOREAFTER"
+                  }
+                },
+                {
+                  "name": "beforeStringInBeforeAfter",
+                  "value": {
+                    "type": "STRING",
+                    "string": "(3) Script:"
+                  }
+                },
+                {
+                  "name": "beforeOccurrenceInBeforeAfter",
+                  "value": {
+                    "type": "NUMBER",
+                    "number": "1"
+                  }
+                },
+                {
+                  "name": "beforeAfterCondition",
+                  "value": {
+                    "type": "STRING",
+                    "string": "AND"
+                  }
+                },
+                {
+                  "name": "afterStringInBeforeAfter",
+                  "value": {
+                    "type": "STRING",
+                    "string": "(4) Quote:"
+                  }
+                },
+                {
+                  "name": "afterOccurrenceInBeforeAfter",
+                  "value": {
+                    "type": "NUMBER",
+                    "number": "1"
+                  }
+                },
+                {
+                  "name": "ifNoMatchFound",
+                  "value": {
+                    "type": "STRING",
+                    "string": "EMPTY"
+                  }
+                },
+                {
+                  "name": "noOfCharsToGet",
+                  "value": {
+                    "type": "STRING",
+                    "string": "ALL"
+                  }
+                },
+                {
+                  "name": "isCaseSensitive",
+                  "value": {
+                    "type": "STRING",
+                    "string": "true"
+                  }
+                },
+                {
+                  "name": "trimSpaces",
+                  "value": {
+                    "type": "BOOLEAN",
+                    "boolean": false
+                  }
+                },
+                {
+                  "name": "removeEnter",
+                  "value": {
+                    "type": "BOOLEAN",
+                    "boolean": false
+                  }
+                }
+              ],
+              "returnTo": {
+                "type": "VARIABLE",
+                "variableName": "stringScript"
+              }
+            },
+            {
+              "uid": "623f44d6-ad68-4cae-ac85-d4e4ab6ccd56",
+              "commandName": "beforeAfter",
+              "packageName": "String",
+              "disabled": false,
+              "attributes": [
+                {
+                  "name": "sourceString",
+                  "value": {
+                    "type": "STRING",
+                    "expression": "$stringTextGeneratorChatGPT$"
+                  }
+                },
+                {
+                  "name": "getCharacters",
+                  "value": {
+                    "type": "STRING",
+                    "string": "BEFORE"
+                  }
+                },
+                {
+                  "name": "beforeString",
+                  "value": {
+                    "type": "STRING",
+                    "string": "(4) Quote:"
+                  }
+                },
+                {
+                  "name": "beforeOccurrence",
+                  "value": {
+                    "type": "NUMBER",
+                    "number": "1"
+                  }
+                },
+                {
+                  "name": "ifNoMatchFound",
+                  "value": {
+                    "type": "STRING",
+                    "string": "EMPTY"
+                  }
+                },
+                {
+                  "name": "noOfCharsToGet",
+                  "value": {
+                    "type": "STRING",
+                    "string": "ALL"
+                  }
+                },
+                {
+                  "name": "isCaseSensitive",
+                  "value": {
+                    "type": "STRING",
+                    "string": "true"
+                  }
+                },
+                {
+                  "name": "trimSpaces",
+                  "value": {
+                    "type": "BOOLEAN",
+                    "boolean": false
+                  }
+                },
+                {
+                  "name": "removeEnter",
+                  "value": {
+                    "type": "BOOLEAN",
+                    "boolean": false
+                  }
+                }
+              ],
+              "returnTo": {
+                "type": "VARIABLE",
+                "variableName": "stringQuote"
+              }
+            }
+          ],
+          "disabled": false,
+          "attributes": [
+            {
+              "name": "title",
+              "value": {
+                "type": "STRING",
+                "string": "Editing"
+              }
+            }
+          ]
+        },
+        {
+          "uid": "b38fdcf8-0455-460f-802c-5eb6ea23245a",
+          "commandName": "step",
+          "packageName": "Step",
+          "children": [
+            {
+              "uid": "d269acb3-414d-4f38-9d8a-b68614ff1e32",
+              "commandName": "setCellValue",
+              "packageName": "DataTable",
+              "disabled": false,
+              "attributes": [
+                {
+                  "name": "table",
+                  "value": {
+                    "type": "VARIABLE",
+                    "variableName": "tableTextGenerator"
+                  }
+                },
+                {
+                  "name": "rowPosition",
+                  "value": {
+                    "type": "NUMBER",
+                    "number": "0"
+                  }
+                },
+                {
+                  "name": "columnType",
+                  "value": {
+                    "type": "STRING",
+                    "string": "colName"
+                  }
+                },
+                {
+                  "name": "columnName",
+                  "value": {
+                    "type": "STRING",
+                    "string": "TextGenerator"
+                  }
+                },
+                {
+                  "name": "value",
+                  "value": {
+                    "type": "STRING",
+                    "expression": "$stringLogTextGenerator$"
+                  }
+                }
+              ]
+            },
+            {
+              "uid": "4ee608cd-3bc7-4050-bf19-070ad588ea75",
+              "commandName": "setCellValue",
+              "packageName": "DataTable",
+              "disabled": false,
+              "attributes": [
+                {
+                  "name": "table",
+                  "value": {
+                    "type": "VARIABLE",
+                    "variableName": "tableTextGenerator"
+                  }
+                },
+                {
+                  "name": "rowPosition",
+                  "value": {
+                    "type": "NUMBER",
+                    "number": "0"
+                  }
+                },
+                {
+                  "name": "columnType",
+                  "value": {
+                    "type": "STRING",
+                    "string": "colName"
+                  }
+                },
+                {
+                  "name": "columnName",
+                  "value": {
+                    "type": "STRING",
+                    "string": "TextGeneratorPromptII"
+                  }
+                },
+                {
+                  "name": "value",
+                  "value": {
+                    "type": "STRING",
+                    "expression": "$stringTextGeneratorPrompt$"
+                  }
+                }
+              ]
+            },
+            {
+              "uid": "20dada79-c2a4-41ff-ab81-8b61c4114fdc",
+              "commandName": "setCellValue",
+              "packageName": "DataTable",
+              "disabled": false,
+              "attributes": [
+                {
+                  "name": "table",
+                  "value": {
+                    "type": "VARIABLE",
+                    "variableName": "tableTextGenerator"
+                  }
+                },
+                {
+                  "name": "rowPosition",
+                  "value": {
+                    "type": "NUMBER",
+                    "number": "0"
+                  }
+                },
+                {
+                  "name": "columnType",
+                  "value": {
+                    "type": "STRING",
+                    "string": "colName"
+                  }
+                },
+                {
+                  "name": "columnName",
+                  "value": {
+                    "type": "STRING",
+                    "string": "TextGeneratorChatGPT"
+                  }
+                },
+                {
+                  "name": "value",
+                  "value": {
+                    "type": "STRING",
+                    "expression": "$stringTextGeneratorChatGPT$"
+                  }
+                }
+              ]
+            },
+            {
+              "uid": "11d3a913-1043-4829-834f-bd736bac329b",
+              "commandName": "setCellValue",
+              "packageName": "DataTable",
+              "disabled": false,
+              "attributes": [
+                {
+                  "name": "table",
+                  "value": {
+                    "type": "VARIABLE",
+                    "variableName": "tableTextGenerator"
+                  }
+                },
+                {
+                  "name": "rowPosition",
+                  "value": {
+                    "type": "NUMBER",
+                    "number": "0"
+                  }
+                },
+                {
+                  "name": "columnType",
+                  "value": {
+                    "type": "STRING",
+                    "string": "colName"
+                  }
+                },
+                {
+                  "name": "columnName",
+                  "value": {
+                    "type": "STRING",
+                    "string": "Topic"
+                  }
+                },
+                {
+                  "name": "value",
+                  "value": {
+                    "type": "STRING",
+                    "expression": "$stringTopic$"
+                  }
+                }
+              ]
+            },
+            {
+              "uid": "90b3b801-34bb-4b80-8dac-e6119f737c1c",
+              "commandName": "setCellValue",
+              "packageName": "DataTable",
+              "disabled": false,
+              "attributes": [
+                {
+                  "name": "table",
+                  "value": {
+                    "type": "VARIABLE",
+                    "variableName": "tableTextGenerator"
+                  }
+                },
+                {
+                  "name": "rowPosition",
+                  "value": {
+                    "type": "NUMBER",
+                    "number": "0"
+                  }
+                },
+                {
+                  "name": "columnType",
+                  "value": {
+                    "type": "STRING",
+                    "string": "colName"
+                  }
+                },
+                {
+                  "name": "columnName",
+                  "value": {
+                    "type": "STRING",
+                    "string": "Description"
+                  }
+                },
+                {
+                  "name": "value",
+                  "value": {
+                    "type": "STRING",
+                    "expression": "$stringDescription$"
+                  }
+                }
+              ]
+            },
+            {
+              "uid": "d36fd6be-7001-48a3-822d-774e66f4f012",
+              "commandName": "setCellValue",
+              "packageName": "DataTable",
+              "disabled": false,
+              "attributes": [
+                {
+                  "name": "table",
+                  "value": {
+                    "type": "VARIABLE",
+                    "variableName": "tableTextGenerator"
+                  }
+                },
+                {
+                  "name": "rowPosition",
+                  "value": {
+                    "type": "NUMBER",
+                    "number": "0"
+                  }
+                },
+                {
+                  "name": "columnType",
+                  "value": {
+                    "type": "STRING",
+                    "string": "colName"
+                  }
+                },
+                {
+                  "name": "columnName",
+                  "value": {
+                    "type": "STRING",
+                    "string": "Script"
+                  }
+                },
+                {
+                  "name": "value",
+                  "value": {
+                    "type": "STRING",
+                    "expression": "$stringScript$"
+                  }
+                }
+              ]
+            },
+            {
+              "uid": "7543e22c-eed0-4150-b315-b7367f9c4dc0",
+              "commandName": "setCellValue",
+              "packageName": "DataTable",
+              "disabled": false,
+              "attributes": [
+                {
+                  "name": "table",
+                  "value": {
+                    "type": "VARIABLE",
+                    "variableName": "tableTextGenerator"
+                  }
+                },
+                {
+                  "name": "rowPosition",
+                  "value": {
+                    "type": "NUMBER",
+                    "number": "0"
+                  }
+                },
+                {
+                  "name": "columnType",
+                  "value": {
+                    "type": "STRING",
+                    "string": "colName"
+                  }
+                },
+                {
+                  "name": "columnName",
+                  "value": {
+                    "type": "STRING",
+                    "string": "Quote"
+                  }
+                },
+                {
+                  "name": "value",
+                  "value": {
+                    "type": "STRING",
+                    "expression": "$stringQuote$"
+                  }
+                }
+              ]
+            }
+          ],
+          "disabled": false,
+          "attributes": [
+            {
+              "name": "title",
+              "value": {
+                "type": "STRING",
+                "string": "Assign"
+              }
+            }
+          ]
+        },
+        {
+          "uid": "941b93aa-058e-4033-bc72-a6479571458f",
+          "commandName": "step",
+          "packageName": "Step",
+          "children": [
+            {
+              "uid": "56b6bb9f-b03b-4d7a-b027-88eb29d44b67",
+              "commandName": "if",
+              "packageName": "If",
+              "children": [
+                {
+                  "uid": "fd097dfe-a8b6-44fc-89e3-76bc01edb760",
+                  "commandName": "close",
+                  "packageName": "Browser",
+                  "disabled": false,
+                  "attributes": [
+                    {
+                      "name": "whatToClose",
+                      "value": {
+                        "type": "STRING",
+                        "string": "Tab"
+                      }
+                    },
+                    {
+                      "name": "tabValue",
+                      "value": {
+                        "type": "WINDOW",
+                        "expression": "$windowChatGPT$"
+                      }
+                    },
+                    {
+                      "name": "timeoutValue",
+                      "value": {
+                        "type": "NUMBER",
+                        "expression": "$numberWaitForCondition$"
+                      }
+                    },
+                    {
+                      "name": "version",
+                      "value": {
+                        "type": "NUMBER",
+                        "number": "3810"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "uid": "43f2aa3f-61c4-4d31-8e4d-90e8d1dfed80",
+                  "commandName": "waitForCondition",
+                  "packageName": "Wait",
+                  "disabled": false,
+                  "attributes": [
+                    {
+                      "attributes": [
+                        {
+                          "name": "window",
+                          "value": {
+                            "type": "WINDOW",
+                            "expression": "$windowChatGPT$"
+                          }
+                        },
+                        {
+                          "name": "waitTimeout",
+                          "value": {
+                            "type": "NUMBER",
+                            "expression": "$numberWaitForCondition$"
+                          }
+                        }
+                      ],
+                      "name": "conditionPredicate",
+                      "value": {
+                        "type": "CONDITIONAL",
+                        "conditionalName": "windowNotExists",
+                        "packageName": "Window"
+                      }
+                    }
+                  ]
+                }
+              ],
+              "branches": [],
+              "disabled": false,
+              "attributes": [
+                {
+                  "attributes": [
+                    {
+                      "name": "window",
+                      "value": {
+                        "type": "WINDOW",
+                        "expression": "$windowChatGPT$"
+                      }
+                    },
+                    {
+                      "name": "waitTimeout",
+                      "value": {
+                        "type": "NUMBER",
+                        "expression": "$numberWaitForCondition$"
+                      }
+                    }
+                  ],
+                  "name": "condition",
+                  "value": {
+                    "type": "CONDITIONAL",
+                    "conditionalName": "windowExists",
+                    "packageName": "Window"
+                  }
+                }
+              ]
+            }
+          ],
+          "disabled": false,
+          "attributes": [
+            {
+              "name": "title",
+              "value": {
+                "type": "STRING",
+                "string": "Close"
+              }
+            }
+          ]
+        }
+      ],
+      "branches": [
+        {
+          "uid": "ccfe3411-85b3-4e70-bbc8-ba5899d183a8",
+          "commandName": "catch",
+          "packageName": "ErrorHandler",
+          "children": [
+            {
+              "uid": "0096451b-ed6b-4465-ab6d-83ae2ae9ec4b",
+              "commandName": "logVariablesToFile",
+              "packageName": "LogToFile",
+              "disabled": false,
+              "attributes": [
+                {
+                  "name": "filePath",
+                  "value": {
+                    "type": "FILE",
+                    "expression": "file://$stringWorkDirectory$/ErrorHandling.txt"
+                  }
+                },
+                {
+                  "name": "logOption",
+                  "value": {
+                    "type": "STRING",
+                    "string": "APPEND_FILE"
+                  }
+                },
+                {
+                  "name": "appendTimestamp",
+                  "value": {
+                    "type": "BOOLEAN",
+                    "boolean": false
+                  }
+                },
+                {
+                  "name": "variables",
+                  "value": {
+                    "type": "VARIABLEMAP",
+                    "variableMapNames": [
+                      "stringerrormessage",
+                      "numbererrorlinenumber"
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "uid": "2a8d7188-d204-46a8-95aa-2985e4fa4115",
+              "commandName": "assign",
+              "packageName": "Boolean",
+              "disabled": false,
+              "attributes": [
+                {
+                  "name": "source",
+                  "value": {
+                    "type": "STRING",
+                    "string": "constant"
+                  }
+                },
+                {
+                  "name": "userDefined",
+                  "value": {
+                    "type": "STRING",
+                    "string": "true"
+                  }
+                }
+              ],
+              "returnTo": {
+                "type": "VARIABLE",
+                "variableName": "booleanError"
+              }
+            }
+          ],
+          "disabled": false,
+          "attributes": [
+            {
+              "name": "exceptionType",
+              "value": {
+                "type": "EXCEPTION",
+                "exceptionName": "BotException",
+                "packageName": "ErrorHandler"
+              }
+            },
+            {
+              "name": "continueOnError",
+              "value": {
+                "type": "BOOLEAN",
+                "boolean": false
+              }
+            }
+          ],
+          "returns": {
+            "errorMessage": {
+              "type": "VARIABLE",
+              "variableName": "stringErrorMessage"
+            },
+            "errorLineNumber": {
+              "type": "VARIABLE",
+              "variableName": "numberErrorLineNumber"
+            }
+          }
+        }
+      ],
+      "disabled": false
+    }
+  ],
+  "variables": [
+    {
+      "name": "stringLogTextGenerator",
+      "description": "",
+      "type": "STRING",
+      "readOnly": false,
+      "input": false,
+      "output": false,
+      "defaultValue": {
+        "type": "STRING",
+        "string": ""
+      }
+    },
+    {
+      "name": "stringDateTimeFormat",
+      "description": "",
+      "type": "STRING",
+      "readOnly": false,
+      "input": true,
+      "output": false,
+      "defaultValue": {
+        "type": "STRING",
+        "string": ""
+      }
+    },
+    {
+      "name": "stringWorkDirectory",
+      "description": "",
+      "type": "STRING",
+      "readOnly": false,
+      "input": true,
+      "output": false,
+      "defaultValue": {
+        "type": "STRING",
+        "string": ""
+      }
+    },
+    {
+      "name": "stringTextGeneratorPrompt",
+      "description": "",
+      "type": "STRING",
+      "readOnly": false,
+      "input": true,
+      "output": false,
+      "defaultValue": {
+        "type": "STRING",
+        "string": ""
+      }
+    },
+    {
+      "name": "stringTopic",
+      "description": "",
+      "type": "STRING",
+      "readOnly": false,
+      "input": false,
+      "output": true,
+      "defaultValue": {
+        "type": "STRING",
+        "string": ""
+      }
+    },
+    {
+      "name": "stringDescription",
+      "description": "",
+      "type": "STRING",
+      "readOnly": false,
+      "input": false,
+      "output": true,
+      "defaultValue": {
+        "type": "STRING",
+        "string": ""
+      }
+    },
+    {
+      "name": "stringScript",
+      "description": "",
+      "type": "STRING",
+      "readOnly": false,
+      "input": false,
+      "output": true,
+      "defaultValue": {
+        "type": "STRING",
+        "string": ""
+      }
+    },
+    {
+      "name": "stringQuote",
+      "description": "",
+      "type": "STRING",
+      "readOnly": false,
+      "input": false,
+      "output": true,
+      "defaultValue": {
+        "type": "STRING",
+        "string": ""
+      }
+    },
+    {
+      "name": "stringTextGeneratorChatGPT",
+      "description": "",
+      "type": "STRING",
+      "readOnly": false,
+      "input": false,
+      "output": false,
+      "defaultValue": {
+        "type": "STRING",
+        "string": ""
+      }
+    },
+    {
+      "name": "stringErrorMessage",
+      "description": "",
+      "type": "STRING",
+      "readOnly": false,
+      "input": false,
+      "output": false,
+      "defaultValue": {
+        "type": "STRING",
+        "string": ""
+      }
+    },
+    {
+      "name": "numberErrorLineNumber",
+      "description": "",
+      "type": "NUMBER",
+      "readOnly": false,
+      "input": false,
+      "output": false,
+      "defaultValue": {
+        "type": "NUMBER",
+        "number": "0"
+      }
+    },
+    {
+      "name": "booleanError",
+      "description": "",
+      "type": "BOOLEAN",
+      "readOnly": false,
+      "input": false,
+      "output": true,
+      "defaultValue": {
+        "type": "BOOLEAN",
+        "boolean": false
+      }
+    },
+    {
+      "name": "tableTextGenerator",
+      "description": "",
+      "type": "TABLE",
+      "readOnly": false,
+      "input": false,
+      "output": true,
+      "defaultValue": {
+        "type": "TABLE",
+        "table": {
+          "schema": [
+            {
+              "name": "TextGenerator",
+              "type": "STRING"
+            },
+            {
+              "name": "TextGeneratorPromptII",
+              "type": "STRING"
+            },
+            {
+              "name": "TextGeneratorChatGPT",
+              "type": "STRING"
+            },
+            {
+              "name": "Topic",
+              "type": "STRING"
+            },
+            {
+              "name": "Description",
+              "type": "STRING"
+            },
+            {
+              "name": "Script",
+              "type": "STRING"
+            },
+            {
+              "name": "Quote",
+              "type": "STRING"
+            }
+          ],
+          "rows": [
+            {
+              "values": [
+                {
+                  "type": "STRING",
+                  "string": ""
+                },
+                {
+                  "type": "STRING",
+                  "string": ""
+                },
+                {
+                  "type": "STRING",
+                  "string": ""
+                },
+                {
+                  "type": "STRING",
+                  "string": ""
+                },
+                {
+                  "type": "STRING",
+                  "string": ""
+                },
+                {
+                  "type": "STRING",
+                  "string": ""
+                },
+                {
+                  "type": "STRING",
+                  "string": ""
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "stringPromptGeneratorChatGPT",
+      "description": "",
+      "type": "STRING",
+      "readOnly": false,
+      "input": true,
+      "output": false,
+      "defaultValue": {
+        "type": "STRING",
+        "string": ""
+      }
+    },
+    {
+      "name": "windowChatGPT",
+      "description": "",
+      "type": "WINDOW",
+      "readOnly": true,
+      "input": false,
+      "output": false,
+      "defaultValue": {
+        "type": "WINDOW",
+        "window": {
+          "name": "*ChatGPT*",
+          "path": "",
+          "class": "Chrome_WidgetWin_",
+          "handle": "0",
+          "isChild": false,
+          "presetType": "NONE",
+          "windowType": "BROWSER_CHROME",
+          "browserTabUrl": "https://chatgpt.com/?temporary-chat=true",
+          "browserTabOpenNewWindow": false,
+          "nameCaseInsensitive": false,
+          "virtualType": "VIRTUAL_TYPE_NONE",
+          "virtualPath": ""
+        }
+      }
+    },
+    {
+      "name": "numberWaitForCondition",
+      "description": "",
+      "type": "NUMBER",
+      "readOnly": false,
+      "input": false,
+      "output": false,
+      "defaultValue": {
+        "type": "NUMBER",
+        "number": "1"
+      }
+    }
+  ],
+  "packages": [
+    {
+      "name": "Boolean",
+      "version": "2.13.2",
+      "settingsAttributes": []
+    },
+    {
+      "name": "Browser",
+      "version": "4.4.1",
+      "settingsAttributes": []
+    },
+    {
+      "name": "Clipboard",
+      "version": "3.9.1",
+      "settingsAttributes": []
+    },
+    {
+      "name": "DataTable",
+      "version": "4.18.0",
+      "settingsAttributes": []
+    },
+    {
+      "name": "Datetime",
+      "version": "2.17.3",
+      "settingsAttributes": []
+    },
+    {
+      "name": "ErrorHandler",
+      "version": "2.13.0-20241115-120032",
+      "settingsAttributes": []
+    },
+    {
+      "name": "If",
+      "version": "3.8.0-20241115-115929",
+      "settingsAttributes": []
+    },
+    {
+      "name": "LogToFile",
+      "version": "3.11.1",
+      "settingsAttributes": []
+    },
+    {
+      "name": "Loop",
+      "version": "3.10.0-20251030-061555",
+      "settingsAttributes": []
+    },
+    {
+      "name": "Recorder",
+      "version": "5.7.4-20260402-111842",
+      "settingsAttributes": [
+        {
+          "name": "recorderNativeFallbackOption",
+          "value": {
+            "type": "BOOLEAN",
+            "boolean": false
+          }
+        },
+        {
+          "name": "genAIVisionBasedFallbackOption",
+          "value": {
+            "type": "BOOLEAN",
+            "boolean": false
+          }
+        },
+        {
+          "name": "genAIFallbackOption",
+          "value": {
+            "type": "BOOLEAN",
+            "boolean": false
+          }
+        }
+      ]
+    },
+    {
+      "name": "Step",
+      "version": "2.7.0",
+      "settingsAttributes": []
+    },
+    {
+      "name": "String",
+      "version": "5.12.2",
+      "settingsAttributes": []
+    },
+    {
+      "name": "System",
+      "version": "3.18.0",
+      "settingsAttributes": []
+    },
+    {
+      "name": "Wait",
+      "version": "4.15.0",
+      "settingsAttributes": []
+    },
+    {
+      "name": "Window",
+      "version": "5.14.1",
+      "settingsAttributes": []
+    }
+  ],
+  "properties": {
+    "botCodeVersion": "7",
+    "improvedNumberSupport": true,
+    "timeout": "0s",
+    "automationPriority": "PRIORITY_MEDIUM",
+    "runInChildWindow": false,
+    "runInChildWindowMode": "DESKTOP"
+  },
+  "workItemTemplateName": null
+}
