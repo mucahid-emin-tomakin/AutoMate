@@ -168,7 +168,7 @@ curl https://repo.anaconda.com/miniconda/Miniconda3-latest-Windows-x86_64.exe --
 ```PowerShell
 Invoke-WebRequest -Uri "https://repo.anaconda.com/miniconda/Miniconda3-latest-Windows-x86_64.exe" -OutFile ".\Miniconda3-latest-Windows-x86_64.exe"
 ```
-activate.bat sollte unter `..\TTSFactory\MINICONDA\Scripts` sein.
+`activate.bat` sollte unter `..\TTSFactory\MINICONDA\Scripts` sein.
 
 ### TortoiseTTS
 Lade TortoiseTTS von [release](https://github.com/mucahid-emin-tomakin/AutoMate/blob/main/AutomationAnywhere/TTSFactory/TortoiseTTS/Installer/tortoise-tts-main.zip) oder von der offiziellen [GitHub repository](https://github.com/neonbjb/tortoise-tts) runter.
@@ -201,7 +201,7 @@ pip install librosa scipy inflect rotary_embedding_torch unidecode tqdm einops p
 cd ..\TortoiseTTS
 pip install -e .
 ```
-Hinweis: Die Modelle werden beim ersten Start von Tortoise automatisch heruntergeladen (ca. 4 GB). Du kannst sie auch manuell aus dem Release übernehmen.
+> **Hinweis:** Die Modelle werden beim ersten Start von Tortoise automatisch heruntergeladen (ca. 4 GB). Du kannst sie auch manuell aus dem Release übernehmen.
 
 ### Automation Anywhere Bots importieren
 - Voraussetzung: [Automation Anywhere Community Edition](https://community2.cloud-2.automationanywhere.digital/#/login?next=/index) & [AA360 Bot Assistant Extension](https://chromewebstore.google.com/detail/bdnogmeijaanbgpnmbhlhmkfcbaoejcp?utm_source=item-share-cb) für Google Chrome.
