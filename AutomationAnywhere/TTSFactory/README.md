@@ -154,11 +154,11 @@ Das Python‑Skript AudioGenerator.py wird dynamisch von AA generiert und anschl
 
 ## ⚙️ KONFIGURATION
 
-### FFMPEG
+### FFmpeg
 Lade `ffmpeg-git-full.7z` von [gyan.dev](https://www.gyan.dev/ffmpeg/builds/) oder von [Release](https://github.com/mucahid-emin-tomakin/AutoMate/blob/main/AutomationAnywhere/TTSFactory/FFMPEG/Installer/ffmpeg-2026-05-11-git-17bc88e67f-full_build.7z) herunter und entpacke es unter `..\TTSFactory\FFMPEG\`.  
 `ffmpeg.exe` sollte unter `..\TTSFactory\FFMPEG\bin` sein.
 
-### MINICONDA
+### Miniconda
 Installer runterladen und unter `..\TTSFactory\MINICONDA` entpacken. Entweder von [release](https://github.com/mucahid-emin-tomakin/AutoMate/blob/main/AutomationAnywhere/TTSFactory/MINICONDA/Installer/Miniconda3-latest-Windows-x86_64.exe) oder mittels command-line interface.
 #### [CMD](https://www.anaconda.com/docs/getting-started/miniconda/install/windows-cli-install#powershell)
 ```CMD
