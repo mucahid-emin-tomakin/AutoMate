@@ -58,7 +58,7 @@
 5. **Main** – Orchestriert alle Schritte und protokolliert alles in `Main.csv`
 Alle Komponenten (FFmpeg, Miniconda, Tortoise TTS) sind in einer **portablen Runtime** zusammengefasst – kein manuelles Installieren von Abhängigkeiten nötig.
 
-### 🤖 DIE FÜNF AUTOMATION ANYWHERE BOTS
+### 🤖 Die fünf Automation Anywhere Bots
 #### 1. Main (Orchestrator)
 **Aufgabe:** Startet die Sub‑Bots der Reihe nach, fängt Fehler ab, sammelt alle Log‑Informationen und schreibt sie in Main.csv.
 **Besonderheiten:** Enthält runTask‑Aufrufe für jeden der vier anderen Bots, jeweils mit Input/Output‑Dictionary. Nach jedem Sub‑Bot wird booleanError geprüft – bei Fehler erfolgt Abbruch mit Fehler‑Log.
@@ -90,7 +90,7 @@ Alle Komponenten (FFmpeg, Miniconda, Tortoise TTS) sind in einer **portablen Run
 - Mit `CsvTxt` werden die Log‑ und Flag‑Dateien wieder eingelesen und bereinigt (Entfernung von `{`, `}`, `},`).
 - Die Ergebnisse (Text, Log, Flag) landen in `tableAudioGenerator`.
 
-### 🐍 DAS TORTOSE TTS PYTHON SKRIPT
+### 🐍 Das TortoiseTTS Python-Skript
 Das Python‑Skript AudioGenerator.py wird dynamisch von AA generiert und anschließend ausgeführt. Es ist ein Wrapper für die offizielle Tortoise‑TTS‑Bibliothek.
 #### Aufgaben im Überblick:
 1. Umgebungsvariablen setzen (HF_HOME, MODELS_DIR) – für portable Modelle.
