@@ -1,3 +1,7 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+# CopySync - Original
+
 import os
 import sys
 import csv
