@@ -113,13 +113,15 @@ Das Python‑Skript AudioGenerator.py wird dynamisch von AA generiert und anschl
 | **OneForAll** | Beinhaltet alle Bots |
 
 ### 🐍 Python (Tortoise TTS Wrapper)
-Das dynamisch generierte `AudioGenerator.py` übernimmt:
-- Laden des Texts aus `AudioGeneratorText.txt`
-- Splitten in Satzteile (max. 200 Zeichen)
-- Aufruf von Tortoise TTS mit allen CLI‑Parametern
-- WAV‑Zusammenführung, MP3‑Konvertierung (FFmpeg) und Bereinigung
+| Schritt | Aufgabe |
+|---------|---------|
+| 1 | Laden des Texts aus `AudioGeneratorText.txt` |
+| 2 | Splitten in Satzteile (max. 200 Zeichen) |
+| 3 | Aufruf von Tortoise TTS mit allen CLI‑Parametern |
+| 4 | WAV‑Zusammenführung, MP3‑Konvertierung (FFmpeg) und Bereinigung |
+| 5 | Schreiben von `Flag.txt` als Signal an AA |
 
-### 📜 Batch & VBS (Startkette)
+### 📜 Startkette Batch & VBS (AA → VBS → BAT → Python)
 | Schritt | Komponente | Aufgabe |
 |---------|------------|---------|
 | 1 | **Automation Anywhere (AudioGenerator Bot)** | Ruft `C:\Windows\System32\wscript.exe` mit Parameter `AudioGenerator.vbs` auf |
@@ -185,7 +187,7 @@ Hinweis: Die Modelle werden beim ersten Start von Tortoise automatisch herunterg
 - Gehe in den AA Control Room, erstelle für jede der fünf .json‑Dateien im Ordner AA-Bots/ einen neuen Bot (Achte auch die Namengebung).
 - Öffne die Extension → "Copy from Clipboard" → Inhalt der .json einfügen → "Patch Content".
 - Wiederhole für alle fünf Bots.
-![DemoAA](https://example.com/demo.gif)
+![DemoAA](https://github.com/mucahid-emin-tomakin/AutoMate/blob/main/AutomationAnywhere/TTSFactory/DemoAA.gif)
 
 ### Variablen anpassen
 Öffne den PreConfiguration‑Bot im AA‑Editor. Suche die Variable stringWorkDirectory und setze sie auf deinen Entpack‑Pfad (z. B. C:\Users\Public\TTSFactory\).
@@ -270,7 +272,7 @@ cd AutomationAnywhere/TTSFactory
 ## 🖼️ SCREENSHOTS
 
 ### 🎬 DemoWorkflow.mp4
-![DemoWorkflow](DemoWorkflow.mp4)
+![DemoWorkflow](https://github.com/mucahid-emin-tomakin/AutoMate/blob/main/AutomationAnywhere/TTSFactory/DemoWorkflow.mp4)
 > **Hinweis:** Das Video zeigt die Ausführung des Main‑Bots und das Ergebnis (MP3 + Main.csv).
 
 ---
