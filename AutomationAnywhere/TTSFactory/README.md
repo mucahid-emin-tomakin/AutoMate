@@ -60,7 +60,7 @@ Alle Komponenten (FFmpeg, Miniconda, Tortoise TTS) sind in einer **portablen Run
 
 ### 🤖 Die fünf Automation Anywhere Bots
 #### 1. Main (Orchestrator)
-**Aufgabe:** Startet die Sub‑Bots der Reihe nach, fängt Fehler ab, sammelt alle Log‑Informationen und schreibt sie in Main.csv.
+**Aufgabe:** Startet die Sub‑Bots der Reihe nach, fängt Fehler ab, sammelt alle Log‑Informationen und schreibt sie in `Main.csv`.
 **Besonderheiten:** Enthält runTask‑Aufrufe für jeden der vier anderen Bots, jeweils mit Input/Output‑Dictionary. Nach jedem Sub‑Bot wird booleanError geprüft – bei Fehler erfolgt Abbruch mit Fehler‑Log.
 #### 2. PreConfiguration (Setup & Prompt‑Bau)
 **Aufgabe:** Definiert alle Pfade, Parameter, erstellt die beiden ChatGPT‑Prompts und generiert die kompletten Steuerungsskripte (.vbs, .bat, .py) als Strings.
@@ -278,7 +278,7 @@ Passe gegebenenfalls auch stringAudioGeneratorVoice (Name der Tortoise‑Stimme)
 git clone https://github.com/mucahid-emin-tomakin/AutoMate.git
 cd AutoMate
 
-# 2. In den ein Projektfodler wechseln
+# 2. In den Projektordner wechseln
 cd AutomationAnywhere/TTSFactory
 
 # 3. JSON-Dateien in Automation Anywhere importieren
