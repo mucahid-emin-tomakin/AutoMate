@@ -1,0 +1,309 @@
+Status;Main;PreConfiguration;DateTimeFormat;WorkDirectory;PromptGeneratorPrompt;TextGeneratorPrompt;AudioGeneratorWorkDirectoryOutput;AudioGeneratorWorkDirectoryScript;stringAudioGeneratorMinicondaDirectory;stringAudioGeneratorFFMPEGDirectory;AudioGeneratorModelDirectory;AudioGeneratorHuggingFaceDirectory;AudioGeneratorTextFile;AudioGeneratorTextSplit;AudioGeneratorVoice;AudioGeneratorOutputPath;AudioGeneratorOutputName;AudioGeneratorPreset;AudioGeneratorRegenerate;AudioGeneratorCandidates;AudioGeneratorSeed;AudioGeneratorProduceDebugState;booleanAudioGeneratorUseDeepspeed;AudioGeneratorCacheKV;AudioGeneratorHalf;AudioGeneratorDebug;AudioGeneratorTemperature;AudioGeneratorLengthPenalty;AudioGeneratorRepetitionPenalty;AudioGeneratorTopP;AudioGeneratorCondFreeK;AudioGeneratorDiffusionTemperature;AudioGeneratorDiffusionIteration;AudioGeneratorARSamples;AudioGeneratorAmountCVVP;AudioGeneratorConditionalFreeGuidance;AudioGeneratorWSH;AudioGeneratorVBS;AudioGeneratorBAT;AudioGeneratorPython;PromptGenerator;PromptGeneratorChatGPT;TextGenerator;TextGeneratorPromptII;TextGeneratorChatGPT;Topic;Description;Script;Quote;AudioGenerator;Text;Flag;Log;StatusDateTime
+Completed;13.05.2026_22:31:11;13.05.2026_22:31:11;dd.MM.yyyy_HH:mm:ss;C:\Users\USER\Downloads\AutomationAnywhere\TTSFactory\;"Give max 5 of today’s top motivational video content themes from TikTok, Instagram, and YouTube. Output only plain text using letters and commas. No extra words, numbering, quotes, emojis, links, hashtags, line breaks, or explanations. Format strictly as: Theme1, Theme2, Theme3, Theme4, Theme5
+";"TASK[SHIFT DOWN]
+[SHIFT UP]Write the spoken portion of a 90-second (233–266 words) vertical-video script for TikTok, Instagram Reels, and YouTube Shorts.[SHIFT DOWN]
+[SHIFT UP][SHIFT DOWN]
+[SHIFT UP]AUDIENCE & STYLE[SHIFT DOWN]
+[SHIFT UP]• Niche: Motivation / self-improvement[SHIFT DOWN]
+[SHIFT UP]• Tone: High-energy, encouraging, conversational (second-person “you”)[SHIFT DOWN]
+[SHIFT UP]• Rhythm: Short, punchy sentences with strategic pauses for on-screen text sync[SHIFT DOWN]
+[SHIFT UP][SHIFT DOWN]
+[SHIFT UP]INPUT[SHIFT DOWN]
+[SHIFT UP]Today’s key content themes:[SHIFT DOWN]
+[SHIFT UP]>>>stringPromptGeneratorChatGPT<<<[SHIFT DOWN]
+[SHIFT UP][SHIFT DOWN]
+[SHIFT UP]OUTPUT FORMAT (no extra text)[SHIFT DOWN]
+[SHIFT UP](1) Topic:[SHIFT DOWN]
+[SHIFT UP](2) Description:[SHIFT DOWN]
+[SHIFT UP](3) Script:[SHIFT DOWN]
+[SHIFT UP](4) Quote:[SHIFT DOWN]
+[SHIFT UP][SHIFT DOWN]
+[SHIFT UP]Use exactly those four section headers, followed by their content.[SHIFT DOWN]
+[SHIFT UP]• Topic — 3–8 words summarising the central idea.[SHIFT DOWN]
+[SHIFT UP]• Description — 1-sentence teaser (no word-count mention).[SHIFT DOWN]
+[SHIFT UP]• Script — Only the words to be spoken; no stage directions, hashtags or separators.[SHIFT DOWN]
+[SHIFT UP]• Quote — End with an inspirational quote (author credited).[SHIFT DOWN]
+[SHIFT UP][SHIFT DOWN]
+[SHIFT UP]Do not output anything besides the four sections.
+";C:\Users\USER\Downloads\AutomationAnywhere\TTSFactory\;C:\Users\USER\Downloads\AutomationAnywhere\TTSFactory\TortoiseTTS\tortoise\;C:\Users\USER\Downloads\AutomationAnywhere\TTSFactory\MINICONDA\;C:\Users\USER\Downloads\AutomationAnywhere\TTSFactory\FFMPEG\bin;C:\Users\USER\Downloads\AutomationAnywhere\TTSFactory\TortoiseTTS\tortoise\.cache\tortoise\models;C:\Users\USER\Downloads\AutomationAnywhere\TTSFactory\TortoiseTTS\tortoise\.cache\huggingface;C:\Users\USER\Downloads\AutomationAnywhere\TTSFactory\AudioGeneratorText.txt;80,2;Madara Uchiha;C:\Users\USER\Downloads\AutomationAnywhere\TTSFactory\\;AudioGenerator;high_quality;;1;1;false;false;true;false;false;1;1;2;1;2;1;444;333;1;false;"""C:\Users\USER\Downloads\AutomationAnywhere\TTSFactory\TortoiseTTS\tortoise\AudioGenerator.vbs""";"Set WshShell = CreateObject(""WScript.Shell"")
+cmdPath = WScript.ScriptFullName
+cmdDir = Left(cmdPath, Len(cmdPath) - Len(WScript.ScriptName))
+runCmd = cmdDir & ""\"" & ""AudioGenerator.bat""
+WshShell.Run Chr(34) & runCmd & Chr(34), 1, True";"@echo off
+:: === Temporärer PATH ===
+set ""PATH=C:\Users\USER\Downloads\AutomationAnywhere\TTSFactory\MINICONDA\;C:\Users\USER\Downloads\AutomationAnywhere\TTSFactory\MINICONDA\Scripts;C:\Users\USER\Downloads\AutomationAnywhere\TTSFactory\MINICONDA\Library\bin;C:\Users\USER\Downloads\AutomationAnywhere\TTSFactory\FFMPEG\bin;%PATH%""
+:: === Conda-Umgebung aktivieren ===
+call ""C:\Users\USER\Downloads\AutomationAnywhere\TTSFactory\MINICONDA\Scripts\activate.bat"" AudioGenerator
+:: === AudioGenerator ausführen ===
+python ""C:\Users\USER\Downloads\AutomationAnywhere\TTSFactory\TortoiseTTS\tortoise\AudioGenerator.py"" ^
+  --textfile ""C:\Users\USER\Downloads\AutomationAnywhere\TTSFactory\AudioGeneratorText.txt"" ^
+  --text_split ""80,200"" ^
+  --voice ""Madara Uchiha"" ^
+  --output_path ""C:\Users\USER\Downloads\AutomationAnywhere\TTSFactory\\"" ^
+  --output_name ""AudioGenerator"" ^
+  --preset ""high_quality"" ^
+  --candidates 1 ^
+  --model_dir ""C:\Users\USER\Downloads\AutomationAnywhere\TTSFactory\TortoiseTTS\tortoise\.cache\tortoise\models"" ^
+  --seed 1 ^
+  --produce_debug_state false ^
+  --use_deepspeed false ^
+  --kv_cache true ^
+  --half false ^
+  --debug false ^
+  --temperature 1 ^
+  --length_penalty 1 ^
+  --repetition_penalty 2 ^
+  --top_p 1 ^
+  --cond_free_k 2 ^
+  --diffusion_temperature 1 ^
+  --diffusion_iterations 444 ^
+  --num_autoregressive_samples 333 ^
+  --cond_free false 
+exit";;13.05.2026_22:31:27;"discipline and consistency mindset, morning routine optimization, gym fitness transformation motivation, productivity focus deep work, financial independence side hustle motivation
+";13.05.2026_22:31:48;"TASK
+Write the spoken portion of a 90-second (233–266 words) vertical-video script for TikTok, Instagram Reels, and YouTube Shorts.
+
+AUDIENCE & STYLE
+• Niche: Motivation / self-improvement
+• Tone: High-energy, encouraging, conversational (second-person “you”)
+• Rhythm: Short, punchy sentences with strategic pauses for on-screen text sync
+
+INPUT
+Today’s key content themes:
+discipline and consistency mindset, morning routine optimization, gym fitness transformation motivation, productivity focus deep work, financial independence side hustle motivation
+
+OUTPUT FORMAT (no extra text)
+(1) Topic:
+(2) Description:
+(3) Script:
+(4) Quote:
+
+Use exactly those four section headers, followed by their content.
+• Topic — 3–8 words summarising the central idea.
+• Description — 1-sentence teaser (no word-count mention).
+• Script — Only the words to be spoken; no stage directions, hashtags or separators.
+• Quote — End with an inspirational quote (author credited).
+
+Do not output anything besides the four sections.
+";"(1) Topic:
+Discipline, Consistency, and Daily Execution
+
+(2) Description:
+A high-energy wake-up call to lock in your discipline, sharpen your routine, and build a life through consistent action.
+
+(3) Script:
+You don’t need more motivation. You need discipline. Because motivation fades, but discipline builds everything you want.
+
+Your mornings decide your future. Stop hitting snooze. Get up and win the first hour. Hydrate. Move your body. Set the tone before the world can touch you.
+
+At the gym, you’re not just lifting weights. You’re building identity. Every rep is a promise to a stronger version of you. Show up even when it’s hard.
+
+Focus is your new currency. Deep work, no distractions. One task. One block. Go all in. That’s how average turns into exceptional.
+
+And money? It follows value. Build a side hustle. Learn a skill. Stack wins quietly while others scroll.
+
+Consistency is the secret no one wants to hear. Small actions, repeated daily, will change your entire life.
+
+Not tomorrow. Today. Not someday. Now.
+
+You already know what to do. The only question is: will you do it when it gets boring?
+
+Because that’s where growth actually happens. Not in hype, but in repetition when nobody is watching.
+
+Most people quit right before results show up. Don’t be most people.
+
+You don’t need perfect conditions. You need a decision and follow-through.
+
+Every small win compounds. Every disciplined choice builds momentum. And momentum changes everything.
+
+So lock in today. Show up again tomorrow. And the day after that.
+
+Because the version of you that wins isn’t lucky. It’s consistent.
+
+Stay relentless.
+
+(4) Quote:
+“Small disciplines repeated with consistency every day lead to great achievements.” — John C. Maxwell
+";"
+Discipline, Consistency, and Daily Execution
+
+";"
+A high-energy wake-up call to lock in your discipline, sharpen your routine, and build a life through consistent action.
+
+";"
+You don’t need more motivation. You need discipline. Because motivation fades, but discipline builds everything you want.
+
+Your mornings decide your future. Stop hitting snooze. Get up and win the first hour. Hydrate. Move your body. Set the tone before the world can touch you.
+
+At the gym, you’re not just lifting weights. You’re building identity. Every rep is a promise to a stronger version of you. Show up even when it’s hard.
+
+Focus is your new currency. Deep work, no distractions. One task. One block. Go all in. That’s how average turns into exceptional.
+
+And money? It follows value. Build a side hustle. Learn a skill. Stack wins quietly while others scroll.
+
+Consistency is the secret no one wants to hear. Small actions, repeated daily, will change your entire life.
+
+Not tomorrow. Today. Not someday. Now.
+
+You already know what to do. The only question is: will you do it when it gets boring?
+
+Because that’s where growth actually happens. Not in hype, but in repetition when nobody is watching.
+
+Most people quit right before results show up. Don’t be most people.
+
+You don’t need perfect conditions. You need a decision and follow-through.
+
+Every small win compounds. Every disciplined choice builds momentum. And momentum changes everything.
+
+So lock in today. Show up again tomorrow. And the day after that.
+
+Because the version of you that wins isn’t lucky. It’s consistent.
+
+Stay relentless.
+
+";"
+“Small disciplines repeated with consistency every day lead to great achievements.” — John C. Maxwell
+";13.05.2026_22:32:42;"
+ You don’t need more motivation. You need discipline. Because motivation fades, but discipline builds everything you want.
+ 
+ Your mornings decide your future. Stop hitting snooze. Get up and win the first hour. Hydrate. Move your body. Set the tone before the world can touch you.
+ 
+ At the gym, you’re not just lifting weights. You’re building identity. Every rep is a promise to a stronger version of you. Show up even when it’s hard.
+ 
+ Focus is your new currency. Deep work, no distractions. One task. One block. Go all in. That’s how average turns into exceptional.
+ 
+ And money? It follows value. Build a side hustle. Learn a skill. Stack wins quietly while others scroll.
+ 
+ Consistency is the secret no one wants to hear. Small actions, repeated daily, will change your entire life.
+ 
+ Not tomorrow. Today. Not someday. Now.
+ 
+ You already know what to do. The only question is: will you do it when it gets boring?
+ 
+ Because that’s where growth actually happens. Not in hype, but in repetition when nobody is watching.
+ 
+ Most people quit right before results show up. Don’t be most people.
+ 
+ You don’t need perfect conditions. You need a decision and follow-through.
+ 
+ Every small win compounds. Every disciplined choice builds momentum. And momentum changes everything.
+ 
+ So lock in today. Show up again tomorrow. And the day after that.
+ 
+ Because the version of you that wins isn’t lucky. It’s consistent.
+ 
+ Stay relentless.
+ 
+ 
+";"Done
+";"===============================================================================================================
+ ============================================ SYSTEM-INFORMATIONEN =============================================
+ ===============================================================================================================
+ 2026-05-13 22:33:18,276 - INFO - Device/Amount: cuda / 1
+ 2026-05-13 22:33:18,276 - INFO - GPU: NVIDIA GeForce RTX 2070 SUPER (8.00 GB VRAM)
+ 2026-05-13 22:33:18,276 - INFO - PyTorch Version: 2.0.1+cu117
+ 2026-05-13 22:33:18,276 - INFO - MPS Available: False
+ 2026-05-13 22:33:18,276 - INFO - Flag-Datei: C:\Users\USER\Downloads\AutomationAnywhere\TTSFactory\AudioGeneratorFlag.txt
+ 2026-05-13 22:33:18,276 - INFO - Log-Datei: C:\Users\USER\Downloads\AutomationAnywhere\TTSFactory\AudioGeneratorLog.txt
+ 2026-05-13 22:33:18,276 - INFO - HF_HOME: C:\Users\USER\Downloads\AutomationAnywhere\TTSFactory\TortoiseTTS\tortoise\.cache\huggingface
+ ===============================================================================================================
+ ======================= ROHDATEN AUS DER KOMMANDOZEILE ÃœBERGEBENE ARGUMENTE (sys.argv) ========================
+ ===============================================================================================================
+ 2026-05-13 22:33:18,277 - INFO - C:\Users\USER\Downloads\AutomationAnywhere\TTSFactory\TortoiseTTS\tortoise\AudioGenerator.py --textfile C:\Users\USER\Downloads\AutomationAnywhere\TTSFactory\AudioGeneratorText.txt --text_split 80,200 --voice Madara Uchiha --output_path C:\Users\USER\Downloads\AutomationAnywhere\TTSFactory\ --output_name AudioGenerator --preset high_quality --candidates 1 --model_dir C:\Users\USER\Downloads\AutomationAnywhere\TTSFactory\TortoiseTTS\tortoise\.cache\tortoise\models --seed 1 --produce_debug_state false --use_deepspeed false --kv_cache true --half false --debug false --temperature 1 --length_penalty 1 --repetition_penalty 2 --top_p 1 --cond_free_k 2 --diffusion_temperature 1 --diffusion_iterations 444 --num_autoregressive_samples 333 --cond_free false
+ ===============================================================================================================
+ =================================== EINGEHENDE PARAMETER (args) (geparste) ====================================
+ ===============================================================================================================
+ 2026-05-13 22:33:18,277 - INFO - textfile: C:\Users\USER\Downloads\AutomationAnywhere\TTSFactory\AudioGeneratorText.txt
+ 2026-05-13 22:33:18,277 - INFO - text_split: 80,200
+ 2026-05-13 22:33:18,277 - INFO - voice: Madara Uchiha
+ 2026-05-13 22:33:18,277 - INFO - output_path: C:\Users\USER\Downloads\AutomationAnywhere\TTSFactory\
+ 2026-05-13 22:33:18,277 - INFO - output_name: AudioGenerator
+ 2026-05-13 22:33:18,277 - INFO - preset: high_quality
+ 2026-05-13 22:33:18,277 - INFO - regenerate: None
+ 2026-05-13 22:33:18,277 - INFO - candidates: 1
+ 2026-05-13 22:33:18,277 - INFO - model_dir: C:\Users\USER\Downloads\AutomationAnywhere\TTSFactory\TortoiseTTS\tortoise\.cache\tortoise\models
+ 2026-05-13 22:33:18,277 - INFO - seed: 1
+ 2026-05-13 22:33:18,277 - INFO - produce_debug_state: False
+ 2026-05-13 22:33:18,277 - INFO - use_deepspeed: False
+ 2026-05-13 22:33:18,277 - INFO - kv_cache: True
+ 2026-05-13 22:33:18,277 - INFO - half: False
+ 2026-05-13 22:33:18,277 - INFO - debug: False
+ 2026-05-13 22:33:18,277 - INFO - temperature: 1.0
+ 2026-05-13 22:33:18,277 - INFO - length_penalty: 1.0
+ 2026-05-13 22:33:18,277 - INFO - repetition_penalty: 2.0
+ 2026-05-13 22:33:18,277 - INFO - top_p: 1.0
+ 2026-05-13 22:33:18,278 - INFO - cond_free_k: 2.0
+ 2026-05-13 22:33:18,278 - INFO - diffusion_temperature: 1.0
+ 2026-05-13 22:33:18,278 - INFO - diffusion_iterations: 444
+ 2026-05-13 22:33:18,278 - INFO - num_autoregressive_samples: 333
+ 2026-05-13 22:33:18,278 - INFO - cond_free: False
+ ===============================================================================================================
+ =========================== INTERNE ABGELEITETE PARAMETER (Code erzeugt/berechnet) ============================
+ ===============================================================================================================
+ 2026-05-13 22:33:18,278 - INFO - textfile: C:\Users\USER\Downloads\AutomationAnywhere\TTSFactory\AudioGeneratorText.txt
+ 2026-05-13 22:33:18,278 - INFO - Anzahl der Textteile: 14
+ 2026-05-13 22:33:18,278 - INFO - voice: Madara Uchiha
+ 2026-05-13 22:33:18,278 - INFO - output_path: C:\Users\USER\Downloads\AutomationAnywhere\TTSFactory\
+ 2026-05-13 22:33:18,278 - INFO - output_name: AudioGenerator
+ 2026-05-13 22:33:18,278 - INFO - preset: high_quality
+ 2026-05-13 22:33:18,278 - INFO - regenerate: Keine
+ 2026-05-13 22:33:18,278 - INFO - candidates: 1
+ 2026-05-13 22:33:18,278 - INFO - model_dir: C:\Users\USER\Downloads\AutomationAnywhere\TTSFactory\TortoiseTTS\tortoise\.cache\tortoise\models
+ 2026-05-13 22:33:18,278 - INFO - seed: 1
+ 2026-05-13 22:33:18,278 - INFO - produce_debug_state: False
+ 2026-05-13 22:33:18,278 - INFO - use_deepspeed: False
+ 2026-05-13 22:33:18,278 - INFO - kv_cache: True
+ 2026-05-13 22:33:18,278 - INFO - half: False
+ 2026-05-13 22:33:18,279 - INFO - debug: False
+ 2026-05-13 22:33:18,279 - INFO - temperature: 1.0
+ 2026-05-13 22:33:18,279 - INFO - length_penalty: 1.0
+ 2026-05-13 22:33:18,279 - INFO - repetition_penalty: 2.0
+ 2026-05-13 22:33:18,279 - INFO - top_p: 1.0
+ 2026-05-13 22:33:18,279 - INFO - cond_free_k: 2.0
+ 2026-05-13 22:33:18,279 - INFO - diffusion_temperature: 1.0
+ 2026-05-13 22:33:18,279 - INFO - diffusion_iterations: 444
+ 2026-05-13 22:33:18,279 - INFO - num_autoregressive_samples: 333
+ 2026-05-13 22:33:18,279 - INFO - cond_free: False
+ 2026-05-13 22:33:18,279 - INFO - Device gewÃ¤hlt: cuda
+ ===============================================================================================================
+ ========================================= API-PARAMETER (aus api.py) ==========================================
+ ===============================================================================================================
+ 2026-05-13 22:45:26,268 - INFO - temperature: 1.0
+ 2026-05-13 22:45:26,268 - INFO - length_penalty: 1.0
+ 2026-05-13 22:45:26,268 - INFO - repetition_penalty: 2.0
+ 2026-05-13 22:45:26,268 - INFO - top_p: 1.0
+ 2026-05-13 22:45:26,268 - INFO - cond_free_k: 2.0
+ 2026-05-13 22:45:26,269 - INFO - diffusion_temperature: 1.0
+ 2026-05-13 22:45:26,269 - INFO - diffusion_iterations: 444
+ ===============================================================================================================
+ ============================================= Starte Generierung ==============================================
+ ===============================================================================================================
+ 2026-05-13 22:45:26,269 - INFO - Wird geladen in: ('C:\\Users\\USER\\Downloads\\USERing\\', '0.wav')
+ ===============================================================================================================
+ ===================================== WAV zu MP3 konvertieren mit ffmpeg ======================================
+ ===============================================================================================================
+ 2026-05-14 00:54:36,148 - INFO - ffmpeg verwendet: C:\Users\USER\Downloads\AutomationAnywhere\TTSFactory\FFMPEG\bin\ffmpeg.exe
+ 2026-05-14 00:54:37,133 - INFO - Erfolgreich in MP3 konvertiert: C:\Users\USER\Downloads\AutomationAnywhere\TTSFactory\AudioGenerator.mp3
+ ===============================================================================================================
+ ========================================== Alle WAV-Dateien lÃ¶schen ===========================================
+ ===============================================================================================================
+ 2026-05-14 00:54:37,134 - INFO - WAV-Datei gelÃ¶scht: C:\Users\USER\Downloads\AutomationAnywhere\TTSFactory\0.wav
+ 2026-05-14 00:54:37,135 - INFO - WAV-Datei gelÃ¶scht: C:\Users\USER\Downloads\AutomationAnywhere\TTSFactory\1.wav
+ 2026-05-14 00:54:37,137 - INFO - WAV-Datei gelÃ¶scht: C:\Users\USER\Downloads\AutomationAnywhere\TTSFactory\10.wav
+ 2026-05-14 00:54:37,138 - INFO - WAV-Datei gelÃ¶scht: C:\Users\USER\Downloads\AutomationAnywhere\TTSFactory\11.wav
+ 2026-05-14 00:54:37,138 - INFO - WAV-Datei gelÃ¶scht: C:\Users\USER\Downloads\AutomationAnywhere\TTSFactory\12.wav
+ 2026-05-14 00:54:37,139 - INFO - WAV-Datei gelÃ¶scht: C:\Users\USER\Downloads\AutomationAnywhere\TTSFactory\13.wav
+ 2026-05-14 00:54:37,139 - INFO - WAV-Datei gelÃ¶scht: C:\Users\USER\Downloads\AutomationAnywhere\TTSFactory\2.wav
+ 2026-05-14 00:54:37,140 - INFO - WAV-Datei gelÃ¶scht: C:\Users\USER\Downloads\AutomationAnywhere\TTSFactory\3.wav
+ 2026-05-14 00:54:37,140 - INFO - WAV-Datei gelÃ¶scht: C:\Users\USER\Downloads\AutomationAnywhere\TTSFactory\4.wav
+ 2026-05-14 00:54:37,141 - INFO - WAV-Datei gelÃ¶scht: C:\Users\USER\Downloads\AutomationAnywhere\TTSFactory\5.wav
+ 2026-05-14 00:54:37,141 - INFO - WAV-Datei gelÃ¶scht: C:\Users\USER\Downloads\AutomationAnywhere\TTSFactory\6.wav
+ 2026-05-14 00:54:37,142 - INFO - WAV-Datei gelÃ¶scht: C:\Users\USER\Downloads\AutomationAnywhere\TTSFactory\7.wav
+ 2026-05-14 00:54:37,142 - INFO - WAV-Datei gelÃ¶scht: C:\Users\USER\Downloads\AutomationAnywhere\TTSFactory\8.wav
+ 2026-05-14 00:54:37,142 - INFO - WAV-Datei gelÃ¶scht: C:\Users\USER\Downloads\AutomationAnywhere\TTSFactory\9.wav
+ 2026-05-14 00:54:37,143 - INFO - WAV-Datei gelÃ¶scht: C:\Users\USER\Downloads\AutomationAnywhere\TTSFactory\AudioGenerator.wav
+ 2026-05-14 00:54:37,145 - INFO - Flag-Datei geschrieben mit Status: Done
+ ===============================================================================================================
+ ========================================== Generierung abgeschlossen ==========================================
+ ===============================================================================================================
+";14.05.2026_00:54:48
