@@ -15,18 +15,18 @@
 
 - [📝 PROJEKTBESCHREIBUNG](#-projektbeschreibung)
   - [🤖 Die fünf Automation Anywhere Bots](#-die-fünf-automation-anywhere-bots)
-  - [🐍 Das TortoiseTTS Python-Skript](#-das-tortoise-tts-python-skript)
+  - [🐍 Das TortoiseTTS Python-Skript](#-das-tortoisetts-python-skript)
 - [✨ FEATURES](#-features)
 - [🚀 TOOL](#-tool)
   - [🤖 Automation Anywhere Bots](#-automation-anywhere-bots)
   - [🐍 Python (Tortoise TTS Wrapper)](#-python-tortoise-tts-wrapper)
-  - [📜 Startkette Batch & VBS (AA → VBS → BAT → Python)](#-startkette-aa--vbs--bat--python)
+  - [📜 Startkette (AA → VBS → BAT → Python)](#-startkette-aa--vbs--bat--python)
 - [⚙️ KONFIGURATION](#️-konfiguration)
   - [FFmpeg](#ffmpeg)
   - [Miniconda](#miniconda)
   - [Tortoise TTS](#tortoisetts)
-  - [TTSFactory](#ttsfactory-runtime-struktur)
-  - [Conda‑Umgebung einrichten](#conda-umgebung-einrichten)
+  - [TTSFactory Runtime Struktur](#ttsfactory-runtime-struktur)
+  - [Conda-Umgebung einrichten](#conda-umgebung-einrichten)
   - [Automation Anywhere Bots importieren](#automation-anywhere-bots-importieren)
   - [Variablen anpassen](#variablen-anpassen)
 - [📁 STRUKTUR](#-struktur)
@@ -34,13 +34,13 @@
   - [🎙️ TTSFactory - Beispiel Run](#️-ttsfactory---beispiel-run)
   - [📁 Struktur-Legende](#-struktur-legende)
 - [⚡ QUICK START](#-quick-start)
-  - [📦 Git & GitHub](#-git-github)
+  - [📦 Git & GitHub](#-git--github)
 - [🖼️ SCREENSHOTS](#️-screenshots)
-  - [🎬 DemoWorkflow.mp4](#-DemoWorkflow)
+  - [🎬 DemoWorkflow.mp4](#-demoworkflowmp4)
 - [⚠️ WICHTIGE HINWEISE](#️-wichtige-hinweise)
   - [📌 Vor der Verwendung](#-vor-der-verwendung)
-  - [🔒 Sicherheit](#-Sicherheit)
-  - [💡 Tipps](#-Tipps)
+  - [🔒 Sicherheit](#-sicherheit)
+  - [💡 Tipps](#-tipps)
 - [📝 LIZENZ](#-lizenz)
 - [👤 AUTOR](#-autor)
 - [📊 REPOSITORY STATISTIK](#-repository-statistik)
@@ -142,7 +142,7 @@ Das Python‑Skript AudioGenerator.py wird dynamisch von AA generiert und anschl
 | 4 | WAV‑Zusammenführung, MP3‑Konvertierung (FFmpeg) und Bereinigung |
 | 5 | Schreiben von `Flag.txt` als Signal an AA |
 
-### 📜 Startkette Batch & VBS (AA → VBS → BAT → Python)
+### 📜 Startkette (AA → VBS → BAT → Python)
 | Schritt | Komponente | Aufgabe |
 |---------|------------|---------|
 | 1 | **Automation Anywhere (AudioGenerator Bot)** | Ruft `C:\Windows\System32\wscript.exe` mit Parameter `AudioGenerator.vbs` auf |
@@ -176,7 +176,7 @@ Lade TortoiseTTS von [release](https://github.com/mucahid-emin-tomakin/AutoMate/
 git clone https://github.com/neonbjb/tortoise-tts.git
 ```
 
-### TTSFactory
+### TTSFactory Runtime Struktur
 ```Text
 ..\TTSFactory\
 ├── FFMPEG\
@@ -188,7 +188,7 @@ git clone https://github.com/neonbjb/tortoise-tts.git
     └── .cache\               # Modelle (optional im Repo, oder wird bei der ersten ausführung automatisch installiert)
 ```
 
-### Conda‑Umgebung einrichten
+### Conda-Umgebung einrichten
 Öffne eine normale Eingabeaufforderung (CMD) – nicht die Anaconda Prompt, wechsle in den MINICONDA‑Ordner und aktiviere Conda (ohne PATH‑Eintrag) und führe aus:
 ```Python
 cd ..\TTSFactory\MINICONDA
