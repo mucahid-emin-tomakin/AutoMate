@@ -91,6 +91,8 @@ const PREFIX_MAP = {
 ├── 🛠️ SourceSheetCode - NoComment.gs
 ├── 📊 MainSheet.xlsx
 ├── 📊 SourceSheet.xlsx
+├── 🎬 DemoConfiguration.gif
+├── 🎬 DemoWorkflow.gif
 └── 📄 README.md
 ```
 
@@ -99,6 +101,7 @@ const PREFIX_MAP = {
 🔄 CryptSheetSync/
 ├── 🛠️ .gs                    # Google Apps Script (Hauptprogramm & Varianten)
 ├── 📊 .xlsx                  # Google Sheets Export (Quell- & Ziel-Tabellen)
+├── 🎬 .gif                   # Video‑Datei
 └── 📄 README.md              # Projektbeschreibung (diese Datei)
 ```
 
@@ -153,7 +156,7 @@ https://docs.google.com/spreadsheets/d/1pO86BY7zcCa6EVcWje9RjWLZ8BSd6xG1-qaJvYEX
 - Gehe zurück zur Main‑Tabelle, wähle im Blatt „Main“ in Zelle A2, A4 oder B2 einen Dropdown‑Wert aus (z. B. einen Sheet‑Namen).
 - Das passende Blatt wird importiert, ggf. entschlüsselt und der 🌙‑Filter greift, falls der Eintrag mit 🌙 endete.
 
-### 🎬 DemoConfiguration.mp4
+### 🎬 DemoConfiguration.gif
 ![DemoConfiguration](https://github.com/mucahid-emin-tomakin/AutoMate/blob/main/AppsScript/CryptSheetSync/DemoConfiguration.gif)
 > **Hinweis:** Das Video zeigt die Konfiguration nach dem Klonen des Repositories.
 
@@ -161,7 +164,7 @@ https://docs.google.com/spreadsheets/d/1pO86BY7zcCa6EVcWje9RjWLZ8BSd6xG1-qaJvYEX
 
 ## 🖼️ SCREENSHOTS
 
-### 🎬 DemoWorkflow.mp4
+### 🎬 DemoWorkflow.gif
 ![DemoWorkflow](https://github.com/mucahid-emin-tomakin/AutoMate/blob/main/AppsScript/CryptSheetSync/DemoWorkflow.gif)
 > **Hinweis:** Das Video demonstriert die Funktionsweise der Dateien.
 
