@@ -153,16 +153,17 @@ https://docs.google.com/spreadsheets/d/1pO86BY7zcCa6EVcWje9RjWLZ8BSd6xG1-qaJvYEX
 - Gehe zurück zur Main‑Tabelle, wähle im Blatt „Main“ in Zelle A2, A4 oder B2 einen Dropdown‑Wert aus (z. B. einen Sheet‑Namen).
 - Das passende Blatt wird importiert, ggf. entschlüsselt und der 🌙‑Filter greift, falls der Eintrag mit 🌙 endete.
 
-### 🎬 Demo.mp4
-![Demo](https://github.com/mucahid-emin-tomakin/AutoMate/blob/main/AppsScript/CryptSheetSync/Demo.gif)
+### 🎬 DemoConfiguration.mp4
+![DemoConfiguration](https://github.com/mucahid-emin-tomakin/AutoMate/blob/main/AppsScript/CryptSheetSync/DemoConfiguration.gif)
 > **Hinweis:** Das Video zeigt die Konfiguration nach dem Klonen des Repositories.
 
 ---
 
 ## 🖼️ SCREENSHOTS
 
-### Demo
-
+### 🎬 DemoWorkflow.mp4
+![DemoWorkflow](https://github.com/mucahid-emin-tomakin/AutoMate/blob/main/AppsScript/CryptSheetSync/DemoConfiguration.gif)
+> **Hinweis:** Das Video demonstriert die Funktionsweise der Dateien.
 
 ---
 
