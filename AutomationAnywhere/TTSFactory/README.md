@@ -36,7 +36,7 @@
 - [⚡ QUICK START](#-quick-start)
   - [📦 Git & GitHub](#-git--github)
 - [🖼️ SCREENSHOTS](#️-screenshots)
-  - [🎬 DemoWorkflow.mp4](#-demoworkflowmp4)
+  - [🎬 DemoWorkflow.gif](#-demoworkflowgif)
 - [⚠️ WICHTIGE HINWEISE](#️-wichtige-hinweise)
   - [📌 Vor der Verwendung](#-vor-der-verwendung)
   - [🔒 Sicherheit](#-sicherheit)
@@ -246,8 +246,8 @@ Passe gegebenenfalls auch stringAudioGeneratorVoice (Name der Tortoise‑Stimme)
 │   ├── 🎵 AudioGenerator.mp3
 │   └── 📊 Main.csv
 ├── 📘 ArchitectureOverview.txt
-├── 🎬 DemoAA.mp4
-└── 🎬 DemoWorkflow.mp4
+├── 🎬 DemoAA.gif
+└── 🎬 DemoWorkflow.gif
 ```
 
 ### 🎙️ TTSFactory - Beispiel Run
@@ -264,7 +264,7 @@ Passe gegebenenfalls auch stringAudioGeneratorVoice (Name der Tortoise‑Stimme)
 ├── 📘 Textdatei (.txt)
 ├── 📊 CSV‑Datei (.csv)
 ├── 🎵 Audio‑Datei (.mp3)
-├── 🎬 Video‑Datei (.mp4)
+├── 🎬 Video‑Datei (.gif)
 └── 📦 Installer / Archiv (.7z, .exe, .zip)
 ```
 
@@ -292,7 +292,7 @@ cd AutomationAnywhere/TTSFactory
 
 ## 🖼️ SCREENSHOTS
 
-### 🎬 DemoWorkflow.mp4
+### 🎬 DemoWorkflow.gif
 ![DemoWorkflow](https://github.com/mucahid-emin-tomakin/AutoMate/blob/main/AutomationAnywhere/TTSFactory/DemoWorkflow.gif)
 > **Hinweis:** Das Video zeigt die Ausführung des Main‑Bots und das Ergebnis (MP3 + Main.csv).
 
