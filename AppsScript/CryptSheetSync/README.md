@@ -162,7 +162,7 @@ https://docs.google.com/spreadsheets/d/1pO86BY7zcCa6EVcWje9RjWLZ8BSd6xG1-qaJvYEX
 ## 🖼️ SCREENSHOTS
 
 ### 🎬 DemoWorkflow.mp4
-![DemoWorkflow](https://github.com/mucahid-emin-tomakin/AutoMate/blob/main/AppsScript/CryptSheetSync/DemoConfiguration.gif)
+![DemoWorkflow](https://github.com/mucahid-emin-tomakin/AutoMate/blob/main/AppsScript/CryptSheetSync/DemoWorkflow.gif)
 > **Hinweis:** Das Video demonstriert die Funktionsweise der Dateien.
 
 ---
