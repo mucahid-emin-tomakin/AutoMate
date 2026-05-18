@@ -2,6 +2,7 @@
 
 ![GitHub](https://img.shields.io/badge/GitHub-181717?logo=github&logoColor=white)
 ![Apps Script](https://img.shields.io/badge/Apps%20Script-4285F4?logo=googleapps&logoColor=white)
+![Google Sheets](https://img.shields.io/badge/Google%20Sheets-34A853?logo=google-sheets&logoColor=white)
 ![License](https://img.shields.io/badge/License-MIT-blue)
 ![Status](https://img.shields.io/badge/Status-Stabil-brightgreen)
 
@@ -136,11 +137,11 @@ https://docs.google.com/spreadsheets/d/1pO86BY7zcCa6EVcWje9RjWLZ8BSd6xG1-qaJvYEX
 
 ### 🛠️ Apps Script
 - In der Main‑Tabelle (Import‑Logik):
-Öffne den Script‑Editor (Erweiterungen → Apps Script), lösche den Standard‑Code und füge den Inhalt von MainSheetCode.gs ein.
-Alternativ kannst du MainSheetCode - NoComment.gs verwenden, falls du die Kommentare nicht benötigst.
+  - Öffne den Script‑Editor (Erweiterungen → Apps Script), lösche den Standard‑Code und füge den Inhalt von MainSheetCode.gs ein.
+  - Alternativ kannst du MainSheetCode - NoComment.gs verwenden, falls du die Kommentare nicht benötigst.
 - In der Quell‑Tabelle (Verschlüsselungsmenü – optional):
-Wiederhole den gleichen Vorgang mit dem Inhalt von SourceSheetCode.gs.
-Dieses Script fügt das Menü 🔐 Encrypt hinzu, mit dem du Blattnamen und A1‑Zellen ver‑/entschlüsseln kannst.
+  - Wiederhole den gleichen Vorgang mit dem Inhalt von SourceSheetCode.gs.
+  - Dieses Script fügt das Menü 🔐 Encrypt hinzu, mit dem du Blattnamen und A1‑Zellen ver‑/entschlüsseln kannst.
 
 ### ▶️ Trigger erstellen
 - Wechsle in den Script‑Editor der Main‑Tabelle.
