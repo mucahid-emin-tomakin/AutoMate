@@ -25,18 +25,55 @@
 
 ## 📝 PROJEKTBESCHREIBUNG
 
-**CryptSheetSync** ist ein Google‑Apps‑Script‑Projekt, das einzelne Blätter aus einer Quell‑Tabelle anhand von Dropdown‑Auswahlen in eine Ziel‑Tabelle importiert.  
+**CryptSheetSync** ist ein Google‑Apps‑Script‑Projekt, das einzelne Blätter aus einer Quell‑Tabelle anhand von Dropdown‑Auswahlen in eine Ziel‑Tabelle importiert.
 Dabei werden verschlüsselte Blattnamen und Zellinhalte **automatisch erkannt und entschlüsselt** – unabhängig davon, ob das Dropdown selbst im Klartext oder verschlüsselt vorliegt.
-
 Ein flexibler **Präfix‑Mechanismus** erlaubt es, zu jedem Dropdown‑Wert Namenszusätze (z. B. Klassennamen) zu ergänzen, ohne die Suchlogik anpassen zu müssen.  
 Ein intelligenter **🌙‑Filter** blendet nach dem Import alle Zeilen ohne 🌙‑Symbol aus, behält aber strukturelle Kopfzeilen bei.
-
 Ein **automatischer Bereinigungsdienst** löscht temporäre Import‑Blätter nach einer einstellbaren Inaktivitätsdauer, während ein **Zähler** die Anzahl der Importe im Hauptblatt protokolliert.
 
----
+### 📁 Workflow-Übersicht
+Der Workflow findet in der **Google Drive-Umgebung** statt, genutzt über die Oberfläche von **CryptoSheetSync** – einer tabellenbasierten Importlösung mit integrierter Entschlüsselung.  
+Der Benutzer navigiert über die Drive-Struktur oder direkt über die Tab-Oberfläche von CryptoSheetSync.
+**2. Dropdown-gesteuerter Blattimport**  
+- In `MainSheet` wählt der Benutzer über ein **Dropdown-Menü** aus, welches Blatt aus `SourceSheet` importiert werden soll.  
+- Die **Blattnamen** in `SourceSheet` können **verschlüsselt** sein.  
+- Das **Dropdown selbst** kann entweder im **Klartext** oder **verschlüsselt** vorliegen – CryptoSheetSync erkennt automatisch, ob eine Entschlüsselung nötig ist.
+**3. Flexibler Präfix-Mechanismus**  
+- Zu jedem Dropdown-Wert können **Namenszusätze** (z. B. Klassennamen, IDs) definiert werden.  
+- Diese **Präfixe** werden bei der Suche nach dem Quellblatt **ignoriert** – d. h. das System findet das Blatt auch dann, wenn der tatsächliche Blattname zusätzliche Informationen enthält.  
+**Beispiel:**  
+Dropdown-Wert = `Klasse_A` → Gefunden wird Blatt mit Namen `Klasse_A_Mathe`
+**4. Import & Entschlüsselung von Zellinhalten**  
+- Die Daten des gefundenen Blattes werden nach `MainSheet` **kopiert**.  
+- Dabei werden **Zellinhalte, die verschlüsselt sind**, automatisch **entschlüsselt**.  
+- Die **Struktur** (Spalten, Kopfzeilen) bleibt erhalten.
+**5. 🌙-Filter („Mond-Filter“)**  
+- Nach dem Import werden alle Zeilen **ohne das 🌙-Symbol** (in einer definierten Spalte) **ausgeblendet**.  
+- **Kopfzeilen** bleiben erhalten, auch wenn sie kein 🌙 enthalten.  
+- Dies dient zur schnellen Fokussierung auf relevante Datensätze (z. B. „Nachtaktiv“, „abgeschlossen“, „priorisiert“).
+**6. Automatische Bereinigung (Cleanup-Dienst)**  
+- **Temporäre Import-Blätter** (z. B. Zwischenspeicher) werden automatisch gelöscht.  
+- Löschung erfolgt nach einer **einstellbaren Inaktivitätsdauer** (z. B. 24 Stunden ohne Zugriff auf das temporäre Blatt).  
+- Verhindert **Datenmüll** in der Drive-Ablage.
+**7. Importzähler & Protokollierung**  
+- Ein **Zähler** im Hauptblatt (`MainSheet`) dokumentiert, wie viele Importe bereits durchgeführt wurden.  
+- **Optional:** Loggt auch Zeitstempel, Quelle, Ziel, Status (erfolgreich/fehlgeschlagen).
+
+### 🔐 Sicherheitsaspekt (implizit)
+Da Blattnamen und Zellinhalte verschlüsselt sein können, liegt die Vermutung nahe, dass ein **symmetrischer Schlüssel** (z. B. via `PropertiesService` von Apps Script) im Projekt hinterlegt ist.  
+Der Nutzer muss den Schlüssel **nicht manuell pro Import** eingeben.
+
+### ✅ Typischer Ablauf für den Endnutzer
+1. **Öffne** `MainSheet` in Google Drive.  
+2. **Wähle** im Dropdown ein gewünschtes Blatt aus `SourceSheet` (z. B. „Kurs 101“).  
+3. **Klicke** auf „Importieren“ (nicht explizit im GIF, aber logisch).  
+4. Das System **sucht** das Blatt (auch mit Präfix), **entschlüsselt** Namen & Inhalte.  
+5. Die **Daten erscheinen** in `MainSheet`.  
+6. Der **🌙-Filter** blendet irrelevante Zeilen aus.  
+7. Der **Importzähler** erhöht sich um 1.  
+8. **Temporäre Blätter** werden später automatisch gelöscht.
 
 ## ✨ FEATURES
-
 ### 🔄 Import & Verschlüsselungs‑Erkennung
 | Feature | Beschreibung | Status |
 |---------|-------------|--------|
