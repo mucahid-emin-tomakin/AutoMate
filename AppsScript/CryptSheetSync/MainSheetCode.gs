@@ -1,20 +1,23 @@
 // ===================================================================================================
 //                                      CONFIGURATION 
 // ===================================================================================================
-const SOURCE_FILE_ID = "1pO86BY7zcCa6EVcWje9RjWLZ8BSd6xG1-qaJvYEX4rY";
-const MASTER_SHEET_NAME = "Main";
-const TEMP_SHEET_REGEX = /^\d+$/;
-const CLEANUP_INTERVAL_MINUTES = 1;
-const PREFIX_MAP = {
-  "A2": ["ClassName - "],
-  //"A2": ["ClassName - "],
-};
+// CONFIGURATION
+// All adjustable parameters for the import process
+const SOURCE_FILE_ID = "SHEET-ID";                                  // ID of the source spreadsheet
+const MASTER_SHEET_NAME = "Main";                                   // Sheet that contains the dropdowns
+const TEMP_SHEET_REGEX = /^\d+$/;                                   // Pattern for temporary sheet names (numbers only)
+const CLEANUP_INTERVAL_MINUTES = 1;                                 // Minutes of inactivity before cleanup
+const PREFIX_MAP = {                                                // Prefixes per cell – each array item is tried in order
+  "A2": ["ClassName - "],};
 // ===================================================================================================
 //                                      CONFIGURATION 
 // ===================================================================================================
 // ===================================================================================================
 //                                      ENCRYPTION
 // ===================================================================================================
+// ENCRYPTION
+// Simple substitution cipher for sheet names and cell A1
+// Encryption map: each character is mapped to another
 const ENCRYPTION_MAP = {
   'A': 'F', 'B': 'G', 'C': 'H', 'D': 'I', 'E': 'J',
   'F': 'K', 'G': 'L', 'H': 'M', 'I': 'N', 'J': 'O',
@@ -28,21 +31,25 @@ const ENCRYPTION_MAP = {
   'u': 'z', 'v': 'a', 'w': 'b', 'x': 'c', 'y': 'd', 'z': 'e',
   '0': '9', '1': '8', '2': '7', '3': '6', '4': '5',
   '5': '4', '6': '3', '7': '2', '8': '1', '9': '0'};
-const DECRYPTION_MAP = {};
+const DECRYPTION_MAP = {};                                          // Reverse map, built automatically
 for (const [key, value] of Object.entries(ENCRYPTION_MAP)) {
   DECRYPTION_MAP[value] = key;}
+// Encrypt a string using the substitution map
 function encryptText(text) {
   let result = '';
   for (let i = 0; i < text.length; i++) {
     const char = text[i];
     result += ENCRYPTION_MAP[char] || char;  }
   return result;}
+// Decrypt a string using the reverse map
 function decryptText(text) {
   let result = '';
   for (let i = 0; i < text.length; i++) {
     const char = text[i];
     result += DECRYPTION_MAP[char] || char;  }
   return result;}
+// Looks for a sheet by name; if not found, tries the encrypted name
+// Returns an object { sheet, wasEncrypted } or null
 function findSheetWithDecryption(sourceFile, selectedSheetName) {
   let sourceSheet = sourceFile.getSheetByName(selectedSheetName);
   if (sourceSheet) return { sheet: sourceSheet, wasEncrypted: false };
@@ -50,6 +57,7 @@ function findSheetWithDecryption(sourceFile, selectedSheetName) {
   sourceSheet = sourceFile.getSheetByName(encryptedName);
   if (sourceSheet) return { sheet: sourceSheet, wasEncrypted: true };
   return null;}
+// Decrypt the content of cell A1 (if not empty)
 function decryptImportedData(sheet) {
   try {
     const cellA1 = sheet.getRange("A1");
@@ -63,6 +71,7 @@ function decryptImportedData(sheet) {
 // ===================================================================================================
 //                                      IMPORT
 // ===================================================================================================
+// IMPORT – user‑visible import function (shows alert on failure)
 function importiereSheetProUser(selectedSheetName) {
   const ss = SpreadsheetApp.getActiveSpreadsheet();
   const sourceFile = SpreadsheetApp.openById(SOURCE_FILE_ID);
@@ -99,6 +108,8 @@ function importiereSheetProUser(selectedSheetName) {
 // ===================================================================================================
 //                                      SMART 🌙 FILTER
 // ===================================================================================================
+// INTELLIGENT 🌙 FILTER
+// Hides rows that neither contain a 🌙 nor a value from the header row (row 2)
 function applyMoonFilterFast(sheet) {
   const lastRow = sheet.getLastRow();
   const lastCol = sheet.getLastColumn();
@@ -120,9 +131,12 @@ function applyMoonFilterFast(sheet) {
 // ===================================================================================================
 //                                      TIME RECORDING
 // ===================================================================================================
+// TIME TRACKING – logs when a sheet was created and updates master sheet
+// Stores current timestamp as ISO string in script properties
 function markSheetCreated() {
   const props = PropertiesService.getScriptProperties();
   props.setProperty("lastSheetCreated", new Date().toISOString());}
+// Increments the import counter in cell A3 of the master sheet
 function updateMasterSheetCounter() {
   const ss = SpreadsheetApp.getActiveSpreadsheet();
   const masterSheet = ss.getSheetByName(MASTER_SHEET_NAME);
@@ -132,6 +146,7 @@ function updateMasterSheetCounter() {
   if (typeof count !== "number") count = 0;
   count += 1;
   counterCell.setValue(count);}
+// Formats a date as DD.MM.YYYY_HH:MM:SS
 function formatDateForMasterSheet(date) {
   const d = new Date(date);
   const day = String(d.getDate()).padStart(2, "0");
@@ -141,6 +156,7 @@ function formatDateForMasterSheet(date) {
   const minutes = String(d.getMinutes()).padStart(2, "0");
   const seconds = String(d.getSeconds()).padStart(2, "0");
   return `${day}.${month}.${year}_${hours}:${minutes}:${seconds}`;}
+// Writes the last import time into cell B3 of the master sheet
 function updateMasterSheetLastTime() {
   const ss = SpreadsheetApp.getActiveSpreadsheet();
   const masterSheet = ss.getSheetByName(MASTER_SHEET_NAME);
@@ -155,6 +171,7 @@ function updateMasterSheetLastTime() {
 // ===================================================================================================
 //                                      CLEANUP
 // ===================================================================================================
+// CLEANUP – deletes temporary sheets after a period of inactivity
 function deleteIfInactive() {
   const props = PropertiesService.getScriptProperties();
   const lastCreated = props.getProperty("lastSheetCreated");
@@ -174,6 +191,7 @@ function deleteIfInactive() {
 // ===================================================================================================
 //                                      TRIGGER
 // ===================================================================================================
+// TRIGGERS – creates the necessary onEdit and time-based triggers
 function createTriggers() {
   const ss = SpreadsheetApp.getActiveSpreadsheet();
   // Bestehende Trigger löschen, um Doppelungen zu vermeiden
@@ -192,10 +210,11 @@ function createTriggers() {
 // ===================================================================================================
 //                                      onEdit WITH PROTECTION
 // ===================================================================================================
+// onEdit WITH MUTEX – prevents concurrent execution, searches with all prefix/encryption combinations
 function onEditHandler(e) {
   if (!e) return;
   const props = PropertiesService.getScriptProperties();
-  if (props.getProperty("isProcessing") === "true") return;
+  if (props.getProperty("isProcessing") === "true") return;   // skip if already running
   props.setProperty("isProcessing", "true");
   try {
     const sheet = e.range.getSheet();
@@ -204,49 +223,51 @@ function onEditHandler(e) {
     let selectedSheet = e.range.getValue();
     if (!selectedSheet) return;
     let applyFilter = false;
-    if (selectedSheet.endsWith("🌙")) {
+    if (selectedSheet.endsWith("🌙")) {                        // moon filter requested
       applyFilter = true;
       selectedSheet = selectedSheet.replace("🌙", "").trim();    }
     let newSheet = null;
     let needsDecryption = false;
     const prefixes = PREFIX_MAP[cell];
-
     if (prefixes && prefixes.length > 0) {
-      const decryptedSelected = decryptText(selectedSheet);
-
+      const decryptedSelected = decryptText(selectedSheet);   // also try with decrypted dropdown value
       for (const prefix of prefixes) {
         const encryptedPrefix = encryptText(prefix);
-
-        // 1. Klartext-Präfix + Original-Dropdown
+        // 1. Plain prefix + original dropdown
         let result = tryImportSheet(prefix + selectedSheet);
         if (result) {
           newSheet = result.sheet;
           needsDecryption = result.wasEncrypted;
           break;        }
-
+        // 2. Encrypted prefix + original dropdown
         result = tryImportSheet(encryptedPrefix + selectedSheet);
         if (result) {
           newSheet = result.sheet;
           needsDecryption = true;
           break;        }
+        // 3. Plain prefix + decrypted dropdown
         result = tryImportSheet(prefix + decryptedSelected);
         if (result) {
           newSheet = result.sheet;
           needsDecryption = result.wasEncrypted;
           break;        }
+        // 4. Encrypted prefix + decrypted dropdown
         result = tryImportSheet(encryptedPrefix + decryptedSelected);
         if (result) {
           newSheet = result.sheet;
           needsDecryption = true;
           break;        }      }
     } else {
+      // No prefixes (e.g. B2) – just try the dropdown value
       const result = tryImportSheet(selectedSheet);
       if (result) {
         newSheet = result.sheet;
         needsDecryption = result.wasEncrypted;      }    }
+    // Show a single alert if nothing was found after all attempts
     if (!newSheet) {
       SpreadsheetApp.getUi().alert("❌ Sheet nicht gefunden: " + selectedSheet);
       return;    }
+    // Decrypt A1 if the source was encrypted or the encrypted prefix was used
     if (needsDecryption) {
       decryptImportedData(newSheet);    }
     if (applyFilter) {
@@ -259,6 +280,7 @@ function onEditHandler(e) {
 // ===================================================================================================
 //                                      importSheetProUser
 // ===================================================================================================
+// SILENT IMPORT – same logic as importiereSheetProUser but without alert; returns { sheet, wasEncrypted } or null
 function tryImportSheet(selectedSheetName) {
   const ss = SpreadsheetApp.getActiveSpreadsheet();
   const sourceFile = SpreadsheetApp.openById(SOURCE_FILE_ID);
@@ -278,6 +300,7 @@ function tryImportSheet(selectedSheetName) {
   const newSheetName = `${nextIndex}`;
   const newSheet = sourceSheet.copyTo(ss);
   newSheet.setName(newSheetName);
+  // Decryption is handled by the caller (onEditHandler) based on needsDecryption
   ss.setActiveSheet(newSheet);
   newSheet.showSheet();
   markSheetCreated();
