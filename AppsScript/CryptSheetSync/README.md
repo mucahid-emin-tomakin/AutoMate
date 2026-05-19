@@ -25,10 +25,12 @@
 
 ## 📝 PROJEKTBESCHREIBUNG
 
-**CryptSheetSync** ist ein Google‑Apps‑Script‑Projekt, das einzelne Blätter aus einer Quell‑Tabelle anhand von Dropdown‑Auswahlen in eine Ziel‑Tabelle importiert.
+**CryptSheetSync** ist ein Google‑Apps‑Script‑Projekt, das einzelne Blätter aus einer Quell‑Tabelle anhand von Dropdown‑Auswahlen in eine Ziel‑Tabelle importiert.  
 Dabei werden verschlüsselte Blattnamen und Zellinhalte **automatisch erkannt und entschlüsselt** – unabhängig davon, ob das Dropdown selbst im Klartext oder verschlüsselt vorliegt.
+
 Ein flexibler **Präfix‑Mechanismus** erlaubt es, zu jedem Dropdown‑Wert Namenszusätze (z. B. Klassennamen) zu ergänzen, ohne die Suchlogik anpassen zu müssen.  
 Ein intelligenter **🌙‑Filter** blendet nach dem Import alle Zeilen ohne 🌙‑Symbol aus, behält aber strukturelle Kopfzeilen bei.
+
 Ein **automatischer Bereinigungsdienst** löscht temporäre Import‑Blätter nach einer einstellbaren Inaktivitätsdauer, während ein **Zähler** die Anzahl der Importe im Hauptblatt protokolliert.
 
 ### 📁 Workflow-Übersicht
