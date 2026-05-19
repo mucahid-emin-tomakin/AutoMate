@@ -1,6 +1,8 @@
 // ===================================================================================================
 //                                   SIMPLE ENCRYPTION 
 // ===================================================================================================
+// SIMPLE ENCRYPTION – substitution cipher for sheet names and cell A1
+// Encryption map: each character is replaced by another
 const ENCRYPTION_MAP = {
   'A': 'F', 'B': 'G', 'C': 'H', 'D': 'I', 'E': 'J', 
   'F': 'K', 'G': 'L', 'H': 'M', 'I': 'N', 'J': 'O',
@@ -16,7 +18,7 @@ const ENCRYPTION_MAP = {
   'z': 'e',
   '0': '9', '1': '8', '2': '7', '3': '6', '4': '5',
   '5': '4', '6': '3', '7': '2', '8': '1', '9': '0'};
-const DECRYPTION_MAP = {};
+const DECRYPTION_MAP = {};                                          // Reverse map, built automatically
 for (const [key, value] of Object.entries(ENCRYPTION_MAP)) {
   DECRYPTION_MAP[value] = key;}
 // ===================================================================================================
@@ -25,12 +27,15 @@ for (const [key, value] of Object.entries(ENCRYPTION_MAP)) {
 // ===================================================================================================
 //                                   ENCRYPTION FUNCTIONS 
 // ===================================================================================================
+// ENCRYPTION / DECRYPTION FUNCTIONS
+// Encrypt a string using the substitution map
 function encryptText(text) {
   let result = '';
   for (let i = 0; i < text.length; i++) {
     const char = text[i];
     result += ENCRYPTION_MAP[char] || char;}
   return result;}
+// Decrypt a string using the reverse map
 function decryptText(text) {
   let result = '';
   for (let i = 0; i < text.length; i++) {
@@ -38,11 +43,13 @@ function decryptText(text) {
     result += DECRYPTION_MAP[char] || char;}
   return result;}
 // ===================================================================================================
-//                                  ENCRYPTION FUNCTIONS 
+//                                   ENCRYPTION FUNCTIONS 
 // ===================================================================================================
 // ===================================================================================================
 //                                         MAINFUNCTION  
 // ===================================================================================================
+// MAIN FUNCTIONS – encrypt / decrypt all sheets
+// Encrypts all sheet names and the content of their A1 cells
 function encryptAllSheets() {
   const ss = SpreadsheetApp.getActiveSpreadsheet();
   const sheets = ss.getSheets();
@@ -58,6 +65,7 @@ function encryptAllSheets() {
     if (encryptCellA1(sheet)) {
       encryptedCount++;}});
   SpreadsheetApp.getUi().alert(`✅ Verschlüsselung abgeschlossen!\n\n• ${sheets.length} Sheetnamen verschlüsselt\n• ${encryptedCount} Zellen A1 verschlüsselt`);}
+// Decrypts all sheet names and the content of their A1 cells
 function decryptAllSheets() {
   const ss = SpreadsheetApp.getActiveSpreadsheet();
   const sheets = ss.getSheets();
@@ -79,6 +87,8 @@ function decryptAllSheets() {
 // ===================================================================================================
 //                                         CELL FUNCTIONS  
 // ===================================================================================================
+// CELL FUNCTIONS – encrypt / decrypt cell A1 of a single sheet
+// Encrypt the value of cell A1 (using its display value)
 function encryptCellA1(sheet) {
   try {
     const cellA1 = sheet.getRange("A1");
@@ -91,6 +101,7 @@ function encryptCellA1(sheet) {
     catch (e) {
     console.log(`❌ A1 konnte nicht verschlüsselt werden in Sheet: ${sheet.getName()}`);}
   return false;}
+// Decrypt the value of cell A1
 function decryptCellA1(sheet) {
   try {
     const cellA1 = sheet.getRange("A1");
@@ -108,6 +119,7 @@ function decryptCellA1(sheet) {
 // ===================================================================================================
 //                                            CONFIGURATION  
 // ===================================================================================================
+// CONFIGURATION DISPLAY – shows an overview of all sheets and their A1 content
 function showEncryptionConfig() {
   const ss = SpreadsheetApp.getActiveSpreadsheet();
   const sheets = ss.getSheets();
@@ -135,6 +147,7 @@ ${sheetInfo}`;
 // ===================================================================================================
 //                                             MENU-FUNCTION  
 // ===================================================================================================
+// MENU – adds the "🔐 Encrypt 🔐" menu when the spreadsheet opens
 function onOpen() {
   SpreadsheetApp.getUi().createMenu('🔐 Encrypt 🔐')
     .addItem('🔄 Alle verschlüsseln 🔄', 'encryptAllSheets')
