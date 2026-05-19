@@ -204,7 +204,7 @@ https://docs.google.com/spreadsheets/d/1pO86BY7zcCa6EVcWje9RjWLZ8BSd6xG1-qaJvYEX
 |----------|------|------|
 | **GitHub** | [@mucahid-emin-tomakin](https://github.com/mucahid-emin-tomakin) | 🐙 |
 | **Automation** | Skript-Entwickler & Automatisierer | 🤖 |
-| **Interessen** | Apps Script, Python, System‑Automation | ⚙️ |
+| **Interessen** | Google Sheets, Apps Script, System‑Automation | ⚙️ |
 
 **Teil der AutoMate Familie:**
 🤖 AutoMate | 🔧 Automation Scripts | 🛠️ Apps Script | 🔄 CryptSheetSync
