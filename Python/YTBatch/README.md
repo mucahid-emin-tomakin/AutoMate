@@ -4,6 +4,7 @@
 ![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white)
 ![yt-dlp](https://img.shields.io/badge/yt--dlp-FF6B6B?logo=youtube&logoColor=white)
 ![ffmpeg](https://img.shields.io/badge/ffmpeg-007808?logo=ffmpeg&logoColor=white)
+![Deno](https://img.shields.io/badge/Deno-000000?logo=deno&logoColor=white)
 ![Terminal](https://img.shields.io/badge/Terminal-4EAA25?logo=gnubash&logoColor=white)
 ![License](https://img.shields.io/badge/License-MIT-blue)
 ![Status](https://img.shields.io/badge/Status-Aktiv-brightgreen)
