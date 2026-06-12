@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-# FolderForge - NoComment
+# FolderForge - NoComment.py
 
 # ============================== IMPORTS ==============================
 
