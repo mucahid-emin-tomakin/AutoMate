@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-# TreeMapper - NoComment
+# TreeMapper - NoComment.py
 
 # ============================== IMPORTS ==============================
 
