@@ -4,6 +4,7 @@
 ![Automation](https://img.shields.io/badge/Automation-FF6B6B?logo=robot&logoColor=white)
 ![PowerShell](https://img.shields.io/badge/PowerShell-5391FE?logo=powershell&logoColor=white)
 ![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white)
+![Google Apps Script](https://img.shields.io/badge/Google_Apps_Script-34A853?logo=google&logoColor=white)
 ![VBScript](https://img.shields.io/badge/VBScript-00599C?logo=windows&logoColor=white)
 ![n8n](https://img.shields.io/badge/n8n-EA4B71?logo=n8n&logoColor=white)
 ![Automation Anywhere](https://img.shields.io/badge/Automation_Anywhere-FF6600?logo=robot-framework&logoColor=white)
@@ -41,11 +42,16 @@ Das Repository wächst kontinuierlich – neue Automatisierungen werden laufend 
 ### 🤖 Enthaltene Projekte
 | Projekt | Inhalte & Schwerpunkte | Status |
 |---------------------|--------------|--------|
-| ⏱️ **WorkingTimeTracker** | Arbeitszeiterfassung aus Excel/CSV mit automatischer Archivierung | ✅ |
-| 🎬 **MediaTracker** | Video-Bibliotheksanalyse mit ffprobe & Multithreading | ✅ |
+| 🔐 **CryptSheetSync** (AppsScript) | Google Sheets verschlüsselt synchronisieren | ✅ |
 | 🔄 **CopySync** | 1:1-Festplattensynchronisation mit SHA-256-Hash | ✅ |
 | 🔨 **FolderForge** | Ordner-Stapelerstellung aus Namensliste | ✅ |
+| 🎬 **MediaTracker** | Video-Bibliotheksanalyse mit ffprobe & Multithreading | ✅ |
+| 🔄 **MultiConverter** | Batch-Konvertierung von Medien mit ffmpeg (Python + Batch) | ✅ |
 | 🔄 **NameShift** | Ordner & Dateien umbenennen + Dateiliste exportieren | ✅ |
+| 🎬 **TTSFactory** (Automation Anywhere) | Text-to-Speech in großer Stückzahl | ✅ |
+| 🌳 **TreeMapper** | Ordnerstruktur als JSON/CSV exportieren | ✅ |
+| ⏱️ **WorkingTimeTracker** | Arbeitszeiterfassung aus Excel/CSV mit automatischer Archivierung | ✅ |
+| 🎬 **YTBatch** | YouTube Batch-Downloader (MP3/MP4) mit dynamischem Terminal | ✅ |
 
 *Jedes fertige Projekt besitzt ein eigenes `README.md` mit Quick-Start und Konfiguration.*
 
@@ -69,20 +75,29 @@ Das Repository wächst kontinuierlich – neue Automatisierungen werden laufend 
 ### 📂 Hauptverzeichnis
 ```text
 🤖 AutoMate/
+├── 📜 AppsScript/
+│   └── 🔐 CryptSheetSync/
+├── 🤖 AutomationAnywhere/
+│   ├── 🎬 TTSFactory/
 ├── 🐍 Python/
-│   └── ⏱️ WorkingTimeTracker/
-│   ├── 🎬 MediaTracker/
 │   ├── 🔄 CopySync/
 │   ├── 🔨 FolderForge/
-│   └── 🔄 NameShift/
+│   ├── 🎬 MediaTracker/
+│   ├── 🔄 MultiConverter/
+│   ├── 🔄 NameShift/
+│   ├── 🌳 TreeMapper/
+│   ├── ⏱️ WorkingTimeTracker/
+│   └── 🎬 YTBatch/
 └── 📄 README.md
 ```
 
 ### 📁 Struktur-Legende
 ```text
 🤖 AutoMate/
-├── 🐍 Python/            # Python Automatisierungen
-└── 📄 README.md          # Projektbeschreibung (diese Datei)
+├── 📜 AppsScript/          # Google Apps Script Projekte
+├── 🤖 AutomationAnywhere/  # Automation Anywhere Bot-Ordner (inkl. Python)
+├── 🐍 Python/              # Python Automatisierungen (alle Skripte)
+└── 📄 README.md            # Projektbeschreibung (diese Datei)
 ```
 
 ---
@@ -169,4 +184,4 @@ cat Result.txt
 
 ---
 
-### 🔧 Made with ❤️ on Automation
+### 🔧 Made with ❤️ on AutoMate
