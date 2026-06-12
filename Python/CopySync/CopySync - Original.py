@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-# CopySync - Original
+# CopySync - Original.py
 
 import os
 import sys
