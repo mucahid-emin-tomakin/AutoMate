@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-# WorkingTimeTracker
+# WorkingTimeTracker.py
 
 # ============================== IMPORTS ==============================
 
