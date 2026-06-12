@@ -101,7 +101,6 @@
 
 Alle Einstellungen sind **direkt im Python‑Skript** über Konstanten am Anfang definiert (wenn gewünscht, können Sie angepasst werden).  
 Standardmäßig ist **keine Konfiguration nötig** – das Skript arbeitet im aktuellen Ordner.
-
 ```python
 # ==================================================
 #  KONFIGURATION (optional, direkt im Code änderbar)
@@ -110,6 +109,39 @@ Standardmäßig ist **keine Konfiguration nötig** – das Skript arbeitet im ak
 # Der Arbeitsordner wird interaktiv abgefragt oder ist %cd%
 # Ausgabedateien landen im gleichen Ordner wie die Quelldateien
 # Format‑Mapping ist in format_map definiert (siehe Code)
+```
+
+### FFmpeg‑Parameter (im Code)
+| Medientyp | ffmpeg‑Aufruf / Parameter | Beschreibung |
+|-----------|---------------------------|--------------|
+| **Bilder** | `ffmpeg -i infile -y outfile` | Einfache Konvertierung ohne weitere Optionen |
+| **Videos (erster Versuch)** | `-c copy` | Kopiert alle Streams (schnell, verlustfrei) |
+| **Videos (Fallback)** | `-i infile -y outfile` | Vollständige Neukodierung (langsamer, aber kompatibler) |
+| **MP3 (Audio)** | `-vn -acodec libmp3lame` | Entfernt Video‑Spur, nutzt LAME‑MP3‑Encoder |
+| **Andere Audioformate** | `-vn` | Nur Audio extrahieren, ohne speziellen Codec |
+> **Hinweis:** Die ffmpeg‑Aufrufe sind für beste Qualität voreingestellt (keine Qualitätseinschränkung).
+
+### 📦 Voraussetzungen
+1. **Python 3.7+** – [python.org](https://python.org)
+2. **ffmpeg** – [ffmpeg.org](https://ffmpeg.org)  
+   Die `ffmpeg.exe` muss im `PATH` **oder** im Skriptordner liegen.
+3. **Keine weiteren Python‑Pakete!** – Nur die Standardbibliothek wird verwendet.
+
+### 💡 Einfache Installation von ffmpeg (Windows)
+```powershell
+# ffmpeg mit winget installieren (setzt Windows 10/11 voraus)
+winget install Gyan.FFmpeg
+
+# Oder manuell:
+# 1. ZIP von https://gyan.dev/ffmpeg/builds/ffmpeg-release-essentials.zip herunterladen
+# 2. Nach C:\ffmpeg entpacken
+# 3. C:\ffmpeg\bin zum PATH hinzufügen
+```
+
+### ✅ Überprüfung der Installation
+Nach der Installation sollte in einer neuen Eingabeaufforderung (CMD) oder PowerShell folgender Befehl funktionieren:
+```bash
+ffmpeg -version
 ```
 
 ---
@@ -161,10 +193,10 @@ Standardmäßig ist **keine Konfiguration nötig** – das Skript arbeitet im ak
 git clone https://github.com/mucahid-emin-tomakin/AutoMate.git
 cd AutoMate
 
-# 2. In den ein Projektfodler wechseln
-cd AutoMate/Python/MultiConverter
+# 2. In den Projektfodler wechseln
+cd Python/MultiConverter
 
-# 3. (Optional) ffmpeg installieren (siehe oben)
+# 3. ffmpeg installieren (siehe oben)
 
 # 4. Konfiguration anpassen (wenn gewollt)
 
@@ -192,46 +224,63 @@ python MultiConverter.py
 
 ## 🖼️ SCREENSHOTS
 
-### Schritt 1 – Formatwahl
+### Schritt 1 – Ordnerauswahl & Dateiliste
 ```text
-=============================================
-   YouTube Batch Downloader (MP3 oder MP4)
-=============================================
-
-Wähle das Format:
-  1 - MP3 (nur Audio, beste Qualität)
-  2 - MP4 (Video + Audio, beste Qualität)
-
-Bitte 1 oder 2 eingeben:
+============================================================================
+                         MultiConverter (ffmpeg)
+============================================================================
+Aktueller Ordner: C:\Users\Benutzer\Downloads
+---------------------------------------------------------------
+Mochtest du einen anderen Ordner? (J/N): n
+============================================================================
+                          Dateien auswahlen
+============================================================================
+Auswahlmoglichkeiten: [A]lle  [1]  [1,3]  [1-3]  oder [1-3,5,7-9]
+-----------------------------------------------------------------
+  [1] bild.png
+  [2] video.mp4
+  [3] song.flac
+-----------------------------------------------------------------
+Deine Auswahl: 1,3
+--------------------------------
+Ausgewahlte Dateien:
+  - bild.png
+  - song.flac
 ```
 
-### 📋 Schritt 2 – Auflösung von Playlists
+### 📋 Schritt 2 – Zielformat wählen
 ```Text
-📋 Sammle alle erwarteten Video-IDs aus den URLs (Playlists werden aufgelöst)...
-  → 12 IDs extrahiert
-  → 12 IDs extrahiert
-  → 1 IDs extrahiert
-...
-✅ Insgesamt 136 Videos werden erwartet.
+============================================================================
+                        Zielformat auswahlen
+============================================================================
+  Bild-Formate:    [1] png     [2] jpg     [3] jpeg    [4] gif
+                   [5] bmp     [6] tiff    [7] webp    [8] heic
+  Video-Formate:   [9] mp4     [10] webm   [11] avi    [12] mkv
+                   [13] mov    [14] flv
+  Audio-Formate:   [15] mp3    [16] wav    [17] ogg    [18] flac
+                   [19] aac    [20] m4a
+---------------------------------------------------------------
+Format-Nummer (1-20): 15
+------------------------
+Gewahltes Format: mp3
 ```
 
-### 📋 Schritt 3 – Dynamische Download‑Anzeige
+### 📋 Schritt 3 – Konvertierung
 ```Text
-==============================================
-= Download:  47% I====================I 100%
-= Title:     Gladiator Ambience — Cinema ...
-==============================================
-```
-(Die Anzeige bleibt stationär und aktualisiert sich live.)
-
-### 📋 Schritt 4 – Abschlussmeldung
-```Text
-==============================================
-= Download:  47% I====================I 100%
-= Title:    Fertig!
-==============================================
-
-✅ Download abgeschlossen! Die Dateien wurden nach MP3 gespeichert.
+============================================================================
+                         Konvertierung lauft...
+============================================================================
+[>>] bild.png --> bild.mp3
+  [OK] bild.mp3
+[>>] song.flac --> song.mp3
+  [OK] song.mp3
+============================================================================
+                       Konvertierung abgeschlossen!
+============================================================================
+Erfolgreich: 2
+Fehlgeschlagen: 0
+------------------------
+Drücke Enter zum Beenden...
 ```
 
 ---
@@ -239,20 +288,21 @@ Bitte 1 oder 2 eingeben:
 ## ⚠️ WICHTIGE HINWEISE
 
 ### 📌 Vor dem ersten Start
-- ✅ Stelle sicher, dass `yt-dlp` und `ffmpeg` entweder im `PATH` oder als `.exe` im Skriptordner liegen.
-- ✅ Die Dateien `ListMP3.txt` und/oder `ListMP4.txt` müssen vorhanden sein (auch leer erlaubt).
-- ✅ Playlist‑URLs werden **vollständig** aufgelöst – das kann bei großen Playlists einige Sekunden dauern.
-- ✅ Cookies werden nur verwendet, wenn die Datei `cookies.txt` im Skriptordner existiert (exportiert z. B. mit Browser‑Erweiterung "Get cookies.txt").
+- ✅ Stelle sicher, dass **ffmpeg** entweder im `PATH` oder als `ffmpeg.exe` im Skriptordner liegt.
+- ✅ Das Skript arbeitet **nur mit Dateien** im aktuellen Ordner (Unterordner werden ignoriert).
+- ✅ Die konvertierten Dateien landen **immer im gleichen Ordner** wie die Originale.
+- ✅ Bei Videos wird zuerst `-c copy` versucht (schnell, verlustfrei). Falls das fehlschlägt, wird automatisch neu codiert.
+- ✅ Bei MP3 wird `libmp3lame` verwendet – das liefert beste Qualität.
 
-### 🔒 Rechtliches
-- ⚠️ Nutze das Tool nur für Inhalte, zu denen du die entsprechenden Rechte besitzt oder die ausdrücklich für den Download freigegeben sind.
-- ⚠️ Das Herunterladen urheberrechtlich geschützter Materialien ist in vielen Ländern illegal.
+### 🔒 Rechtliches (keine Einschränkung)
+- ⚠️ Die Konvertierung von Medien, die du besitzt oder für die du eine Lizenz hast, ist völlig legal.
+- ⚠️ Das Tool enthält keine Umgehung von Kopierschutzmechanismen.
 
 ### 💡 Tipps für den Betrieb
-- ✅ Bei großen Playlists: Die Vorab‑Auflösung (Sammeln der IDs) kann einige Minuten dauern – das ist normal.
-- ✅ Verwende `--limit-rate 1M`, um eine Überlastung deiner Internetleitung zu vermeiden (der Wert kann im Skript geändert werden).
-- ✅ Falls die dynamische Anzeige nicht richtig funktioniert (z. B. Titel bleibt leer), liegt das an der Ausgabe von `yt-dlp`. Das Skript erkennt `[download] Destination:` – aktuelle `yt-dlp`‑Versionen zeigen das weiterhin an.
-- ✅ Bei Problemen mit JavaScript‑Challenges installiere **deno** und setze `--js-runtimes deno` (im Skript bereits enthalten).
+- ✅ Für große Batch‑Konvertierungen: Lege alle zu konvertierenden Dateien in einen eigenen Ordner, starte das Skript dort und wähle `A` (alle Dateien).
+- ✅ Nutze die Bereichsauswahl, um nur bestimmte Dateien zu konvertieren – z. B. `1-5,7,9-12`.
+- ✅ Die Batch‑Version (`MultiConverter.bat`) funktioniert ebenfalls, ist aber weniger robust bei der Bereichsauswahl. Die Python‑Version ist **immer vorzuziehen**.
+- ✅ Falls ffmpeg nicht gefunden wird, zeigt das Skript eine klare Fehlermeldung mit Link zur Installation.
 
 ---
 
@@ -269,10 +319,10 @@ Bitte 1 oder 2 eingeben:
 |----------|------|------|
 | **GitHub** | [@mucahid-emin-tomakin](https://github.com/mucahid-emin-tomakin) | 🐙 |
 | **Automation** | Skript-Entwickler & Automatisierer | 🤖 |
-| **Interessen** | Python, System-Automation | ⚙️ |
+| **Interessen** | Python, System‑Automation, ffmpeg | ⚙️ |
 
 **Teil der AutoMate Familie:**
-🤖 AutoMate | 🔧 Automation Scripts | 🐍 Python | 🎬 YTBatch
+🤖 AutoMate | 🔧 Automation Scripts | 🐍 Python | 🔄 MultiConverter
 
 ## 📊 REPOSITORY STATISTIK
 
@@ -286,5 +336,3 @@ Bitte 1 oder 2 eingeben:
 ---
 
 ### 🔧 Made with ❤️ on Python
-
-
