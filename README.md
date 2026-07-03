@@ -39,16 +39,24 @@ Das Repository wächst kontinuierlich – neue Automatisierungen werden laufend 
 
 ## ✨ FEATURES
 
-### 🤖 Enthaltene Projekte
-| Projekt | Inhalte & Schwerpunkte | Status |
-|---------------------|--------------|--------|
-| 🔐 **CryptSheetSync** (AppsScript) | Google Sheets verschlüsselt synchronisieren | ✅ |
+### 📜 Google Apps Script-Projekte
+| Projekt | Beschreibung | Status |
+|---------|--------------|--------|
+| 🔐 **CryptSheetSync** | Google Sheets verschlüsselt synchronisieren | ✅ |
+
+### 🤖 Automation Anywhere-Projekte
+| Projekt | Beschreibung | Status |
+|---------|--------------|--------|
+| 🎬 **TTSFactory** | Text-to-Speech in großer Stückzahl (mit FFMPEG & TortoiseTTS) | ✅ |
+
+### 🐍 Python-Projekte
+| Projekt | Beschreibung | Status |
+|---------|--------------|--------|
 | 🔄 **CopySync** | 1:1-Festplattensynchronisation mit SHA-256-Hash | ✅ |
 | 🔨 **FolderForge** | Ordner-Stapelerstellung aus Namensliste | ✅ |
 | 🎬 **MediaTracker** | Video-Bibliotheksanalyse mit ffprobe & Multithreading | ✅ |
 | 🔄 **MultiConverter** | Batch-Konvertierung von Medien mit ffmpeg (Python + Batch) | ✅ |
 | 🔄 **NameShift** | Ordner & Dateien umbenennen + Dateiliste exportieren | ✅ |
-| 🎬 **TTSFactory** (Automation Anywhere) | Text-to-Speech in großer Stückzahl | ✅ |
 | 🌳 **TreeMapper** | Ordnerstruktur als JSON/CSV exportieren | ✅ |
 | ⏱️ **WorkingTimeTracker** | Arbeitszeiterfassung aus Excel/CSV mit automatischer Archivierung | ✅ |
 | 🎬 **YTBatch** | YouTube Batch-Downloader (MP3/MP4) mit dynamischem Terminal | ✅ |
