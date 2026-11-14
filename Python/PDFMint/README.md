@@ -19,13 +19,13 @@ Zwei kurze Aufnahmen zeigen den kompletten Ablauf – einmal beim **ersten Start
 
 > Beim ersten Lauf erstellt PDFMint die venv, installiert alle Python-Pakete, lädt GLM-OCR (~1,4 GB) und das Qwen2.5-VL-Vision-Modell (~2 GB) automatisch herunter. Je nach Internetverbindung dauert das **10–30 Minuten**. Danach startet die Pipeline selbstständig.
 
-![Setup beim ersten Start](setup.gif)
+![Setup beim ersten Start](assets/Setup.gif)
 
 ### ▶️ Nächster Lauf – Pipeline läuft sofort
 
 > Beim zweiten und allen weiteren Läufen prüft PDFMint in Sekunden, ob venv, Pakete und Modelle vorhanden sind – und beginnt direkt mit der Verarbeitung. Die vier Phasen (Erkennung → Marker → Vision → GLM-OCR) laufen automatisch nacheinander.
 
-![Pipeline-Ausführung nach Download](run.gif)
+![Pipeline-Ausführung nach Download](assets/Run.gif)
 
 ---
 
