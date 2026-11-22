@@ -244,7 +244,7 @@ cd AutoMate/ChromeExtension/DeepForge
 ```
 
 ### 📦 Extention Laden (einmalig)
-> **[Version 1.0.0](https://chromewebstore.google.com/detail/jhcjppkoepgeobplikbdfiihfepnnnaf)** · Verfügbar im [Chrome Web Store](https://chromewebstore.google.com/detail/jhcjppkoepgeobplikbdfiihfepnnnaf)
+> **[Version 1.0.0](https://chromewebstore.google.com/detail/jhcjppkoepgeobplikbdfiihfepnnnaf)** · Verfügbar im [Chrome Web Store](https://chromewebstore.google.com)
 > (alternativ manuell als entpackte Erweiterung über `chrome://extensions` ladbar).
 1. In Google Chrome **`chrome://extensions`** öffnen.
 2. Oben rechts den **Entwicklermodus** aktivieren.
