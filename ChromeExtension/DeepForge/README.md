@@ -10,24 +10,10 @@
 
 ---
 
-## 🎬 DEMO
-
-> **DeepForge** bindet sich direkt in die Benutzeroberfläche von `chat.deepseek.com` ein und bietet über ein kompaktes Dropdown-Menü den Export kompletter Konversationen als **JSON**, **Markdown (`.md`)**, **Plain Text (`.txt`)** oder als **eigenständiges interaktives HTML-Dokument (`.html`)** – inklusive Anhängen, PDF-Seitenbildern, Quellen und Inhaltsverzeichnis.
-
-### ✨ Export-Workflow im Überblick
-- **Direkter Zugriff in DeepSeek:** Über den integrierten Export-Button öffnet sich das Format-Menü (`JSON`, `MD`, `TXT`, `HTML`).
-- **Live-Fortschritt & Schutz:** Während der Extraktion, Diagramm-Aufbereitung, Anhang-/PDF-Erfassung und HTML-Erzeugung führt ein Exporting-Overlay durch die Schritte und verhindert parallele Doppel-Exports.
-- **Eigenständiges HTML-Archiv:** Die erzeugte `.html`-Datei funktioniert offline ohne externe Extension und bringt ein eigenes Inhaltsverzeichnis (TOC) mit Scrollspy, Quellen-Overlay, Datei-/PDF-Drawer sowie Code-Copy/Download mit.
-
----
-
 ## 📖 INHALTSVERZEICHNIS
 
-## 📖 INHALTSVERZEICHNIS
-
-- [🎬 DEMO](#-demo)
-  - [✨ Export-Workflow im Überblick](#-export-workflow-im-überblick)
 - [📝 PROJEKTBESCHREIBUNG](#-projektbeschreibung)
+  - [✨ Export-Workflow im Überblick](#-export-workflow-im-überblick)
 - [✨ FEATURES](#-features)
   - [📦 Export-Formate & Datenaufbereitung](#-export-formate--datenaufbereitung)
   - [🔍 DOM-Parsing, Tabellen, Quellen & Diagramme](#-dom-parsing-tabellen-quellen--diagramme)
@@ -49,7 +35,7 @@
   - [▶️ Export starten (auf `chat.deepseek.com`)](#️-export-starten-auf-chatdeepseekcom)
   - [🧪 Diagnose-Befehle (DevTools-Konsole)](#-diagnose-befehle-devtools-konsole)
 - [🖼️ SCREENSHOTS](#️-screenshots)
-  - [🧭 Features im exportierten HTML-Dokument](#-features-im-exportierten-html-dokument)
+  - [🎬 DEMO](#-demo)
 - [⚠️ WICHTIGE HINWEISE](#️-wichtige-hinweise)
   - [📌 Vor der Verwendung](#-vor-der-verwendung)
   - [🔒 Sicherheit & Datenschutz](#-sicherheit--datenschutz)
@@ -61,6 +47,8 @@
 ---
 
 ## 📝 PROJEKTBESCHREIBUNG
+
+> **DeepForge** bindet sich direkt in die Benutzeroberfläche von `chat.deepseek.com` ein und bietet über ein kompaktes Dropdown-Menü den Export kompletter Konversationen als **JSON (`.json`)**, **Markdown (`.md`)**, **Plain Text (`.txt`)** oder als **eigenständiges interaktives HTML-Dokument (`.html`)** – inklusive Anhängen, PDF-Seitenbildern, Quellen und Inhaltsverzeichnis.
 
 **DeepForge** ist eine modulare Chrome-Extension für **chat.deepseek.com**, mit der sich umfangreiche KI-Konversationen inklusive Gedankengängen (`chain_of_thought`), Tabellen, Code-Blöcken, Quellenangaben, Datei-Anhängen und mehrseitigen PDF-Dokumenten zuverlässig sichern und weiterverarbeiten lassen.
 
@@ -83,6 +71,11 @@
 - Für alle, die lange DeepSeek-Verläufe als übersichtliches, offline nutzbares HTML-Archiv mit Inhaltsverzeichnis und Drawer behalten möchten.
 
 Teil der **AutoMate**-Familie: 🤖 AutoMate | 🔧 Automation Scripts | 🐍 Python | 🧩 DeepForge
+
+### ✨ Export-Workflow im Überblick
+- **Direkter Zugriff in DeepSeek:** Über den integrierten Export-Button öffnet sich das Format-Menü (`JSON`, `MD`, `TXT`, `HTML`).
+- **Live-Fortschritt & Schutz:** Während der Extraktion, Diagramm-Aufbereitung, Anhang-/PDF-Erfassung und HTML-Erzeugung führt ein Exporting-Overlay durch die Schritte und verhindert parallele Doppel-Exports.
+- **Eigenständiges HTML-Archiv:** Die erzeugte `.html`-Datei funktioniert offline ohne externe Extension und bringt ein eigenes Inhaltsverzeichnis (TOC) mit Scrollspy, Quellen-Overlay, Datei-/PDF-Drawer sowie Code-Copy/Download mit.
 
 ---
 
@@ -261,10 +254,9 @@ dfError('Fehler beim Export.', new Error('Test-Fehler für Diagnose'));
 
 ## 🖼️ SCREENSHOTS
 
-### 🧭 Features im exportierten HTML-Dokument
-* **Inhaltsverzeichnis (TOC):** Oben rechts platziert, auf-/zuklappbar, mit sanftem Scrollen und aktiver Hervorhebung während des Lesens.
-* **Datei- & PDF-Drawer:** Klick auf erfasste Dateien oder PDF-Anhänge öffnet links einen Drawer mit Textinhalt bzw. allen erfassten PDF-Seitenbildern.
-* **Quellen-Overlay:** Klick auf Quellenblöcke öffnet ein zentriertes Overlay mit Quellenlinks und Domains.
+
+### 🎬 DEMO
+
 
 ---
 
@@ -305,6 +297,15 @@ Dieses Projekt ist unter der **MIT License** lizenziert – frei für persönlic
 
 **Teil der AutoMate Familie:**
 🤖 AutoMate | 🔧 Automation Scripts | 🐍 Python | 🧩 DeepForge
+
+## 📊 REPOSITORY STATISTIK
+
+| Metrik | Wert | Trend |
+|--------|------|-------|
+| **Stars** | ![GitHub Stars](https://img.shields.io/github/stars/mucahid-emin-tomakin/AutoMate) | 📈 |
+| **Forks** | ![GitHub Forks](https://img.shields.io/github/forks/mucahid-emin-tomakin/AutoMate) | 🔄 |
+| **Issues** | ![GitHub Issues](https://img.shields.io/github/issues/mucahid-emin-tomakin/AutoMate) | ✅ |
+| **Letztes Update** | ![GitHub Last Commit](https://img.shields.io/github/last-commit/mucahid-emin-tomakin/AutoMate) | 🕐 |
 
 ---
 
