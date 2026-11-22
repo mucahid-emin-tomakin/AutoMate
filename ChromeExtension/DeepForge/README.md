@@ -19,13 +19,13 @@
   - [🔍 DOM-Parsing, Tabellen, Quellen & Diagramme](#-dom-parsing-tabellen-quellen--diagramme)
   - [📑 Anhang- & PDF-Erfassung](#-anhang---pdf-erfassung)
   - [🎨 Standalone-HTML: UI, Navigation & Interaktion](#-standalone-html-ui-navigation--interaktion)
-  - [🛡️ Zuverlässigkeit, Sicherheit & Diagnose](#-zuverlässigkeit-sicherheit--diagnose)
+  - [🛡️ Zuverlässigkeit, Sicherheit & Diagnose](#️-zuverlässigkeit-sicherheit--diagnose)
 - [🚀 TOOL](#-tool)
   - [🧩 Architektur der 10 Logischen Code-Abschnitte](#-architektur-der-10-logischen-code-abschnitte)
-- [⚙️ KONFIGURATION](#-konfiguration)
+- [⚙️ KONFIGURATION](#️-konfiguration)
   - [📦 Voraussetzungen](#-voraussetzungen)
   - [✅ Überprüfung im Browser](#-überprüfung-im-browser)
-  - [🎛️ Konfigurierbare Variablen (`content.js` – Abschnitt 1)](#-konfigurierbare-variablen-contentjs--abschnitt-1)
+  - [🎛️ Konfigurierbare Variablen (`content.js` – Abschnitt 1)](#️-konfigurierbare-variablen-contentjs--abschnitt-1)
 - [📁 STRUKTUR](#-struktur)
   - [📂 Hauptverzeichnis (im `AutoMate`-Repository)](#-hauptverzeichnis-im-automate-repository)
   - [📂 Export-Ergebnisse (Downloads)](#-export-ergebnisse-downloads)
@@ -33,10 +33,10 @@
 - [⚡ QUICK START](#-quick-start)
   - [📦 Installation (einmalig)](#-installation-einmalig)
   - [📦 Extention Laden (einmalig)](#-extention-laden-einmalig)
-  - [▶️ Export starten (auf `chat.deepseek.com`)](#-export-starten-auf-chatdeepseekcom)
+  - [▶️ Export starten (auf `chat.deepseek.com`)](#️-export-starten-auf-chatdeepseekcom)
   - [🧪 Diagnose-Befehle (DevTools-Konsole)](#-diagnose-befehle-devtools-konsole)
-- [🖼️ SCREENSHOTS](#-screenshots)
-- [⚠️ WICHTIGE HINWEISE](#-wichtige-hinweise)
+- [🖼️ SCREENSHOTS](#️-screenshots)
+- [⚠️ WICHTIGE HINWEISE](#️-wichtige-hinweise)
   - [📌 Vor der Verwendung](#-vor-der-verwendung)
   - [🔒 Sicherheit & Datenschutz](#-sicherheit--datenschutz)
   - [🔧 Bekannte Einschränkungen & Tipps](#-bekannte-einschränkungen--tipps)
@@ -118,6 +118,7 @@ Teil der **AutoMate**-Familie: 🤖 AutoMate | 🔧 Automation Scripts | 🐍 Py
 | 🌈 **CSS-, Font- & SVG-Einbettung** | Bettet Stylesheets, CSS-Variablen, `@font-face` (`BlackChancery` u. a.) und `#df-electric` SVG-Filter ein | ✅ |
 | 📊 **Scroll-Fortschrittsbalken** | Dynamische Scroll-Indikatoren für TOC, Drawer und Quellenliste (mit `requestAnimationFrame`-Drosselung) | ✅ |
 
+<a id="zuverlaessigkeit"></a>
 ### 🛡️ Zuverlässigkeit, Sicherheit & Diagnose
 | Feature | Beschreibung | Status |
 |---------|-------------|--------|
