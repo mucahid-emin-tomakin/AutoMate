@@ -19,7 +19,7 @@
   - [🔍 DOM-Parsing, Tabellen, Quellen & Diagramme](#-dom-parsing-tabellen-quellen--diagramme)
   - [📑 Anhang- & PDF-Erfassung](#-anhang---pdf-erfassung)
   - [🎨 Standalone-HTML: UI, Navigation & Interaktion](#-standalone-html-ui-navigation--interaktion)
-  - [🛡️ Zuverlässigkeit, Sicherheit & Diagnose](#-zuverlässigkeit-sicherheit--diagnose)
+  - [🛡️ Zuverlässigkeit, Sicherheit & Diagnose](#zuverlässigkeit-sicherheit--diagnose)
 - [🚀 TOOL](#-tool)
   - [🧩 Architektur der 10 Logischen Code-Abschnitte](#-architektur-der-10-logischen-code-abschnitte)
 - [⚙️ KONFIGURATION](#️-konfiguration)
@@ -32,6 +32,7 @@
   - [📁 Struktur-Legende](#-struktur-legende)
 - [⚡ QUICK START](#-quick-start)
   - [📦 Installation (einmalig)](#-installation-einmalig)
+  - [📦 Extention Laden (einmalig)](#-extention-laden-einmalig)
   - [▶️ Export starten (auf `chat.deepseek.com`)](#️-export-starten-auf-chatdeepseekcom)
   - [🧪 Diagnose-Befehle (DevTools-Konsole)](#-diagnose-befehle-devtools-konsole)
 - [🖼️ SCREENSHOTS](#️-screenshots)
@@ -191,33 +192,45 @@ Teil der **AutoMate**-Familie: 🤖 AutoMate | 🔧 Automation Scripts | 🐍 Py
 ```text
 🧩 ChromeExtension/
 └── 📂 DeepForge/
-    ├── 📂 fonts/                   # Eingebettete Schriftarten (z. B. BlackChancery.ttf, Magnificent.ttf)
+    ├── 📂 fonts/                   # Eingebettete Schriftarten (BlackChancery.ttf, Magnificent.ttf)
     ├── 📂 icons/                   # Extension-Icons (icon16.png, icon48.png, icon128.png)
-    ├── 📂 assets/                  # Screenshots / GIFs für Dokumentation
+    ├── 📂 assets/                  # Screenshots & GIFs für Dokumentation
+    │   ├── 🎬 DemoRun.gif            # Demo: Export-Lauf auf chat.deepseek.com
+    │   ├── 🎬 DemoResult.gif         # Demo: Ergebnis im exportierten HTML-Dokument
+    │   ├── 🖼️ TestWarning.png        # Screenshot: Warn-Log & Warning-Toast
+    │   ├── 🖼️ TestError.png          # Screenshot: Fehler-Log & Error-Toast
+    │   └── 🖼️ ReloadWarning.png      # Screenshot: Hinweis bei ungültigem Extension-Kontext
     ├── 📄 manifest.json            # Extension-Manifest (Konfiguration & Berechtigungen)
     ├── ⚙️ background.js            # Hintergrundskript der Extension
     ├── 🐍 content.js               # Hauptskript (10 modulare Abschnitte für Extraktion, Capture & HTML-Export)
     ├── 🎨 styles.css               # Stylesheets der Extension
     └── 📄 README.md                # Projektdokumentation
+
 ```
 
 ### 📂 Export-Ergebnisse (Downloads)
+
 ```text
 Downloads/
 ├── 📄 <Konversationstitel>.json   # Strukturierter JSON-Export
 ├── 📝 <Konversationstitel>.md     # Markdown-Export mit Tabellen & Quellen
 ├── 📜 <Konversationstitel>.txt    # Plain-Text-Export
 └── 🌐 <Konversationstitel>.html   # Eigenständiges HTML mit TOC, Drawer, Quellen & eingebetteten Assets
+
 ```
 
 ### 📁 Struktur-Legende
+
 ```text
 🧩 DeepForge/
 ├── 📂 Ordner
 ├── 📄 Konfigurations- & Dokumentationsdatei (.json, .md)
-├── 🐍 Skriptdatei (.js)
+├── ⚙️ / 🐍 Skript- & Style-Dateien (.js, .css)
+├── 🖼️ Screenshot (.png)
+├── 🎬 Demo-Animation (.gif)
 ├── 📝 Markdown- & Text-Export (.md, .txt)
 └── 🌐 Eigenständiger HTML-Export (.html)
+
 ```
 
 ---
@@ -225,54 +238,66 @@ Downloads/
 ## ⚡ QUICK START
 
 ### 📦 Installation (einmalig)
+
 ```powershell
 # 1. Repository klonen
 git clone [https://github.com/mucahid-emin-tomakin/AutoMate.git](https://github.com/mucahid-emin-tomakin/AutoMate.git)
 cd AutoMate/ChromeExtension/DeepForge
+
 ```
 
 ### 📦 Extention Laden (einmalig)
+
 1. In Google Chrome **`chrome://extensions`** öffnen.
 2. Oben rechts den **Entwicklermodus** aktivieren.
 3. Auf **„Entpackte Erweiterung laden“** klicken und den Ordner `ChromeExtension/DeepForge` auswählen.
 
 ### ▶️ Export starten (auf `chat.deepseek.com`)
+
 1. Einen Chat auf **`https://chat.deepseek.com`** öffnen und warten, bis die Nachrichten geladen sind.
 2. Den **Export-Button** von DeepForge anklicken und im Dropdown **`JSON`**, **`MD`**, **`TXT`** oder **`HTML`** wählen.
 3. Den Fortschritt im Exporting-Overlay abwarten – die Datei wird automatisch heruntergeladen.
 
 ### 🧪 Diagnose-Befehle (DevTools-Konsole)
+
 ```javascript
 // Warn-Toast und [DeepForge-Warning] testen (im Content-Script-Kontext)
 dfWarn('Keine Nachrichten zum Exportieren gefunden.');
 
 // Fehler-Toast und [DeepForge-Error] testen (im Content-Script-Kontext)
 dfError('Fehler beim Export.', new Error('Test-Fehler für Diagnose'));
+
 ```
 
 ---
 
 ## 🖼️ SCREENSHOTS
 
-
 ### 🎬 DEMO
-
+#### ▶️ Export-Lauf (`DemoRun.gif`)
+#### 🌐 Ergebnis im Standalone-HTML (`DemoResult.gif`)
+#### ⚠️ Warnung (`TestWarning.png`)
+#### ❌ Fehler (`TestError.png`)
+#### 🔄 Reload-Hinweis (`ReloadWarning.png`)
 
 ---
 
 ## ⚠️ WICHTIGE HINWEISE
 
 ### 📌 Vor der Verwendung
+
 * ✅ Die Extension arbeitet gezielt auf **`chat.deepseek.com`** – auf anderen Seiten wird die Initialisierung übersprungen.
 * ✅ Bei umfangreichen Chats mit vielen oder langen PDF-Anhängen (z. B. 20–40+ Seiten) kann ein `HTML`-Export mehrere Minuten dauern.
 * ✅ Falls die Extension neu geladen wurde, während ein Tab offen ist, hilft ein **Neuladen der Seite (`F5`)**, falls der Extension-Kontext ungültig geworden ist.
 
 ### 🔒 Sicherheit & Datenschutz
+
 * ✅ Alle Extraktionen, Formatierungen und HTML-Generierungen laufen **lokal im Browser** ohne externen Backend-Server.
 * ✅ Exportierte `.html`-Dateien enthalten eingebettete Styles, Schriften und Anhangsdaten – prüfe vor dem Weitergeben, ob vertrauliche Chat- oder PDF-Inhalte enthalten sind.
 * ⚠️ Keine Tokens, Passwörter oder sensiblen Zugangsdaten in Konfigurationsdateien oder Logs ablegen.
 
 ### 🔧 Bekannte Einschränkungen & Tipps
+
 * ⚠️ **Selektoren (`DF_SELECTORS`):** Wenn DeepSeek seine DOM-Klassen ändert, lassen sich die Selektoren zentral in Abschnitt 1 anpassen.
 * ⚠️ **Nicht erfassbare Dateiformate:** Dateien aus `NON_CAPTURABLE_EXTENSIONS` (z. B. Archive, Medien, Office-Formate) werden bewusst nicht als Text/PDF-Seiten erfasst.
 * 💡 **Debug-Modus:** Für normale Nutzung `const DF_DEBUG = false` belassen und für Fehlersuche temporär auf `true` setzen.
@@ -301,11 +326,11 @@ Dieses Projekt ist unter der **MIT License** lizenziert – frei für persönlic
 ## 📊 REPOSITORY STATISTIK
 
 | Metrik | Wert | Trend |
-|--------|------|-------|
-| **Stars** | ![GitHub Stars](https://img.shields.io/github/stars/mucahid-emin-tomakin/AutoMate) | 📈 |
-| **Forks** | ![GitHub Forks](https://img.shields.io/github/forks/mucahid-emin-tomakin/AutoMate) | 🔄 |
-| **Issues** | ![GitHub Issues](https://img.shields.io/github/issues/mucahid-emin-tomakin/AutoMate) | ✅ |
-| **Letztes Update** | ![GitHub Last Commit](https://img.shields.io/github/last-commit/mucahid-emin-tomakin/AutoMate) | 🕐 |
+| --- | --- | --- |
+| **Stars** |  | 📈 |
+| **Forks** |  | 🔄 |
+| **Issues** |  | ✅ |
+| **Letztes Update** |  | 🕐 |
 
 ---
 
